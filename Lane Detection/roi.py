@@ -1,4 +1,5 @@
-﻿"""
+﻿#inspired by: mirodilkamilov
+"""
 All roi operations are handled here:
 1) finding center of roi and drawing it
 2) finding lane center and drawing it
