@@ -1,0 +1,21 @@
+﻿.venv/
+.idea/
+__pycache__
+*.pyc
+*.pyo
+
+# any __pycache__ directory
+__pycache__/
+
+# any .vscode directory
+.vscode/
+
+# any .pytest_cache directory
+.pytest_cache/
+
+# any .mypy_cache directory
+.mypy_cache/
+
+# any .mypy directory
+.mypy/
+/.idea/
