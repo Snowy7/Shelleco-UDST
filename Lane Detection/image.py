@@ -3,27 +3,50 @@ import cv2 as cv
 import constants as constant
 import roi as ro
 import motor as mt
+import os
 
-frame = cv.imread('./images/3.jpg')
+# get the path of the current file
+current_path = os.path.dirname(os.path.abspath(__file__))
+# get the path of the project folder
+project_path = os.path.abspath(os.path.join(current_path, os.pardir))
+# get the path of the images folder
+image_path = os.path.join(project_path, 'images')
+# get the path of the image
+image_path = os.path.join(image_path, '4.jpg')
+
+frame = cv.imread(image_path)
 
 # resize image
 frame = cv.resize(frame, (constant.WIDTH, constant.HEIGHT))
 
 gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
 blur = cv.GaussianBlur(gray, (5, 5), 0)
-canny = cv.Canny(blur, 0, 200)
+canny = cv.Canny(blur, 50, 200)
 colored_blur = cv.GaussianBlur(frame, (5, 5), 0)
 hsv = cv.cvtColor(colored_blur, cv.COLOR_BGR2HSV)
 
 # define range of white color in HSV
-lower_white = np.array([0, 150, 200])
-upper_white = np.array([179, 30, 255])
+lower_white = np.array([0, 0, 250])
+upper_white = np.array([179, 60, 255])
 
 # returns binary image highlighting white lines
 mask = cv.inRange(hsv, lower_white, upper_white)
 
+lines = cv.HoughLinesP(canny, rho=1, theta=np.pi/180, threshold=50, minLineLength=50, maxLineGap=20)
+
+# Create a blank image to draw lines
+line_image = np.zeros_like(canny)
+
+if lines is not None:
+    for line in lines:
+        x1, y1, x2, y2 = line[0]
+        cv.line(line_image, (x1, y1), (x2, y2), (255, 255, 255), 5)
+
+# Combine the line image with the mask
+combined_binary = cv.bitwise_or(line_image, mask)
+
 # combine canny and hsv binary frames to have more robust detection (in our case hsv was working perfect)
-combined_binary = cv.bitwise_or(canny, mask)
+#combined_binary = cv.bitwise_or(canny, mask)
 
 roi = combined_binary[
       constant.ROI_HEIGHT_LOWER_BOUND:constant.ROI_HEIGHT_UPPER_BOUND,

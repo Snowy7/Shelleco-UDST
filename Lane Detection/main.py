@@ -7,40 +7,52 @@ import motor as mt
 cameraIndex = 0
 cap = cv.VideoCapture(cameraIndex)
 
-# resize image
-cap.set(cv.CAP_PROP_FRAME_WIDTH, constant.WIDTH)
-cap.set(cv.CAP_PROP_FRAME_HEIGHT, constant.HEIGHT)
-
 if not cap.isOpened():
     print('Cannot open camera')
     exit()
+    
+started = False
 
 while True:
     ret, frame = cap.read()
 
     if not ret:
         print('Can\'t receive frame. Exiting ...')
-        break
+        continue
+    # resize frame to 640x480
+    frame = cv.resize(frame, (constant.WIDTH, constant.HEIGHT))
 
     gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
     blur = cv.GaussianBlur(gray, (5, 5), 0)
-    # canny = cv.Canny(blur, 30, 80)
+    canny = cv.Canny(blur, 50, 200)
     colored_blur = cv.GaussianBlur(frame, (5, 5), 0)
     hsv = cv.cvtColor(colored_blur, cv.COLOR_BGR2HSV)
 
-    # define range of yellow color in HSV
-    lower_yellow = np.array([28, 89, 165])
-    upper_yellow = np.array([63, 255, 255])
+    # define range of white color in HSV
+    lower_white = np.array([0, 0, 250])
+    upper_white = np.array([179, 60, 255])
 
-    # returns binary image highlighting yellow lines
-    mask = cv.inRange(hsv, lower_yellow, upper_yellow)
+    # returns binary image highlighting white lines
+    mask = cv.inRange(hsv, lower_white, upper_white)
 
-    # combine canny and hsv binary frames to have more robust detection (in our case hsv was working perfect)
-    # combined_binary = cv.bitwise_or(canny, mask)
+    lines = cv.HoughLinesP(canny, rho=1, theta=np.pi/180, threshold=50, minLineLength=50, maxLineGap=20)
 
-    roi = mask[
-          constant.ROI_HEIGHT_LOWER_BOUND:constant.ROI_HEIGHT_UPPER_BOUND,
-          constant.ROI_WIDTH_LOWER_BOUND:constant.ROI_WIDTH_UPPER_BOUND]
+    # Create a blank image to draw lines
+    line_image = np.zeros_like(canny)
+
+    if lines is not None:
+        for line in lines:
+            x1, y1, x2, y2 = line[0]
+            cv.line(line_image, (x1, y1), (x2, y2), (255, 255, 255), 5)
+
+    # Combine the line image with the mask
+    combined_binary = cv.bitwise_or(line_image, mask)
+
+    roi = combined_binary[
+        constant.ROI_HEIGHT_LOWER_BOUND:constant.ROI_HEIGHT_UPPER_BOUND,
+        constant.ROI_WIDTH_LOWER_BOUND:constant.ROI_WIDTH_UPPER_BOUND]
+
+
 
     ro.draw_legend(frame)
     roi_center = ro.find_roi_center()
@@ -49,20 +61,27 @@ while True:
     roi_lane_center = ro.find_roi_lane_center(roi, roi_center)
     ro.draw_roi_lane_center(frame, roi_lane_center)
 
-    direction = mt.handle_motor_operations(roi_center, roi_lane_center)
+    direction = mt.handle_motor_operations(roi_center, roi_lane_center, started)
     ro.draw_direction_text(frame, direction)
 
+    
+    cv.imshow('roi', roi)
     cv.imshow('original', frame)
-
-    # show one frame at a time (press space to show next frame)
-    key = cv.waitKey(0)
-    while key not in [ord('q'), ord(' ')]:
-        key = cv.waitKey(0)
-
-    # Quit when 'q' is pressed
+    
+    # show buttons
+    cv.namedWindow("Car Controller")
+    cv.createButton("Left", mt.left)
+    cv.createButton("Right", mt.right)
+    cv.createButton("Forward", mt.forward)
+    cv.createButton("Stop", mt.stop)
+    
+    
+    # wait for key press and check if it's 'q', then exit
+    key = cv.waitKey(1)
     if key == ord('q'):
         break
 
 # When everything done, release the capture
 cap.release()
 cv.destroyAllWindows()
+#mt.stop()

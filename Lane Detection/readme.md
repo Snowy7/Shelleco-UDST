@@ -4,12 +4,13 @@ This project implements a lane detection system using OpenCV and Python. The sys
 
 ## Project Structure
 
-- `main.py`: Main script to process real-time camera frames for lane detection.
+- `main.py`: Main script to process real-time camera frames for lane detection. (CLI Version)
 - `roi.py`: Contains functions for handling Region of Interest (ROI) operations.
 - `motor.py`: Contains functions for handling motor operations based on lane detection.
 - `image.py`: Script to process a single image for lane detection.
 - `constants.py`: Contains constant values used throughout the project.
 - `readme.md`: Project documentation.
+- `gui.py`: Main script to process real-time camera frames for lane detection with simple GUI Contrls. (GUI Version)
 
 ## Dependencies
 
@@ -35,6 +36,10 @@ This project implements a lane detection system using OpenCV and Python. The sys
 ### Running the Lane Detection on Video
 
 To run the lane detection on a video, execute the `main.py` script:
+```sh
+  python gui.py
+```
+or for the debug version
 ```sh
   python main.py
 ```
