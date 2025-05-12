@@ -1,0 +1,366 @@
+[0.220s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink']
+[0.220s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffff87f0ca30>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff880bd9f0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff880bd9f0>>, mixin_verb=('build',))
+[0.549s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.549s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.549s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.549s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.549s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.549s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.549s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ubuntu/eco_marathon_ws'
+[0.550s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.550s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.550s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.550s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.550s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.551s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.551s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.551s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.551s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.570s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.570s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.571s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.571s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.571s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.571s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.571s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.571s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.573s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.573s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.573s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.573s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.573s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.573s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.573s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.573s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.573s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.573s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.573s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.574s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.574s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.574s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.574s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_control) by extensions ['ignore', 'ignore_ament_install']
+[0.574s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_control) by extension 'ignore'
+[0.574s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_control) by extension 'ignore_ament_install'
+[0.574s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_control) by extensions ['colcon_pkg']
+[0.574s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_control) by extension 'colcon_pkg'
+[0.574s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_control) by extensions ['colcon_meta']
+[0.574s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_control) by extension 'colcon_meta'
+[0.575s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_control) by extensions ['ros']
+[0.575s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_control) by extension 'ros'
+[0.579s] DEBUG:colcon.colcon_core.package_identification:Package 'src/eco_control' with type 'ros.ament_python' and name 'eco_control'
+[0.579s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.579s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_interfaces) by extension 'ignore'
+[0.580s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_interfaces) by extension 'ignore_ament_install'
+[0.580s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_interfaces) by extensions ['colcon_pkg']
+[0.580s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_interfaces) by extension 'colcon_pkg'
+[0.580s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_interfaces) by extensions ['colcon_meta']
+[0.580s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_interfaces) by extension 'colcon_meta'
+[0.580s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_interfaces) by extensions ['ros']
+[0.580s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_interfaces) by extension 'ros'
+[0.581s] DEBUG:colcon.colcon_core.package_identification:Package 'src/eco_interfaces' with type 'ros.ament_cmake' and name 'eco_interfaces'
+[0.582s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_localization) by extensions ['ignore', 'ignore_ament_install']
+[0.582s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_localization) by extension 'ignore'
+[0.582s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_localization) by extension 'ignore_ament_install'
+[0.582s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_localization) by extensions ['colcon_pkg']
+[0.582s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_localization) by extension 'colcon_pkg'
+[0.582s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_localization) by extensions ['colcon_meta']
+[0.582s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_localization) by extension 'colcon_meta'
+[0.582s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_localization) by extensions ['ros']
+[0.582s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_localization) by extension 'ros'
+[0.584s] DEBUG:colcon.colcon_core.package_identification:Package 'src/eco_localization' with type 'ros.ament_python' and name 'eco_localization'
+[0.584s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_perception) by extensions ['ignore', 'ignore_ament_install']
+[0.584s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_perception) by extension 'ignore'
+[0.584s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_perception) by extension 'ignore_ament_install'
+[0.584s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_perception) by extensions ['colcon_pkg']
+[0.584s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_perception) by extension 'colcon_pkg'
+[0.584s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_perception) by extensions ['colcon_meta']
+[0.585s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_perception) by extension 'colcon_meta'
+[0.585s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_perception) by extensions ['ros']
+[0.585s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_perception) by extension 'ros'
+[0.586s] DEBUG:colcon.colcon_core.package_identification:Package 'src/eco_perception' with type 'ros.ament_python' and name 'eco_perception'
+[0.586s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_planning) by extensions ['ignore', 'ignore_ament_install']
+[0.586s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_planning) by extension 'ignore'
+[0.586s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_planning) by extension 'ignore_ament_install'
+[0.587s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_planning) by extensions ['colcon_pkg']
+[0.587s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_planning) by extension 'colcon_pkg'
+[0.587s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_planning) by extensions ['colcon_meta']
+[0.587s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_planning) by extension 'colcon_meta'
+[0.587s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_planning) by extensions ['ros']
+[0.587s] Level 1:colcon.colcon_core.package_identification:_identify(src/eco_planning) by extension 'ros'
+[0.588s] DEBUG:colcon.colcon_core.package_identification:Package 'src/eco_planning' with type 'ros.ament_python' and name 'eco_planning'
+[0.588s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.588s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.588s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.589s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.589s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.656s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.657s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.661s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/ubuntu/eco_marathon_ws/install
+[0.662s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 8 installed packages in /home/ubuntu/ros2_ws/install
+[0.664s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 274 installed packages in /opt/ros/humble
+[0.666s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.734s] Level 5:colcon.colcon_core.verb:set package 'eco_control' build argument 'cmake_args' from command line to 'None'
+[0.735s] Level 5:colcon.colcon_core.verb:set package 'eco_control' build argument 'cmake_target' from command line to 'None'
+[0.735s] Level 5:colcon.colcon_core.verb:set package 'eco_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.735s] Level 5:colcon.colcon_core.verb:set package 'eco_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.735s] Level 5:colcon.colcon_core.verb:set package 'eco_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.735s] Level 5:colcon.colcon_core.verb:set package 'eco_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.735s] Level 5:colcon.colcon_core.verb:set package 'eco_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.735s] Level 5:colcon.colcon_core.verb:set package 'eco_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.735s] Level 5:colcon.colcon_core.verb:set package 'eco_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.735s] DEBUG:colcon.colcon_core.verb:Building package 'eco_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/eco_marathon_ws/build/eco_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/eco_marathon_ws/install/eco_control', 'merge_install': False, 'path': '/home/ubuntu/eco_marathon_ws/src/eco_control', 'symlink_install': True, 'test_result_base': None}
+[0.736s] Level 5:colcon.colcon_core.verb:set package 'eco_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.736s] Level 5:colcon.colcon_core.verb:set package 'eco_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.736s] Level 5:colcon.colcon_core.verb:set package 'eco_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.736s] Level 5:colcon.colcon_core.verb:set package 'eco_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.736s] Level 5:colcon.colcon_core.verb:set package 'eco_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.736s] Level 5:colcon.colcon_core.verb:set package 'eco_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.736s] Level 5:colcon.colcon_core.verb:set package 'eco_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.736s] Level 5:colcon.colcon_core.verb:set package 'eco_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.736s] Level 5:colcon.colcon_core.verb:set package 'eco_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.736s] DEBUG:colcon.colcon_core.verb:Building package 'eco_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/eco_marathon_ws/build/eco_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/eco_marathon_ws/install/eco_interfaces', 'merge_install': False, 'path': '/home/ubuntu/eco_marathon_ws/src/eco_interfaces', 'symlink_install': True, 'test_result_base': None}
+[0.737s] Level 5:colcon.colcon_core.verb:set package 'eco_localization' build argument 'cmake_args' from command line to 'None'
+[0.737s] Level 5:colcon.colcon_core.verb:set package 'eco_localization' build argument 'cmake_target' from command line to 'None'
+[0.737s] Level 5:colcon.colcon_core.verb:set package 'eco_localization' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.737s] Level 5:colcon.colcon_core.verb:set package 'eco_localization' build argument 'cmake_clean_cache' from command line to 'False'
+[0.737s] Level 5:colcon.colcon_core.verb:set package 'eco_localization' build argument 'cmake_clean_first' from command line to 'False'
+[0.737s] Level 5:colcon.colcon_core.verb:set package 'eco_localization' build argument 'cmake_force_configure' from command line to 'False'
+[0.737s] Level 5:colcon.colcon_core.verb:set package 'eco_localization' build argument 'ament_cmake_args' from command line to 'None'
+[0.737s] Level 5:colcon.colcon_core.verb:set package 'eco_localization' build argument 'catkin_cmake_args' from command line to 'None'
+[0.737s] Level 5:colcon.colcon_core.verb:set package 'eco_localization' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.737s] DEBUG:colcon.colcon_core.verb:Building package 'eco_localization' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/eco_marathon_ws/build/eco_localization', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/eco_marathon_ws/install/eco_localization', 'merge_install': False, 'path': '/home/ubuntu/eco_marathon_ws/src/eco_localization', 'symlink_install': True, 'test_result_base': None}
+[0.738s] Level 5:colcon.colcon_core.verb:set package 'eco_perception' build argument 'cmake_args' from command line to 'None'
+[0.738s] Level 5:colcon.colcon_core.verb:set package 'eco_perception' build argument 'cmake_target' from command line to 'None'
+[0.738s] Level 5:colcon.colcon_core.verb:set package 'eco_perception' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.738s] Level 5:colcon.colcon_core.verb:set package 'eco_perception' build argument 'cmake_clean_cache' from command line to 'False'
+[0.738s] Level 5:colcon.colcon_core.verb:set package 'eco_perception' build argument 'cmake_clean_first' from command line to 'False'
+[0.738s] Level 5:colcon.colcon_core.verb:set package 'eco_perception' build argument 'cmake_force_configure' from command line to 'False'
+[0.738s] Level 5:colcon.colcon_core.verb:set package 'eco_perception' build argument 'ament_cmake_args' from command line to 'None'
+[0.738s] Level 5:colcon.colcon_core.verb:set package 'eco_perception' build argument 'catkin_cmake_args' from command line to 'None'
+[0.738s] Level 5:colcon.colcon_core.verb:set package 'eco_perception' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.738s] DEBUG:colcon.colcon_core.verb:Building package 'eco_perception' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/eco_marathon_ws/build/eco_perception', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/eco_marathon_ws/install/eco_perception', 'merge_install': False, 'path': '/home/ubuntu/eco_marathon_ws/src/eco_perception', 'symlink_install': True, 'test_result_base': None}
+[0.739s] Level 5:colcon.colcon_core.verb:set package 'eco_planning' build argument 'cmake_args' from command line to 'None'
+[0.739s] Level 5:colcon.colcon_core.verb:set package 'eco_planning' build argument 'cmake_target' from command line to 'None'
+[0.739s] Level 5:colcon.colcon_core.verb:set package 'eco_planning' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.739s] Level 5:colcon.colcon_core.verb:set package 'eco_planning' build argument 'cmake_clean_cache' from command line to 'False'
+[0.739s] Level 5:colcon.colcon_core.verb:set package 'eco_planning' build argument 'cmake_clean_first' from command line to 'False'
+[0.739s] Level 5:colcon.colcon_core.verb:set package 'eco_planning' build argument 'cmake_force_configure' from command line to 'False'
+[0.739s] Level 5:colcon.colcon_core.verb:set package 'eco_planning' build argument 'ament_cmake_args' from command line to 'None'
+[0.739s] Level 5:colcon.colcon_core.verb:set package 'eco_planning' build argument 'catkin_cmake_args' from command line to 'None'
+[0.739s] Level 5:colcon.colcon_core.verb:set package 'eco_planning' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.739s] DEBUG:colcon.colcon_core.verb:Building package 'eco_planning' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/eco_marathon_ws/build/eco_planning', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/eco_marathon_ws/install/eco_planning', 'merge_install': False, 'path': '/home/ubuntu/eco_marathon_ws/src/eco_planning', 'symlink_install': True, 'test_result_base': None}
+[0.740s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.742s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.743s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ubuntu/eco_marathon_ws/src/eco_control' with build type 'ament_python'
+[0.743s] Level 1:colcon.colcon_core.shell:create_environment_hook('eco_control', 'ament_prefix_path')
+[0.747s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.748s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/install/eco_control/share/eco_control/hook/ament_prefix_path.ps1'
+[0.749s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/eco_marathon_ws/install/eco_control/share/eco_control/hook/ament_prefix_path.dsv'
+[0.750s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/install/eco_control/share/eco_control/hook/ament_prefix_path.sh'
+[0.752s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.752s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.760s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ubuntu/eco_marathon_ws/src/eco_interfaces' with build type 'ament_cmake'
+[0.760s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ubuntu/eco_marathon_ws/src/eco_interfaces'
+[0.761s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.761s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.768s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ubuntu/eco_marathon_ws/src/eco_localization' with build type 'ament_python'
+[0.768s] Level 1:colcon.colcon_core.shell:create_environment_hook('eco_localization', 'ament_prefix_path')
+[0.769s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/install/eco_localization/share/eco_localization/hook/ament_prefix_path.ps1'
+[0.770s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/eco_marathon_ws/install/eco_localization/share/eco_localization/hook/ament_prefix_path.dsv'
+[0.770s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/install/eco_localization/share/eco_localization/hook/ament_prefix_path.sh'
+[0.772s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.772s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.778s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ubuntu/eco_marathon_ws/src/eco_perception' with build type 'ament_python'
+[0.779s] Level 1:colcon.colcon_core.shell:create_environment_hook('eco_perception', 'ament_prefix_path')
+[0.779s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/install/eco_perception/share/eco_perception/hook/ament_prefix_path.ps1'
+[0.780s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/eco_marathon_ws/install/eco_perception/share/eco_perception/hook/ament_prefix_path.dsv'
+[0.781s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/install/eco_perception/share/eco_perception/hook/ament_prefix_path.sh'
+[0.782s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.782s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.789s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ubuntu/eco_marathon_ws/src/eco_planning' with build type 'ament_python'
+[0.789s] Level 1:colcon.colcon_core.shell:create_environment_hook('eco_planning', 'ament_prefix_path')
+[0.790s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/install/eco_planning/share/eco_planning/hook/ament_prefix_path.ps1'
+[0.791s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/eco_marathon_ws/install/eco_planning/share/eco_planning/hook/ament_prefix_path.dsv'
+[0.792s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/install/eco_planning/share/eco_planning/hook/ament_prefix_path.sh'
+[0.794s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.794s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.337s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ubuntu/eco_marathon_ws/src/eco_control'
+[1.338s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.338s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.352s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/eco_marathon_ws/build/eco_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble /home/ubuntu/.local/bin/cmake /home/ubuntu/eco_marathon_ws/src/eco_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ubuntu/eco_marathon_ws/install/eco_interfaces
+[1.905s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ubuntu/eco_marathon_ws/src/eco_localization'
+[1.905s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.906s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.451s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ubuntu/eco_marathon_ws/src/eco_perception'
+[2.452s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.453s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.008s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ubuntu/eco_marathon_ws/src/eco_planning'
+[3.009s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.009s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.026s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/eco_marathon_ws/build/eco_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble /home/ubuntu/.local/bin/cmake /home/ubuntu/eco_marathon_ws/src/eco_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ubuntu/eco_marathon_ws/install/eco_interfaces
+[3.030s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/eco_marathon_ws/build/eco_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble /home/ubuntu/.local/bin/cmake --build /home/ubuntu/eco_marathon_ws/build/eco_interfaces -- -j8 -l8
+[3.230s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/eco_marathon_ws/build/eco_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble /home/ubuntu/.local/bin/cmake --build /home/ubuntu/eco_marathon_ws/build/eco_interfaces -- -j8 -l8
+[3.405s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/eco_marathon_ws/build/eco_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble /home/ubuntu/.local/bin/cmake --install /home/ubuntu/eco_marathon_ws/build/eco_interfaces
+[3.679s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(eco_interfaces)
+[3.680s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/eco_marathon_ws/build/eco_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble /home/ubuntu/.local/bin/cmake --install /home/ubuntu/eco_marathon_ws/build/eco_interfaces
+[3.689s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_interfaces' for CMake module files
+[3.693s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_interfaces' for CMake config files
+[3.693s] Level 1:colcon.colcon_core.shell:create_environment_hook('eco_interfaces', 'cmake_prefix_path')
+[3.694s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/hook/cmake_prefix_path.ps1'
+[3.696s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/hook/cmake_prefix_path.dsv'
+[3.697s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/hook/cmake_prefix_path.sh'
+[3.699s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/bin'
+[3.699s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/lib/pkgconfig/eco_interfaces.pc'
+[3.699s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/lib/python3.10/site-packages'
+[3.700s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/bin'
+[3.700s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/package.ps1'
+[3.702s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/package.dsv'
+[3.704s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/package.sh'
+[3.706s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/package.bash'
+[3.707s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/package.zsh'
+[3.709s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/colcon-core/packages/eco_interfaces)
+[3.711s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(eco_interfaces)
+[3.711s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_interfaces' for CMake module files
+[3.712s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_interfaces' for CMake config files
+[3.713s] Level 1:colcon.colcon_core.shell:create_environment_hook('eco_interfaces', 'cmake_prefix_path')
+[3.713s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/hook/cmake_prefix_path.ps1'
+[3.714s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/hook/cmake_prefix_path.dsv'
+[3.715s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/hook/cmake_prefix_path.sh'
+[3.717s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/bin'
+[3.717s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/lib/pkgconfig/eco_interfaces.pc'
+[3.718s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/lib/python3.10/site-packages'
+[3.718s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/bin'
+[3.719s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/package.ps1'
+[3.720s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/package.dsv'
+[3.721s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/package.sh'
+[3.722s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/package.bash'
+[3.723s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/package.zsh'
+[3.724s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/colcon-core/packages/eco_interfaces)
+[3.917s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/ubuntu/eco_marathon_ws/install/eco_perception/share/ament_index/resource_index/packages/eco_perception
+[3.917s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/ubuntu/eco_marathon_ws/install/eco_perception/share/eco_perception/package.xml
+[3.921s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/eco_marathon_ws/build/eco_perception': PYTHONPATH=/home/ubuntu/eco_marathon_ws/build/eco_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ubuntu/eco_marathon_ws/build/eco_perception/build --no-deps symlink_data --force
+[3.922s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/ubuntu/eco_marathon_ws/install/eco_planning/share/ament_index/resource_index/packages/eco_planning
+[3.922s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/ubuntu/eco_marathon_ws/install/eco_planning/share/eco_planning/package.xml
+[3.929s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/eco_marathon_ws/build/eco_planning': PYTHONPATH=/home/ubuntu/eco_marathon_ws/build/eco_planning/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/eco_marathon_ws/install/eco_planning/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ubuntu/eco_marathon_ws/build/eco_planning/build --no-deps symlink_data --force
+[3.930s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/ubuntu/eco_marathon_ws/install/eco_control/share/ament_index/resource_index/packages/eco_control
+[3.930s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/ubuntu/eco_marathon_ws/install/eco_control/share/eco_control/package.xml
+[3.933s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/ubuntu/eco_marathon_ws/install/eco_localization/share/ament_index/resource_index/packages/eco_localization
+[3.933s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/eco_marathon_ws/build/eco_control': PYTHONPATH=/home/ubuntu/eco_marathon_ws/build/eco_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/eco_marathon_ws/install/eco_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ubuntu/eco_marathon_ws/build/eco_control/build --no-deps symlink_data --force
+[3.934s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/ubuntu/eco_marathon_ws/install/eco_localization/share/eco_localization/package.xml
+[3.937s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/eco_marathon_ws/build/eco_localization': PYTHONPATH=/home/ubuntu/eco_marathon_ws/build/eco_localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/eco_marathon_ws/install/eco_localization/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ubuntu/eco_marathon_ws/build/eco_localization/build --no-deps symlink_data --force
+[5.021s] Level 1:colcon.colcon_core.shell:create_environment_hook('eco_localization', 'pythonpath_develop')
+[5.022s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/build/eco_localization/share/eco_localization/hook/pythonpath_develop.ps1'
+[5.023s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/eco_marathon_ws/build/eco_localization' returned '0': PYTHONPATH=/home/ubuntu/eco_marathon_ws/build/eco_localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/eco_marathon_ws/install/eco_localization/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ubuntu/eco_marathon_ws/build/eco_localization/build --no-deps symlink_data --force
+[5.025s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/eco_marathon_ws/build/eco_localization/share/eco_localization/hook/pythonpath_develop.dsv'
+[5.026s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/build/eco_localization/share/eco_localization/hook/pythonpath_develop.sh'
+[5.027s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_localization' for CMake module files
+[5.028s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_localization' for CMake config files
+[5.029s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_localization/lib'
+[5.029s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_localization/bin'
+[5.030s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_localization/lib/pkgconfig/eco_localization.pc'
+[5.030s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_localization/lib/python3.10/site-packages'
+[5.030s] Level 1:colcon.colcon_core.shell:create_environment_hook('eco_localization', 'pythonpath')
+[5.031s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/install/eco_localization/share/eco_localization/hook/pythonpath.ps1'
+[5.032s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/eco_marathon_ws/install/eco_localization/share/eco_localization/hook/pythonpath.dsv'
+[5.033s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/install/eco_localization/share/eco_localization/hook/pythonpath.sh'
+[5.034s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_localization/bin'
+[5.034s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(eco_localization)
+[5.035s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/eco_marathon_ws/install/eco_localization/share/eco_localization/package.ps1'
+[5.036s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/eco_marathon_ws/install/eco_localization/share/eco_localization/package.dsv'
+[5.037s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/eco_marathon_ws/install/eco_localization/share/eco_localization/package.sh'
+[5.038s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/eco_marathon_ws/install/eco_localization/share/eco_localization/package.bash'
+[5.039s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/eco_marathon_ws/install/eco_localization/share/eco_localization/package.zsh'
+[5.039s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/eco_marathon_ws/install/eco_localization/share/colcon-core/packages/eco_localization)
+[5.042s] Level 1:colcon.colcon_core.shell:create_environment_hook('eco_control', 'pythonpath_develop')
+[5.043s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/build/eco_control/share/eco_control/hook/pythonpath_develop.ps1'
+[5.046s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/eco_marathon_ws/build/eco_control' returned '0': PYTHONPATH=/home/ubuntu/eco_marathon_ws/build/eco_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/eco_marathon_ws/install/eco_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ubuntu/eco_marathon_ws/build/eco_control/build --no-deps symlink_data --force
+[5.046s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/eco_marathon_ws/build/eco_control/share/eco_control/hook/pythonpath_develop.dsv'
+[5.047s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/build/eco_control/share/eco_control/hook/pythonpath_develop.sh'
+[5.049s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_control' for CMake module files
+[5.050s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_control' for CMake config files
+[5.052s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_control/lib'
+[5.053s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_control/bin'
+[5.053s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_control/lib/pkgconfig/eco_control.pc'
+[5.054s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_control/lib/python3.10/site-packages'
+[5.055s] Level 1:colcon.colcon_core.shell:create_environment_hook('eco_control', 'pythonpath')
+[5.056s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/install/eco_control/share/eco_control/hook/pythonpath.ps1'
+[5.057s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/eco_marathon_ws/install/eco_control/share/eco_control/hook/pythonpath.dsv'
+[5.059s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/install/eco_control/share/eco_control/hook/pythonpath.sh'
+[5.061s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_control/bin'
+[5.061s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(eco_control)
+[5.062s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/eco_marathon_ws/install/eco_control/share/eco_control/package.ps1'
+[5.063s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/eco_marathon_ws/install/eco_control/share/eco_control/package.dsv'
+[5.065s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/eco_marathon_ws/install/eco_control/share/eco_control/package.sh'
+[5.067s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/eco_marathon_ws/install/eco_control/share/eco_control/package.bash'
+[5.068s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/eco_marathon_ws/install/eco_control/share/eco_control/package.zsh'
+[5.069s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/eco_marathon_ws/install/eco_control/share/colcon-core/packages/eco_control)
+[5.071s] Level 1:colcon.colcon_core.shell:create_environment_hook('eco_planning', 'pythonpath_develop')
+[5.072s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/build/eco_planning/share/eco_planning/hook/pythonpath_develop.ps1'
+[5.074s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/eco_marathon_ws/build/eco_planning' returned '0': PYTHONPATH=/home/ubuntu/eco_marathon_ws/build/eco_planning/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/eco_marathon_ws/install/eco_planning/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ubuntu/eco_marathon_ws/build/eco_planning/build --no-deps symlink_data --force
+[5.074s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/eco_marathon_ws/build/eco_planning/share/eco_planning/hook/pythonpath_develop.dsv'
+[5.076s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/build/eco_planning/share/eco_planning/hook/pythonpath_develop.sh'
+[5.078s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_planning' for CMake module files
+[5.079s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_planning' for CMake config files
+[5.081s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_planning/lib'
+[5.081s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_planning/bin'
+[5.081s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_planning/lib/pkgconfig/eco_planning.pc'
+[5.082s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_planning/lib/python3.10/site-packages'
+[5.082s] Level 1:colcon.colcon_core.shell:create_environment_hook('eco_planning', 'pythonpath')
+[5.082s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/install/eco_planning/share/eco_planning/hook/pythonpath.ps1'
+[5.083s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/eco_marathon_ws/install/eco_planning/share/eco_planning/hook/pythonpath.dsv'
+[5.084s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/install/eco_planning/share/eco_planning/hook/pythonpath.sh'
+[5.086s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_planning/bin'
+[5.086s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(eco_planning)
+[5.087s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/eco_marathon_ws/install/eco_planning/share/eco_planning/package.ps1'
+[5.088s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/eco_marathon_ws/install/eco_planning/share/eco_planning/package.dsv'
+[5.090s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/eco_marathon_ws/install/eco_planning/share/eco_planning/package.sh'
+[5.091s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/eco_marathon_ws/install/eco_planning/share/eco_planning/package.bash'
+[5.092s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/eco_marathon_ws/install/eco_planning/share/eco_planning/package.zsh'
+[5.093s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/eco_marathon_ws/install/eco_planning/share/colcon-core/packages/eco_planning)
+[5.096s] Level 1:colcon.colcon_core.shell:create_environment_hook('eco_perception', 'pythonpath_develop')
+[5.097s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/build/eco_perception/share/eco_perception/hook/pythonpath_develop.ps1'
+[5.098s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/eco_marathon_ws/build/eco_perception' returned '0': PYTHONPATH=/home/ubuntu/eco_marathon_ws/build/eco_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ubuntu/eco_marathon_ws/build/eco_perception/build --no-deps symlink_data --force
+[5.099s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/eco_marathon_ws/build/eco_perception/share/eco_perception/hook/pythonpath_develop.dsv'
+[5.100s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/build/eco_perception/share/eco_perception/hook/pythonpath_develop.sh'
+[5.102s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_perception' for CMake module files
+[5.103s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_perception' for CMake config files
+[5.105s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_perception/lib'
+[5.105s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_perception/bin'
+[5.106s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_perception/lib/pkgconfig/eco_perception.pc'
+[5.106s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages'
+[5.106s] Level 1:colcon.colcon_core.shell:create_environment_hook('eco_perception', 'pythonpath')
+[5.107s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/install/eco_perception/share/eco_perception/hook/pythonpath.ps1'
+[5.109s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/eco_marathon_ws/install/eco_perception/share/eco_perception/hook/pythonpath.dsv'
+[5.110s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/eco_marathon_ws/install/eco_perception/share/eco_perception/hook/pythonpath.sh'
+[5.112s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/eco_marathon_ws/install/eco_perception/bin'
+[5.112s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(eco_perception)
+[5.113s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/eco_marathon_ws/install/eco_perception/share/eco_perception/package.ps1'
+[5.114s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/eco_marathon_ws/install/eco_perception/share/eco_perception/package.dsv'
+[5.116s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/eco_marathon_ws/install/eco_perception/share/eco_perception/package.sh'
+[5.117s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/eco_marathon_ws/install/eco_perception/share/eco_perception/package.bash'
+[5.118s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/eco_marathon_ws/install/eco_perception/share/eco_perception/package.zsh'
+[5.119s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/eco_marathon_ws/install/eco_perception/share/colcon-core/packages/eco_perception)
+[5.119s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.120s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.121s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[5.121s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.136s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.137s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.137s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[5.181s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[5.182s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/eco_marathon_ws/install/local_setup.ps1'
+[5.187s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ubuntu/eco_marathon_ws/install/_local_setup_util_ps1.py'
+[5.191s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/eco_marathon_ws/install/setup.ps1'
+[5.196s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/eco_marathon_ws/install/local_setup.sh'
+[5.197s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ubuntu/eco_marathon_ws/install/_local_setup_util_sh.py'
+[5.199s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/eco_marathon_ws/install/setup.sh'
+[5.202s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/eco_marathon_ws/install/local_setup.bash'
+[5.204s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/eco_marathon_ws/install/setup.bash'
+[5.207s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/eco_marathon_ws/install/local_setup.zsh'
+[5.209s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/eco_marathon_ws/install/setup.zsh'

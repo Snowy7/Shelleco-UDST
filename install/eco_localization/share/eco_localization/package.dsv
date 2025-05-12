@@ -1,0 +1,9 @@
+source;share/eco_localization/hook/pythonpath.ps1
+source;share/eco_localization/hook/pythonpath.dsv
+source;share/eco_localization/hook/pythonpath.sh
+source;share/eco_localization/hook/ament_prefix_path.ps1
+source;share/eco_localization/hook/ament_prefix_path.dsv
+source;share/eco_localization/hook/ament_prefix_path.sh
+source;../../build/eco_localization/share/eco_localization/hook/pythonpath_develop.ps1
+source;../../build/eco_localization/share/eco_localization/hook/pythonpath_develop.dsv
+source;../../build/eco_localization/share/eco_localization/hook/pythonpath_develop.sh

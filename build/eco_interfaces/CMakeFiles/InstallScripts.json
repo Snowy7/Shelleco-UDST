@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/ubuntu/eco_marathon_ws/build/eco_interfaces/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

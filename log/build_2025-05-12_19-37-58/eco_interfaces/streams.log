@@ -1,0 +1,58 @@
+[0.557s] Invoking command in '/home/ubuntu/eco_marathon_ws/build/eco_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble /home/ubuntu/.local/bin/cmake /home/ubuntu/eco_marathon_ws/src/eco_interfaces -DCMAKE_INSTALL_PREFIX=/home/ubuntu/eco_marathon_ws/install/eco_interfaces
+[1.625s] -- The C compiler identification is GNU 11.4.0
+[1.625s] -- The CXX compiler identification is GNU 11.4.0
+[1.625s] -- Detecting C compiler ABI info
+[1.626s] -- Detecting C compiler ABI info - done
+[1.627s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.627s] -- Detecting C compile features
+[1.627s] -- Detecting C compile features - done
+[1.627s] -- Detecting CXX compiler ABI info
+[1.628s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[1.628s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[1.629s]   CMake.
+[1.629s] 
+[1.629s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[1.629s]   to tell CMake that the project requires at least <min> but has been updated
+[1.629s]   to work with policies introduced by <max> or earlier.
+[1.629s] 
+[1.629s] [0m
+[1.652s] -- Detecting CXX compiler ABI info - done
+[1.685s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.685s] -- Detecting CXX compile features
+[1.687s] -- Detecting CXX compile features - done
+[1.728s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.015s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter
+[2.351s] -- Found std_msgs: 4.8.0 (/opt/ros/humble/share/std_msgs/cmake)
+[2.509s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[2.535s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.573s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.628s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.701s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.812s] -- Found geometry_msgs: 4.8.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[2.869s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[3.126s] -- Added test 'lint_cmake' to check CMake code style
+[3.130s] -- Added test 'xmllint' to check XML markup files
+[3.135s] -- Configuring done (2.4s)
+[3.147s] -- Generating done (0.0s)
+[3.150s] -- Build files have been written to: /home/ubuntu/eco_marathon_ws/build/eco_interfaces
+[3.171s] Invoked command in '/home/ubuntu/eco_marathon_ws/build/eco_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble /home/ubuntu/.local/bin/cmake /home/ubuntu/eco_marathon_ws/src/eco_interfaces -DCMAKE_INSTALL_PREFIX=/home/ubuntu/eco_marathon_ws/install/eco_interfaces
+[3.172s] Invoking command in '/home/ubuntu/eco_marathon_ws/build/eco_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble /home/ubuntu/.local/bin/cmake --build /home/ubuntu/eco_marathon_ws/build/eco_interfaces -- -j8 -l8
+[3.389s] Invoked command in '/home/ubuntu/eco_marathon_ws/build/eco_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble /home/ubuntu/.local/bin/cmake --build /home/ubuntu/eco_marathon_ws/build/eco_interfaces -- -j8 -l8
+[3.560s] Invoking command in '/home/ubuntu/eco_marathon_ws/build/eco_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble /home/ubuntu/.local/bin/cmake --install /home/ubuntu/eco_marathon_ws/build/eco_interfaces
+[3.735s] -- Install configuration: ""
+[3.736s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/ament_index/resource_index/package_run_dependencies/eco_interfaces
+[3.736s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/ament_index/resource_index/parent_prefix_path/eco_interfaces
+[3.737s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/environment/ament_prefix_path.sh
+[3.738s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/environment/ament_prefix_path.dsv
+[3.738s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/environment/path.sh
+[3.738s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/environment/path.dsv
+[3.738s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/local_setup.bash
+[3.738s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/local_setup.sh
+[3.739s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/local_setup.zsh
+[3.739s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/local_setup.dsv
+[3.739s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/package.dsv
+[3.740s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/ament_index/resource_index/packages/eco_interfaces
+[3.740s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/eco_interfacesConfig.cmake
+[3.741s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/eco_interfacesConfig-version.cmake
+[3.741s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/package.xml
+[3.744s] Invoked command in '/home/ubuntu/eco_marathon_ws/build/eco_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble /home/ubuntu/.local/bin/cmake --install /home/ubuntu/eco_marathon_ws/build/eco_interfaces

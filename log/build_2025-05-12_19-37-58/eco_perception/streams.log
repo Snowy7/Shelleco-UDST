@@ -1,0 +1,33 @@
+[3.203s] Invoking command in '/home/ubuntu/eco_marathon_ws/src/eco_perception': PYTHONPATH=/home/ubuntu/eco_marathon_ws/build/eco_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/eco_perception build --build-base /home/ubuntu/eco_marathon_ws/build/eco_perception/build install --record /home/ubuntu/eco_marathon_ws/build/eco_perception/install.log --single-version-externally-managed install_data
+[3.728s] running egg_info
+[3.728s] creating ../../build/eco_perception/eco_perception.egg-info
+[3.729s] writing ../../build/eco_perception/eco_perception.egg-info/PKG-INFO
+[3.730s] writing dependency_links to ../../build/eco_perception/eco_perception.egg-info/dependency_links.txt
+[3.730s] writing entry points to ../../build/eco_perception/eco_perception.egg-info/entry_points.txt
+[3.730s] writing requirements to ../../build/eco_perception/eco_perception.egg-info/requires.txt
+[3.731s] writing top-level names to ../../build/eco_perception/eco_perception.egg-info/top_level.txt
+[3.732s] writing manifest file '../../build/eco_perception/eco_perception.egg-info/SOURCES.txt'
+[3.736s] reading manifest file '../../build/eco_perception/eco_perception.egg-info/SOURCES.txt'
+[3.739s] writing manifest file '../../build/eco_perception/eco_perception.egg-info/SOURCES.txt'
+[3.740s] running build
+[3.740s] running build_py
+[3.740s] creating /home/ubuntu/eco_marathon_ws/build/eco_perception/build
+[3.740s] creating /home/ubuntu/eco_marathon_ws/build/eco_perception/build/lib
+[3.740s] creating /home/ubuntu/eco_marathon_ws/build/eco_perception/build/lib/eco_perception
+[3.741s] copying eco_perception/__init__.py -> /home/ubuntu/eco_marathon_ws/build/eco_perception/build/lib/eco_perception
+[3.741s] running install
+[3.741s] running install_lib
+[3.743s] creating /home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages/eco_perception
+[3.744s] copying /home/ubuntu/eco_marathon_ws/build/eco_perception/build/lib/eco_perception/__init__.py -> /home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages/eco_perception
+[3.747s] byte-compiling /home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages/eco_perception/__init__.py to __init__.cpython-310.pyc
+[3.748s] running install_data
+[3.748s] creating /home/ubuntu/eco_marathon_ws/install/eco_perception/share/ament_index
+[3.749s] creating /home/ubuntu/eco_marathon_ws/install/eco_perception/share/ament_index/resource_index
+[3.749s] creating /home/ubuntu/eco_marathon_ws/install/eco_perception/share/ament_index/resource_index/packages
+[3.750s] copying resource/eco_perception -> /home/ubuntu/eco_marathon_ws/install/eco_perception/share/ament_index/resource_index/packages
+[3.750s] copying package.xml -> /home/ubuntu/eco_marathon_ws/install/eco_perception/share/eco_perception
+[3.750s] running install_egg_info
+[3.755s] Copying ../../build/eco_perception/eco_perception.egg-info to /home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages/eco_perception-0.0.0-py3.10.egg-info
+[3.757s] running install_scripts
+[3.797s] writing list of installed files to '/home/ubuntu/eco_marathon_ws/build/eco_perception/install.log'
+[3.883s] Invoked command in '/home/ubuntu/eco_marathon_ws/src/eco_perception' returned '0': PYTHONPATH=/home/ubuntu/eco_marathon_ws/build/eco_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/eco_perception build --build-base /home/ubuntu/eco_marathon_ws/build/eco_perception/build install --record /home/ubuntu/eco_marathon_ws/build/eco_perception/install.log --single-version-externally-managed install_data
