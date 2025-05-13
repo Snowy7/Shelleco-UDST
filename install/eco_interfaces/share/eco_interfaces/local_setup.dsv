@@ -1,1 +1,4 @@
-/home/ubuntu/eco_marathon_ws/build/eco_interfaces/ament_cmake_environment_hooks/local_setup.dsv
+source;share/eco_interfaces/environment/ament_prefix_path.sh
+source;share/eco_interfaces/environment/library_path.sh
+source;share/eco_interfaces/environment/path.sh
+source;share/eco_interfaces/environment/pythonpath.sh

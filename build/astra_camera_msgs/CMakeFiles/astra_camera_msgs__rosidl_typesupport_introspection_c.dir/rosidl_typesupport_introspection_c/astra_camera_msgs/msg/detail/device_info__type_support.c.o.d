@@ -48,17 +48,13 @@ CMakeFiles/astra_camera_msgs__rosidl_typesupport_introspection_c.dir/rosidl_type
  /usr/include/aarch64-linux-gnu/bits/types/__sigset_t.h \
  /usr/include/aarch64-linux-gnu/bits/types/struct_timeval.h \
  /usr/include/aarch64-linux-gnu/bits/types/struct_timespec.h \
- /usr/include/aarch64-linux-gnu/bits/select2.h \
  /usr/include/aarch64-linux-gnu/bits/pthreadtypes.h \
  /usr/include/aarch64-linux-gnu/bits/thread-shared-types.h \
  /usr/include/aarch64-linux-gnu/bits/pthreadtypes-arch.h \
  /usr/include/aarch64-linux-gnu/bits/atomic_wide_counter.h \
  /usr/include/aarch64-linux-gnu/bits/struct_mutex.h \
  /usr/include/aarch64-linux-gnu/bits/struct_rwlock.h \
- /usr/include/alloca.h \
- /usr/include/aarch64-linux-gnu/bits/stdlib-bsearch.h \
- /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
- /usr/include/aarch64-linux-gnu/bits/stdlib.h \
+ /usr/include/alloca.h /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
  /home/ubuntu/eco_marathon_ws/build/astra_camera_msgs/rosidl_generator_c/astra_camera_msgs/msg/rosidl_generator_c__visibility_control.h \
  /home/ubuntu/eco_marathon_ws/build/astra_camera_msgs/rosidl_generator_c/astra_camera_msgs/msg/detail/device_info__struct.h \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.h \
