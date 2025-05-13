@@ -23,8 +23,12 @@ __pycache__/
 build/
 install/
 <<<<<<< HEAD
+<<<<<<< HEAD
 log/
 models/
+=======
+log/
+>>>>>>> 6a1fc5fd6ee3b144053ef6a8483c6a42e3cabed8
 =======
 log/
 >>>>>>> 6a1fc5fd6ee3b144053ef6a8483c6a42e3cabed8
