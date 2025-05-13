@@ -1,0 +1,1 @@
+/home/ubuntu/eco_marathon_ws/src/sensors/ros2_astra_camera/astra_camera_msgs/msg/Metadata.msg

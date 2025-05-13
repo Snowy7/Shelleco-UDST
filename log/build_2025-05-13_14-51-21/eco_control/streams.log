@@ -1,0 +1,23 @@
+[2.992s] Invoking command in '/home/ubuntu/eco_marathon_ws/build/eco_control': PYTHONPATH=/home/ubuntu/eco_marathon_ws/build/eco_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/eco_marathon_ws/install/eco_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ubuntu/eco_marathon_ws/build/eco_control/build --no-deps symlink_data
+[3.580s] running develop
+[3.888s] running egg_info
+[3.888s] creating eco_control.egg-info
+[3.888s] writing eco_control.egg-info/PKG-INFO
+[3.889s] writing dependency_links to eco_control.egg-info/dependency_links.txt
+[3.889s] writing entry points to eco_control.egg-info/entry_points.txt
+[3.889s] writing requirements to eco_control.egg-info/requires.txt
+[3.889s] writing top-level names to eco_control.egg-info/top_level.txt
+[3.890s] writing manifest file 'eco_control.egg-info/SOURCES.txt'
+[3.894s] reading manifest file 'eco_control.egg-info/SOURCES.txt'
+[3.895s] writing manifest file 'eco_control.egg-info/SOURCES.txt'
+[3.898s] running build_ext
+[3.898s] Creating /home/ubuntu/eco_marathon_ws/install/eco_control/lib/python3.10/site-packages/eco-control.egg-link (link to .)
+[3.900s] 
+[3.901s] Installed /home/ubuntu/eco_marathon_ws/build/eco_control
+[3.901s] running symlink_data
+[3.901s] creating /home/ubuntu/eco_marathon_ws/install/eco_control/share/ament_index
+[3.901s] creating /home/ubuntu/eco_marathon_ws/install/eco_control/share/ament_index/resource_index
+[3.902s] creating /home/ubuntu/eco_marathon_ws/install/eco_control/share/ament_index/resource_index/packages
+[3.902s] symbolically linking /home/ubuntu/eco_marathon_ws/build/eco_control/resource/eco_control -> /home/ubuntu/eco_marathon_ws/install/eco_control/share/ament_index/resource_index/packages
+[3.902s] symbolically linking /home/ubuntu/eco_marathon_ws/build/eco_control/package.xml -> /home/ubuntu/eco_marathon_ws/install/eco_control/share/eco_control
+[4.016s] Invoked command in '/home/ubuntu/eco_marathon_ws/build/eco_control' returned '0': PYTHONPATH=/home/ubuntu/eco_marathon_ws/build/eco_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/eco_marathon_ws/install/eco_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ubuntu/eco_marathon_ws/build/eco_control/build --no-deps symlink_data

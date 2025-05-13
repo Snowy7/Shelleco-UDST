@@ -1,0 +1,1 @@
+/home/ubuntu/eco_marathon_ws/build/astra_camera/ament_cmake_environment_hooks/local_setup.bash

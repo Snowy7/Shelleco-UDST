@@ -1,0 +1,1 @@
+/home/ubuntu/eco_marathon_ws/src/sensors/ros2_astra_camera/astra_camera/include/astra_camera/point_cloud_proc/depth_traits.h
