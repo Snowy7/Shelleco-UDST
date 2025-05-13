@@ -88,8 +88,6 @@ cd "$WORKSPACE_ROOT" || exit
 colcon build --symlink-install --event-handlers  console_direct+  --cmake-args  -DCMAKE_BUILD_TYPE=Release
 source "$WORKSPACE_ROOT/install/setup.bash"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 # download models
 echo "Downloading models..."
 
@@ -102,8 +100,4 @@ echo "Downloading YOLO model..."
 wget -P "$WORKSPACE_ROOT/models" https://github.com/CAIC-AD/YOLOPv2/releases/download/V0.0.1/yolopv2.pt
 
 
-=======
->>>>>>> 6a1fc5fd6ee3b144053ef6a8483c6a42e3cabed8
-=======
->>>>>>> 6a1fc5fd6ee3b144053ef6a8483c6a42e3cabed8
 echo "Setup complete. All dependencies are installed and udev rules are set."
