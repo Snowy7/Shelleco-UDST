@@ -1,0 +1,18 @@
+running develop
+running egg_info
+writing eco_perception.egg-info/PKG-INFO
+writing dependency_links to eco_perception.egg-info/dependency_links.txt
+writing entry points to eco_perception.egg-info/entry_points.txt
+writing requirements to eco_perception.egg-info/requires.txt
+writing top-level names to eco_perception.egg-info/top_level.txt
+reading manifest file 'eco_perception.egg-info/SOURCES.txt'
+writing manifest file 'eco_perception.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages/eco-perception.egg-link (link to .)
+Installing lane_detection script to /home/ubuntu/eco_marathon_ws/install/eco_perception/lib/eco_perception
+
+Installed /home/ubuntu/eco_marathon_ws/build/eco_perception
+running symlink_data
+symbolically linking /home/ubuntu/eco_marathon_ws/build/eco_perception/resource/eco_perception -> /home/ubuntu/eco_marathon_ws/install/eco_perception/share/ament_index/resource_index/packages
+symbolically linking /home/ubuntu/eco_marathon_ws/build/eco_perception/package.xml -> /home/ubuntu/eco_marathon_ws/install/eco_perception/share/eco_perception
+symbolically linking /home/ubuntu/eco_marathon_ws/build/eco_perception/launch/eco_mar.launch.py -> /home/ubuntu/eco_marathon_ws/install/eco_perception/share/eco_perception

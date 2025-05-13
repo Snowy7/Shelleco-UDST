@@ -1,1 +1,4 @@
-/home/ubuntu/eco_marathon_ws/src/sensors/ros2_astra_camera/astra_camera_msgs/srv/GetString.srv
+---
+string data
+bool success
+string message

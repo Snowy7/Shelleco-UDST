@@ -1,0 +1,33 @@
+[3.501s] Invoking command in '/home/ubuntu/eco_marathon_ws/src/eco_localization': PYTHONPATH=/home/ubuntu/eco_marathon_ws/build/eco_localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/eco_marathon_ws/install/eco_localization/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/eco_localization build --build-base /home/ubuntu/eco_marathon_ws/build/eco_localization/build install --record /home/ubuntu/eco_marathon_ws/build/eco_localization/install.log --single-version-externally-managed install_data
+[4.091s] running egg_info
+[4.091s] creating ../../build/eco_localization/eco_localization.egg-info
+[4.095s] writing ../../build/eco_localization/eco_localization.egg-info/PKG-INFO
+[4.095s] writing dependency_links to ../../build/eco_localization/eco_localization.egg-info/dependency_links.txt
+[4.095s] writing entry points to ../../build/eco_localization/eco_localization.egg-info/entry_points.txt
+[4.096s] writing requirements to ../../build/eco_localization/eco_localization.egg-info/requires.txt
+[4.096s] writing top-level names to ../../build/eco_localization/eco_localization.egg-info/top_level.txt
+[4.096s] writing manifest file '../../build/eco_localization/eco_localization.egg-info/SOURCES.txt'
+[4.104s] reading manifest file '../../build/eco_localization/eco_localization.egg-info/SOURCES.txt'
+[4.109s] writing manifest file '../../build/eco_localization/eco_localization.egg-info/SOURCES.txt'
+[4.109s] running build
+[4.109s] running build_py
+[4.110s] creating /home/ubuntu/eco_marathon_ws/build/eco_localization/build
+[4.110s] creating /home/ubuntu/eco_marathon_ws/build/eco_localization/build/lib
+[4.110s] creating /home/ubuntu/eco_marathon_ws/build/eco_localization/build/lib/eco_localization
+[4.110s] copying eco_localization/__init__.py -> /home/ubuntu/eco_marathon_ws/build/eco_localization/build/lib/eco_localization
+[4.111s] running install
+[4.111s] running install_lib
+[4.113s] creating /home/ubuntu/eco_marathon_ws/install/eco_localization/lib/python3.10/site-packages/eco_localization
+[4.114s] copying /home/ubuntu/eco_marathon_ws/build/eco_localization/build/lib/eco_localization/__init__.py -> /home/ubuntu/eco_marathon_ws/install/eco_localization/lib/python3.10/site-packages/eco_localization
+[4.116s] byte-compiling /home/ubuntu/eco_marathon_ws/install/eco_localization/lib/python3.10/site-packages/eco_localization/__init__.py to __init__.cpython-310.pyc
+[4.116s] running install_data
+[4.117s] creating /home/ubuntu/eco_marathon_ws/install/eco_localization/share/ament_index
+[4.117s] creating /home/ubuntu/eco_marathon_ws/install/eco_localization/share/ament_index/resource_index
+[4.117s] creating /home/ubuntu/eco_marathon_ws/install/eco_localization/share/ament_index/resource_index/packages
+[4.117s] copying resource/eco_localization -> /home/ubuntu/eco_marathon_ws/install/eco_localization/share/ament_index/resource_index/packages
+[4.117s] copying package.xml -> /home/ubuntu/eco_marathon_ws/install/eco_localization/share/eco_localization
+[4.117s] running install_egg_info
+[4.122s] Copying ../../build/eco_localization/eco_localization.egg-info to /home/ubuntu/eco_marathon_ws/install/eco_localization/lib/python3.10/site-packages/eco_localization-0.0.0-py3.10.egg-info
+[4.124s] running install_scripts
+[4.174s] writing list of installed files to '/home/ubuntu/eco_marathon_ws/build/eco_localization/install.log'
+[4.297s] Invoked command in '/home/ubuntu/eco_marathon_ws/src/eco_localization' returned '0': PYTHONPATH=/home/ubuntu/eco_marathon_ws/build/eco_localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/eco_marathon_ws/install/eco_localization/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/eco_localization build --build-base /home/ubuntu/eco_marathon_ws/build/eco_localization/build install --record /home/ubuntu/eco_marathon_ws/build/eco_localization/install.log --single-version-externally-managed install_data

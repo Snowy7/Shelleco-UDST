@@ -1,1 +1,1 @@
-/home/ubuntu/eco_marathon_ws/build/eco_interfaces/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/eco_interfaces
+rosidl_default_runtime;std_msgs

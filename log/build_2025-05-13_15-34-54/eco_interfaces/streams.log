@@ -1,0 +1,312 @@
+[0.648s] Invoking command in '/home/ubuntu/eco_marathon_ws/build/eco_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble /home/ubuntu/.local/bin/cmake --build /home/ubuntu/eco_marathon_ws/build/eco_interfaces -- -j8 -l8
+[1.857s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[1.858s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[1.858s]   CMake.
+[1.858s] 
+[1.858s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[1.858s]   to tell CMake that the project requires at least <min> but has been updated
+[1.858s]   to work with policies introduced by <max> or earlier.
+[1.858s] 
+[1.858s] [0m
+[1.859s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.859s] -- Found std_msgs: 4.8.0 (/opt/ros/humble/share/std_msgs/cmake)
+[1.859s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.860s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.860s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.860s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.860s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.860s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[1.861s] -- Found geometry_msgs: 4.8.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[2.665s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[6.325s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[8.008s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[8.013s] [33mCMake Warning (dev) at /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:20 (find_package):
+[8.013s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[8.014s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[8.014s]   the cmake_policy command to set the policy and suppress this warning.
+[8.014s] 
+[8.014s] Call Stack (most recent call first):
+[8.014s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[8.014s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[8.014s]   CMakeLists.txt:15 (rosidl_generate_interfaces)
+[8.014s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[8.014s] [0m
+[8.120s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[8.121s] [33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:52 (find_package):
+[8.121s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[8.121s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[8.121s]   the cmake_policy command to set the policy and suppress this warning.
+[8.121s] 
+[8.121s] Call Stack (most recent call first):
+[8.121s]   /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+[8.121s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[8.122s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[8.122s]   CMakeLists.txt:15 (rosidl_generate_interfaces)
+[8.122s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[8.122s] [0m
+[8.178s] [33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:140 (find_package):
+[8.179s]   Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+[8.179s]   are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+[8.179s]   the cmake_policy command to set the policy and suppress this warning.
+[8.179s] 
+[8.179s] Call Stack (most recent call first):
+[8.179s]   /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+[8.179s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[8.180s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[8.180s]   CMakeLists.txt:15 (rosidl_generate_interfaces)
+[8.180s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[8.180s] [0m
+[8.182s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[8.183s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[8.183s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+[8.311s] -- Configuring done (7.5s)
+[8.457s] -- Generating done (0.1s)
+[8.480s] -- Build files have been written to: /home/ubuntu/eco_marathon_ws/build/eco_interfaces
+[8.657s] [  3%] Built target eco_interfaces__cpp
+[8.705s] [  6%] [32mBuilding C object CMakeFiles/eco_interfaces__rosidl_generator_c.dir/rosidl_generator_c/eco_interfaces/msg/detail/lane_detection__functions.c.o[0m
+[8.737s] [  6%] Built target ament_cmake_python_copy_eco_interfaces
+[8.817s] [ 12%] [32mBuilding CXX object CMakeFiles/eco_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/eco_interfaces/msg/lane_detection__type_support.cpp.o[0m
+[8.817s] [ 12%] [32mBuilding CXX object CMakeFiles/eco_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/eco_interfaces/msg/detail/dds_fastrtps/lane_detection__type_support.cpp.o[0m
+[8.825s] [ 16%] [32mBuilding CXX object CMakeFiles/eco_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/eco_interfaces/msg/detail/lane_detection__type_support.cpp.o[0m
+[8.953s] [ 19%] [32m[1mLinking C shared library libeco_interfaces__rosidl_generator_c.so[0m
+[9.149s] [ 22%] Built target eco_interfaces__rosidl_generator_c
+[9.222s] [ 25%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[9.236s] [ 29%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[9.245s] [ 32%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[9.981s] [ 35%] [32m[1mLinking CXX shared library libeco_interfaces__rosidl_typesupport_cpp.so[0m
+[10.161s] running egg_info
+[10.164s] writing eco_interfaces.egg-info/PKG-INFO
+[10.166s] writing dependency_links to eco_interfaces.egg-info/dependency_links.txt
+[10.182s] [ 38%] Built target eco_interfaces__rosidl_typesupport_cpp
+[10.183s] writing top-level names to eco_interfaces.egg-info/top_level.txt
+[10.191s] reading manifest file 'eco_interfaces.egg-info/SOURCES.txt'
+[10.194s] writing manifest file 'eco_interfaces.egg-info/SOURCES.txt'
+[10.398s] [ 41%] [32mBuilding CXX object CMakeFiles/eco_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/eco_interfaces/msg/lane_detection__type_support.cpp.o[0m
+[10.403s] [ 41%] Built target ament_cmake_python_build_eco_interfaces_egg
+[10.492s] [ 45%] [32mBuilding C object CMakeFiles/eco_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/eco_interfaces/msg/detail/lane_detection__type_support.c.o[0m
+[10.518s] [ 48%] [32mBuilding CXX object CMakeFiles/eco_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/eco_interfaces/msg/detail/lane_detection__type_support_c.cpp.o[0m
+[10.577s] [ 51%] [32m[1mLinking CXX shared library libeco_interfaces__rosidl_typesupport_c.so[0m
+[10.677s] [ 54%] [32m[1mLinking CXX shared library libeco_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[10.774s] [ 58%] [32m[1mLinking C shared library libeco_interfaces__rosidl_typesupport_introspection_c.so[0m
+[10.781s] [ 58%] Built target eco_interfaces__rosidl_typesupport_c
+[10.899s] [ 58%] Built target eco_interfaces__rosidl_typesupport_introspection_c
+[10.984s] [ 61%] [32m[1mLinking CXX shared library libeco_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[11.054s] [ 64%] Built target eco_interfaces__rosidl_typesupport_introspection_cpp
+[11.330s] [ 67%] Built target eco_interfaces__rosidl_typesupport_fastrtps_cpp
+[11.761s] [ 70%] [32m[1mLinking CXX shared library libeco_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[12.158s] [ 70%] Built target eco_interfaces__rosidl_typesupport_fastrtps_c
+[12.250s] [ 70%] Built target eco_interfaces
+[12.362s] [ 74%] [34m[1mGenerating Python code for ROS interfaces[0m
+[13.461s] [ 74%] Built target eco_interfaces__py
+[13.617s] [ 77%] [32mBuilding C object CMakeFiles/eco_interfaces__rosidl_generator_py.dir/rosidl_generator_py/eco_interfaces/msg/_lane_detection_s.c.o[0m
+[14.145s] [ 80%] [32m[1mLinking C shared library rosidl_generator_py/eco_interfaces/libeco_interfaces__rosidl_generator_py.so[0m
+[14.338s] [ 80%] Built target eco_interfaces__rosidl_generator_py
+[14.458s] [ 83%] [32mBuilding C object CMakeFiles/eco_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/eco_interfaces/_eco_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[14.493s] [ 90%] [32mBuilding C object CMakeFiles/eco_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/eco_interfaces/_eco_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[14.494s] [ 90%] [32mBuilding C object CMakeFiles/eco_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/eco_interfaces/_eco_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[14.886s] [ 93%] [32m[1mLinking C shared library rosidl_generator_py/eco_interfaces/eco_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so[0m
+[14.891s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/eco_interfaces/eco_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so[0m
+[14.929s] [100%] [32m[1mLinking C shared library rosidl_generator_py/eco_interfaces/eco_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so[0m
+[15.086s] [100%] Built target eco_interfaces__rosidl_typesupport_introspection_c__pyext
+[15.098s] [100%] Built target eco_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[15.149s] [100%] Built target eco_interfaces__rosidl_typesupport_c__pyext
+[15.183s] Invoked command in '/home/ubuntu/eco_marathon_ws/build/eco_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble /home/ubuntu/.local/bin/cmake --build /home/ubuntu/eco_marathon_ws/build/eco_interfaces -- -j8 -l8
+[15.206s] Invoking command in '/home/ubuntu/eco_marathon_ws/build/eco_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble /home/ubuntu/.local/bin/cmake --install /home/ubuntu/eco_marathon_ws/build/eco_interfaces
+[15.485s] -- Install configuration: ""
+[15.486s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/ament_index/resource_index/rosidl_interfaces/eco_interfaces
+[15.487s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces
+[15.488s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg
+[15.488s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/stop_sign.h
+[15.489s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/system_state.h
+[15.490s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/obstacles.h
+[15.490s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail
+[15.491s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/obstacle__type_support.h
+[15.492s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/obstacle__functions.h
+[15.492s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/stop_sign__functions.h
+[15.493s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/obstacle__functions.c
+[15.494s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/parking_area__functions.h
+[15.494s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/parking_area__functions.c
+[15.495s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/system_state__struct.h
+[15.496s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/system_state__functions.c
+[15.496s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/lane_detection__type_support.h
+[15.497s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/parking_area__type_support.h
+[15.498s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/obstacles__functions.c
+[15.499s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/lane_detection__functions.c
+[15.500s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/lane_detection__functions.h
+[15.500s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/stop_sign__functions.c
+[15.500s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/stop_sign__type_support.h
+[15.501s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/obstacles__type_support.h
+[15.502s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/obstacles__functions.h
+[15.503s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/stop_sign__struct.h
+[15.503s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/obstacle__struct.h
+[15.504s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/obstacles__struct.h
+[15.505s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/system_state__type_support.h
+[15.505s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/lane_detection__struct.h
+[15.506s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/parking_area__struct.h
+[15.507s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/system_state__functions.h
+[15.507s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/rosidl_generator_c__visibility_control.h
+[15.508s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/obstacle.h
+[15.509s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/lane_detection.h
+[15.510s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/parking_area.h
+[15.511s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/environment/library_path.sh
+[15.511s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/environment/library_path.dsv
+[15.512s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/lib/libeco_interfaces__rosidl_generator_c.so
+[15.513s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/eco_marathon_ws/install/eco_interfaces/lib/libeco_interfaces__rosidl_generator_c.so" to ""
+[15.513s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces
+[15.514s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg
+[15.514s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[15.515s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail
+[15.515s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/lane_detection__rosidl_typesupport_fastrtps_c.h
+[15.516s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/lib/libeco_interfaces__rosidl_typesupport_fastrtps_c.so
+[15.517s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/eco_marathon_ws/install/eco_interfaces/lib/libeco_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[15.518s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces
+[15.518s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg
+[15.518s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/parking_area.hpp
+[15.519s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/system_state.hpp
+[15.520s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/lane_detection.hpp
+[15.520s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/obstacles.hpp
+[15.521s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/stop_sign.hpp
+[15.522s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/obstacle.hpp
+[15.522s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[15.523s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail
+[15.523s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/obstacles__traits.hpp
+[15.524s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/stop_sign__builder.hpp
+[15.525s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/obstacle__traits.hpp
+[15.525s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/system_state__builder.hpp
+[15.526s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/lane_detection__struct.hpp
+[15.526s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/obstacle__builder.hpp
+[15.527s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/stop_sign__type_support.hpp
+[15.528s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/lane_detection__builder.hpp
+[15.528s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/parking_area__type_support.hpp
+[15.529s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/parking_area__builder.hpp
+[15.529s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/parking_area__struct.hpp
+[15.530s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/system_state__type_support.hpp
+[15.531s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/obstacle__struct.hpp
+[15.531s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/system_state__struct.hpp
+[15.532s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/parking_area__traits.hpp
+[15.533s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/obstacles__builder.hpp
+[15.533s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/obstacle__type_support.hpp
+[15.534s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/system_state__traits.hpp
+[15.535s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/lane_detection__type_support.hpp
+[15.535s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/stop_sign__struct.hpp
+[15.536s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/obstacles__type_support.hpp
+[15.536s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/obstacles__struct.hpp
+[15.537s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/stop_sign__traits.hpp
+[15.538s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/lane_detection__traits.hpp
+[15.539s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces
+[15.539s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg
+[15.539s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[15.540s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail
+[15.540s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/obstacle__rosidl_typesupport_fastrtps_cpp.hpp
+[15.541s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/system_state__rosidl_typesupport_fastrtps_cpp.hpp
+[15.542s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/lane_detection__rosidl_typesupport_fastrtps_cpp.hpp
+[15.542s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/parking_area__rosidl_typesupport_fastrtps_cpp.hpp
+[15.543s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/dds_fastrtps
+[15.544s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/stop_sign__rosidl_typesupport_fastrtps_cpp.hpp
+[15.544s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/obstacles__rosidl_typesupport_fastrtps_cpp.hpp
+[15.545s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/lib/libeco_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[15.547s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/eco_marathon_ws/install/eco_interfaces/lib/libeco_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[15.547s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces
+[15.547s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg
+[15.548s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[15.549s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail
+[15.549s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/lane_detection__type_support.c
+[15.550s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/lane_detection__rosidl_typesupport_introspection_c.h
+[15.551s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/lib/libeco_interfaces__rosidl_typesupport_introspection_c.so
+[15.552s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/eco_marathon_ws/install/eco_interfaces/lib/libeco_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[15.552s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/lib/libeco_interfaces__rosidl_typesupport_c.so
+[15.554s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/eco_marathon_ws/install/eco_interfaces/lib/libeco_interfaces__rosidl_typesupport_c.so" to ""
+[15.554s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces
+[15.554s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg
+[15.555s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail
+[15.555s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/parking_area__type_support.cpp
+[15.556s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/obstacle__rosidl_typesupport_introspection_cpp.hpp
+[15.557s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/parking_area__rosidl_typesupport_introspection_cpp.hpp
+[15.557s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/lane_detection__rosidl_typesupport_introspection_cpp.hpp
+[15.558s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/lane_detection__type_support.cpp
+[15.558s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/stop_sign__rosidl_typesupport_introspection_cpp.hpp
+[15.559s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/system_state__type_support.cpp
+[15.560s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/system_state__rosidl_typesupport_introspection_cpp.hpp
+[15.560s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/stop_sign__type_support.cpp
+[15.561s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/obstacles__rosidl_typesupport_introspection_cpp.hpp
+[15.562s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/obstacles__type_support.cpp
+[15.562s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/include/eco_interfaces/eco_interfaces/msg/detail/obstacle__type_support.cpp
+[15.563s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/lib/libeco_interfaces__rosidl_typesupport_introspection_cpp.so
+[15.565s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/eco_marathon_ws/install/eco_interfaces/lib/libeco_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[15.565s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/lib/libeco_interfaces__rosidl_typesupport_cpp.so
+[15.567s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/eco_marathon_ws/install/eco_interfaces/lib/libeco_interfaces__rosidl_typesupport_cpp.so" to ""
+[15.567s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/environment/pythonpath.sh
+[15.568s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/environment/pythonpath.dsv
+[15.569s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces-0.0.0-py3.10.egg-info
+[15.570s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[15.570s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[15.571s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[15.571s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[15.572s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces
+[15.573s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces/libeco_interfaces__rosidl_generator_py.so
+[15.574s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces/msg
+[15.574s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces/msg/__init__.py
+[15.575s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces/msg/_lane_detection.py
+[15.576s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces/msg/_lane_detection_s.c
+[15.576s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces/__init__.py
+[15.577s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces/_eco_interfaces_s.ep.rosidl_typesupport_c.c
+[15.578s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces/_eco_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[15.579s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces/eco_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[15.579s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces/eco_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[15.580s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces/eco_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[15.581s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces/_eco_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[15.828s] Listing '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces'...
+[15.828s] Compiling '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces/__init__.py'...
+[15.829s] Listing '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces/msg'...
+[15.829s] Compiling '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces/msg/__init__.py'...
+[15.829s] Compiling '/home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces/msg/_lane_detection.py'...
+[15.864s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces/eco_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[15.865s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces/eco_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so" to ""
+[15.865s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces/eco_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[15.865s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces/eco_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so" to ""
+[15.866s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces/eco_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[15.866s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/eco_marathon_ws/install/eco_interfaces/local/lib/python3.10/dist-packages/eco_interfaces/eco_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so" to ""
+[15.867s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/lib/libeco_interfaces__rosidl_generator_py.so
+[15.867s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/eco_marathon_ws/install/eco_interfaces/lib/libeco_interfaces__rosidl_generator_py.so" to ""
+[15.867s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/msg/LaneDetection.idl
+[15.868s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/msg/LaneDetection.msg
+[15.868s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/ament_index/resource_index/package_run_dependencies/eco_interfaces
+[15.868s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/ament_index/resource_index/parent_prefix_path/eco_interfaces
+[15.869s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/environment/ament_prefix_path.sh
+[15.869s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/environment/ament_prefix_path.dsv
+[15.869s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/environment/path.sh
+[15.869s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/environment/path.dsv
+[15.870s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/local_setup.bash
+[15.870s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/local_setup.sh
+[15.870s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/local_setup.zsh
+[15.870s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/local_setup.dsv
+[15.871s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/package.dsv
+[15.871s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/ament_index/resource_index/packages/eco_interfaces
+[15.871s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/export_eco_interfaces__rosidl_generator_cExport.cmake
+[15.872s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/export_eco_interfaces__rosidl_generator_cExport-noconfig.cmake
+[15.876s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/export_eco_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[15.876s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/export_eco_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[15.876s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/export_eco_interfaces__rosidl_generator_cppExport.cmake
+[15.877s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/export_eco_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[15.877s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/export_eco_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[15.877s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/eco_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[15.878s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/eco_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[15.879s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/eco_interfaces__rosidl_typesupport_cExport.cmake
+[15.880s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/eco_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[15.880s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/eco_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[15.882s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/eco_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[15.882s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/eco_interfaces__rosidl_typesupport_cppExport.cmake
+[15.884s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/eco_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[15.884s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/export_eco_interfaces__rosidl_generator_pyExport.cmake
+[15.886s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/export_eco_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[15.887s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/rosidl_cmake-extras.cmake
+[15.887s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[15.889s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[15.889s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[15.892s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[15.892s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[15.893s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[15.894s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/eco_interfacesConfig.cmake
+[15.895s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/cmake/eco_interfacesConfig-version.cmake
+[15.896s] -- Installing: /home/ubuntu/eco_marathon_ws/install/eco_interfaces/share/eco_interfaces/package.xml
+[15.917s] Invoked command in '/home/ubuntu/eco_marathon_ws/build/eco_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble /home/ubuntu/.local/bin/cmake --install /home/ubuntu/eco_marathon_ws/build/eco_interfaces

@@ -1,0 +1,233 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-98b9e377a6e88ad2f24c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				},
+				{
+					"build" : "astra_camera_msgs__py",
+					"jsonFile" : "directory-astra_camera_msgs__py-dc8ac8f160a72969ff62.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/ubuntu/eco_marathon_ws/build/astra_camera_msgs/astra_camera_msgs__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "astra_camera_msgs",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_astra_camera_msgs_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_astra_camera_msgs_egg-d7f6347cfe9e843f502d.json",
+					"name" : "ament_cmake_python_build_astra_camera_msgs_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_astra_camera_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_astra_camera_msgs-3e445238c6d99b2e2d4a.json",
+					"name" : "ament_cmake_python_copy_astra_camera_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "astra_camera_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-astra_camera_msgs-1bac3c1616f67af17816.json",
+					"name" : "astra_camera_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "astra_camera_msgs__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-astra_camera_msgs__cpp-798a599b217cb3dd0caf.json",
+					"name" : "astra_camera_msgs__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "astra_camera_msgs__py::@cfb567643703981b03b4",
+					"jsonFile" : "target-astra_camera_msgs__py-6c46f6523afa3b812e56.json",
+					"name" : "astra_camera_msgs__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "astra_camera_msgs__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-astra_camera_msgs__rosidl_generator_c-bdab5514ab73aafd8fb4.json",
+					"name" : "astra_camera_msgs__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "astra_camera_msgs__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-astra_camera_msgs__rosidl_generator_py-601287e8d0ac5b9e9cb4.json",
+					"name" : "astra_camera_msgs__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "astra_camera_msgs__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-astra_camera_msgs__rosidl_typesupport_c-f397409adc29ce620e95.json",
+					"name" : "astra_camera_msgs__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "astra_camera_msgs__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-astra_camera_msgs__rosidl_typesupport_c__pyext-a7537ad51f8d4ba277fa.json",
+					"name" : "astra_camera_msgs__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "astra_camera_msgs__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-astra_camera_msgs__rosidl_typesupport_cpp-d7f80e2532d8f21dd838.json",
+					"name" : "astra_camera_msgs__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "astra_camera_msgs__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-astra_camera_msgs__rosidl_typesupport_fastrtps_c-b070c2ba60b6c232ddab.json",
+					"name" : "astra_camera_msgs__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "astra_camera_msgs__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-astra_camera_msgs__rosidl_typesupport_fastrtps_c__pyext-2ba0226bac78cd6851c9.json",
+					"name" : "astra_camera_msgs__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "astra_camera_msgs__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-astra_camera_msgs__rosidl_typesupport_fastrtps_cpp-2e96dc68eba2d0c2d714.json",
+					"name" : "astra_camera_msgs__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "astra_camera_msgs__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-astra_camera_msgs__rosidl_typesupport_introspection_c-9acfbe434bfae670632c.json",
+					"name" : "astra_camera_msgs__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "astra_camera_msgs__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-astra_camera_msgs__rosidl_typesupport_introspection_c__pyext-60ddbfd47ee7550d96ad.json",
+					"name" : "astra_camera_msgs__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "astra_camera_msgs__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-astra_camera_msgs__rosidl_typesupport_introspection_cpp-b5edef0baeb1ab3d4423.json",
+					"name" : "astra_camera_msgs__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "astra_camera_msgs_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-astra_camera_msgs_uninstall-a7f3da9e36af9121d21b.json",
+					"name" : "astra_camera_msgs_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-a0fb74b9b85944996009.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/ubuntu/eco_marathon_ws/build/astra_camera_msgs",
+		"source" : "/home/ubuntu/eco_marathon_ws/src/sensors/ros2_astra_camera/astra_camera_msgs"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

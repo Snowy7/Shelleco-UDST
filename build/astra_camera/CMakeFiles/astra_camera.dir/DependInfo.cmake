@@ -22,8 +22,12 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/ubuntu/eco_marathon_ws/src/sensors/ros2_astra_camera/astra_camera/src/uvc_camera_driver.cpp" "CMakeFiles/astra_camera.dir/src/uvc_camera_driver.cpp.o" "gcc" "CMakeFiles/astra_camera.dir/src/uvc_camera_driver.cpp.o.d"
   )
 
-# Targets to which this target links.
-set(CMAKE_TARGET_LINKED_INFO_FILES
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

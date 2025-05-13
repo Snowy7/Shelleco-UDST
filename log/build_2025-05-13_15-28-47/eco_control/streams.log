@@ -1,0 +1,33 @@
+[3.505s] Invoking command in '/home/ubuntu/eco_marathon_ws/src/eco_control': PYTHONPATH=/home/ubuntu/eco_marathon_ws/build/eco_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/eco_marathon_ws/install/eco_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/eco_control build --build-base /home/ubuntu/eco_marathon_ws/build/eco_control/build install --record /home/ubuntu/eco_marathon_ws/build/eco_control/install.log --single-version-externally-managed install_data
+[4.113s] running egg_info
+[4.115s] creating ../../build/eco_control/eco_control.egg-info
+[4.115s] writing ../../build/eco_control/eco_control.egg-info/PKG-INFO
+[4.116s] writing dependency_links to ../../build/eco_control/eco_control.egg-info/dependency_links.txt
+[4.116s] writing entry points to ../../build/eco_control/eco_control.egg-info/entry_points.txt
+[4.116s] writing requirements to ../../build/eco_control/eco_control.egg-info/requires.txt
+[4.116s] writing top-level names to ../../build/eco_control/eco_control.egg-info/top_level.txt
+[4.117s] writing manifest file '../../build/eco_control/eco_control.egg-info/SOURCES.txt'
+[4.125s] reading manifest file '../../build/eco_control/eco_control.egg-info/SOURCES.txt'
+[4.130s] writing manifest file '../../build/eco_control/eco_control.egg-info/SOURCES.txt'
+[4.130s] running build
+[4.131s] running build_py
+[4.131s] creating /home/ubuntu/eco_marathon_ws/build/eco_control/build
+[4.131s] creating /home/ubuntu/eco_marathon_ws/build/eco_control/build/lib
+[4.131s] creating /home/ubuntu/eco_marathon_ws/build/eco_control/build/lib/eco_control
+[4.132s] copying eco_control/__init__.py -> /home/ubuntu/eco_marathon_ws/build/eco_control/build/lib/eco_control
+[4.133s] running install
+[4.134s] running install_lib
+[4.137s] creating /home/ubuntu/eco_marathon_ws/install/eco_control/lib/python3.10/site-packages/eco_control
+[4.137s] copying /home/ubuntu/eco_marathon_ws/build/eco_control/build/lib/eco_control/__init__.py -> /home/ubuntu/eco_marathon_ws/install/eco_control/lib/python3.10/site-packages/eco_control
+[4.140s] byte-compiling /home/ubuntu/eco_marathon_ws/install/eco_control/lib/python3.10/site-packages/eco_control/__init__.py to __init__.cpython-310.pyc
+[4.141s] running install_data
+[4.144s] creating /home/ubuntu/eco_marathon_ws/install/eco_control/share/ament_index
+[4.144s] creating /home/ubuntu/eco_marathon_ws/install/eco_control/share/ament_index/resource_index
+[4.145s] creating /home/ubuntu/eco_marathon_ws/install/eco_control/share/ament_index/resource_index/packages
+[4.145s] copying resource/eco_control -> /home/ubuntu/eco_marathon_ws/install/eco_control/share/ament_index/resource_index/packages
+[4.145s] copying package.xml -> /home/ubuntu/eco_marathon_ws/install/eco_control/share/eco_control
+[4.146s] running install_egg_info
+[4.150s] Copying ../../build/eco_control/eco_control.egg-info to /home/ubuntu/eco_marathon_ws/install/eco_control/lib/python3.10/site-packages/eco_control-0.0.0-py3.10.egg-info
+[4.152s] running install_scripts
+[4.206s] writing list of installed files to '/home/ubuntu/eco_marathon_ws/build/eco_control/install.log'
+[4.336s] Invoked command in '/home/ubuntu/eco_marathon_ws/src/eco_control' returned '0': PYTHONPATH=/home/ubuntu/eco_marathon_ws/build/eco_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/eco_marathon_ws/install/eco_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/eco_control build --build-base /home/ubuntu/eco_marathon_ws/build/eco_control/build install --record /home/ubuntu/eco_marathon_ws/build/eco_control/install.log --single-version-externally-managed install_data

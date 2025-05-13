@@ -1,1 +1,4 @@
-/home/ubuntu/eco_marathon_ws/build/astra_camera_msgs/rosidl_cmake/srv/GetCameraInfo_Response.msg
+
+sensor_msgs/CameraInfo info
+bool success
+string message

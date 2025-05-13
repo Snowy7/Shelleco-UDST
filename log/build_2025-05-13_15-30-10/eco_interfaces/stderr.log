@@ -1,0 +1,210 @@
+[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+[0m
+[33mCMake Warning (dev) at /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:20 (find_package):
+  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+  CMakeLists.txt:26 (rosidl_generate_interfaces)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:52 (find_package):
+  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+  CMakeLists.txt:26 (rosidl_generate_interfaces)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:140 (find_package):
+  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+Call Stack (most recent call first):
+  /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)
+  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+  CMakeLists.txt:26 (rosidl_generate_interfaces)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+In file included from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/obstacle__functions.h:19[m[K,
+                 from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/obstacle__functions.c:4[m[K:
+[01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/obstacle__struct.h:22:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/detail/header__struct.h: No such file or directory
+   22 | #include [01;31m[K"std_msgs/msg/detail/header__struct.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_generator_c.dir/build.make:202: CMakeFiles/eco_interfaces__rosidl_generator_c.dir/rosidl_generator_c/eco_interfaces/msg/detail/obstacle__functions.c.o] Error 1
+In file included from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/lane_detection__functions.h:19[m[K,
+                 from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/lane_detection__functions.c:4[m[K:
+[01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/lane_detection__struct.h:22:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/detail/header__struct.h: No such file or directory
+   22 | #include [01;31m[K"std_msgs/msg/detail/header__struct.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_generator_c.dir/build.make:188: CMakeFiles/eco_interfaces__rosidl_generator_c.dir/rosidl_generator_c/eco_interfaces/msg/detail/lane_detection__functions.c.o] Error 1
+In file included from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/parking_area__functions.h:19[m[K,
+                 from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/parking_area__functions.c:4[m[K:
+[01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/parking_area__struct.h:22:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/detail/header__struct.h: No such file or directory
+   22 | #include [01;31m[K"std_msgs/msg/detail/header__struct.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+In file included from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/stop_sign__functions.h:19[m[K,
+                 from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/stop_sign__functions.c:4[m[K:
+[01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/stop_sign__struct.h:22:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/detail/header__struct.h: No such file or directory
+   22 | #include [01;31m[K"std_msgs/msg/detail/header__struct.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_generator_c.dir/build.make:244: CMakeFiles/eco_interfaces__rosidl_generator_c.dir/rosidl_generator_c/eco_interfaces/msg/detail/stop_sign__functions.c.o] Error 1
+gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_generator_c.dir/build.make:230: CMakeFiles/eco_interfaces__rosidl_generator_c.dir/rosidl_generator_c/eco_interfaces/msg/detail/parking_area__functions.c.o] Error 1
+In file included from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/obstacles__functions.h:19[m[K,
+                 from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/obstacles__functions.c:4[m[K:
+[01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/obstacles__struct.h:22:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/detail/header__struct.h: No such file or directory
+   22 | #include [01;31m[K"std_msgs/msg/detail/header__struct.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_generator_c.dir/build.make:216: CMakeFiles/eco_interfaces__rosidl_generator_c.dir/rosidl_generator_c/eco_interfaces/msg/detail/obstacles__functions.c.o] Error 1
+In file included from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/system_state__functions.h:19[m[K,
+                 from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/system_state__functions.c:4[m[K:
+[01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/system_state__struct.h:82:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/detail/header__struct.h: No such file or directory
+   82 | #include [01;31m[K"std_msgs/msg/detail/header__struct.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_generator_c.dir/build.make:258: CMakeFiles/eco_interfaces__rosidl_generator_c.dir/rosidl_generator_c/eco_interfaces/msg/detail/system_state__functions.c.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:258: CMakeFiles/eco_interfaces__rosidl_generator_c.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+In file included from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_typesupport_cpp/eco_interfaces/msg/obstacles__type_support.cpp:7[m[K:
+[01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_cpp/eco_interfaces/msg/detail/obstacles__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/detail/header__struct.hpp: No such file or directory
+   20 | #include [01;31m[K"std_msgs/msg/detail/header__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_typesupport_cpp.dir/build.make:137: CMakeFiles/eco_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/eco_interfaces/msg/obstacles__type_support.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+In file included from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_typesupport_cpp/eco_interfaces/msg/stop_sign__type_support.cpp:7[m[K:
+[01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_cpp/eco_interfaces/msg/detail/stop_sign__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/detail/header__struct.hpp: No such file or directory
+   20 | #include [01;31m[K"std_msgs/msg/detail/header__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_typesupport_cpp.dir/build.make:165: CMakeFiles/eco_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/eco_interfaces/msg/stop_sign__type_support.cpp.o] Error 1
+In file included from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_typesupport_cpp/eco_interfaces/msg/obstacle__type_support.cpp:7[m[K:
+[01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_cpp/eco_interfaces/msg/detail/obstacle__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/detail/header__struct.hpp: No such file or directory
+   20 | #include [01;31m[K"std_msgs/msg/detail/header__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+In file included from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_typesupport_cpp/eco_interfaces/msg/parking_area__type_support.cpp:7[m[K:
+[01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_cpp/eco_interfaces/msg/detail/parking_area__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/detail/header__struct.hpp: No such file or directory
+   20 | #include [01;31m[K"std_msgs/msg/detail/header__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_typesupport_cpp.dir/build.make:123: CMakeFiles/eco_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/eco_interfaces/msg/obstacle__type_support.cpp.o] Error 1
+gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_typesupport_cpp.dir/build.make:151: CMakeFiles/eco_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/eco_interfaces/msg/parking_area__type_support.cpp.o] Error 1
+In file included from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_typesupport_cpp/eco_interfaces/msg/lane_detection__type_support.cpp:7[m[K:
+[01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_cpp/eco_interfaces/msg/detail/lane_detection__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/detail/header__struct.hpp: No such file or directory
+   20 | #include [01;31m[K"std_msgs/msg/detail/header__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_typesupport_cpp.dir/build.make:109: CMakeFiles/eco_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/eco_interfaces/msg/lane_detection__type_support.cpp.o] Error 1
+In file included from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_typesupport_cpp/eco_interfaces/msg/system_state__type_support.cpp:7[m[K:
+[01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_cpp/eco_interfaces/msg/detail/system_state__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/detail/header__struct.hpp: No such file or directory
+   20 | #include [01;31m[K"std_msgs/msg/detail/header__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_typesupport_cpp.dir/build.make:179: CMakeFiles/eco_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/eco_interfaces/msg/system_state__type_support.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:482: CMakeFiles/eco_interfaces__rosidl_typesupport_cpp.dir/all] Error 2
+In file included from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_typesupport_introspection_cpp/eco_interfaces/msg/detail/obstacle__type_support.cpp:12[m[K:
+[01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_cpp/eco_interfaces/msg/detail/obstacle__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/detail/header__struct.hpp: No such file or directory
+   20 | #include [01;31m[K"std_msgs/msg/detail/header__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+In file included from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_typesupport_introspection_cpp/eco_interfaces/msg/detail/obstacles__type_support.cpp:12[m[K:
+[01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_cpp/eco_interfaces/msg/detail/obstacles__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/detail/header__struct.hpp: No such file or directory
+   20 | #include [01;31m[K"std_msgs/msg/detail/header__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make:157: CMakeFiles/eco_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/eco_interfaces/msg/detail/obstacles__type_support.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make:143: CMakeFiles/eco_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/eco_interfaces/msg/detail/obstacle__type_support.cpp.o] Error 1
+In file included from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_typesupport_introspection_cpp/eco_interfaces/msg/detail/parking_area__type_support.cpp:12[m[K:
+[01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_cpp/eco_interfaces/msg/detail/parking_area__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/detail/header__struct.hpp: No such file or directory
+   20 | #include [01;31m[K"std_msgs/msg/detail/header__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+In file included from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_typesupport_introspection_cpp/eco_interfaces/msg/detail/stop_sign__type_support.cpp:12[m[K:
+[01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_cpp/eco_interfaces/msg/detail/stop_sign__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/detail/header__struct.hpp: No such file or directory
+   20 | #include [01;31m[K"std_msgs/msg/detail/header__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make:171: CMakeFiles/eco_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/eco_interfaces/msg/detail/parking_area__type_support.cpp.o] Error 1
+gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make:185: CMakeFiles/eco_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/eco_interfaces/msg/detail/stop_sign__type_support.cpp.o] Error 1
+In file included from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_typesupport_introspection_cpp/eco_interfaces/msg/detail/lane_detection__type_support.cpp:12[m[K:
+[01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_cpp/eco_interfaces/msg/detail/lane_detection__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/detail/header__struct.hpp: No such file or directory
+   20 | #include [01;31m[K"std_msgs/msg/detail/header__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make:129: CMakeFiles/eco_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/eco_interfaces/msg/detail/lane_detection__type_support.cpp.o] Error 1
+In file included from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_typesupport_introspection_cpp/eco_interfaces/msg/detail/system_state__type_support.cpp:12[m[K:
+[01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_cpp/eco_interfaces/msg/detail/system_state__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/detail/header__struct.hpp: No such file or directory
+   20 | #include [01;31m[K"std_msgs/msg/detail/header__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make:199: CMakeFiles/eco_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/eco_interfaces/msg/detail/system_state__type_support.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:450: CMakeFiles/eco_interfaces__rosidl_typesupport_introspection_cpp.dir/all] Error 2
+In file included from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_typesupport_fastrtps_cpp/eco_interfaces/msg/detail/parking_area__rosidl_typesupport_fastrtps_cpp.hpp:11[m[K,
+                 from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_typesupport_fastrtps_cpp/eco_interfaces/msg/detail/dds_fastrtps/parking_area__type_support.cpp:4[m[K:
+[01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_cpp/eco_interfaces/msg/detail/parking_area__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/detail/header__struct.hpp: No such file or directory
+   20 | #include [01;31m[K"std_msgs/msg/detail/header__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_typesupport_fastrtps_cpp/eco_interfaces/msg/detail/obstacle__rosidl_typesupport_fastrtps_cpp.hpp:11[m[K,
+                 from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_typesupport_fastrtps_cpp/eco_interfaces/msg/detail/dds_fastrtps/obstacle__type_support.cpp:4[m[K:
+[01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_cpp/eco_interfaces/msg/detail/obstacle__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/detail/header__struct.hpp: No such file or directory
+   20 | #include [01;31m[K"std_msgs/msg/detail/header__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+compilation terminated.
+In file included from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_typesupport_fastrtps_cpp/eco_interfaces/msg/detail/stop_sign__rosidl_typesupport_fastrtps_cpp.hpp:11[m[K,
+                 from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_typesupport_fastrtps_cpp/eco_interfaces/msg/detail/dds_fastrtps/stop_sign__type_support.cpp:4[m[K:
+[01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_cpp/eco_interfaces/msg/detail/stop_sign__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/detail/header__struct.hpp: No such file or directory
+   20 | #include [01;31m[K"std_msgs/msg/detail/header__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make:171: CMakeFiles/eco_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/eco_interfaces/msg/detail/dds_fastrtps/parking_area__type_support.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make:143: CMakeFiles/eco_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/eco_interfaces/msg/detail/dds_fastrtps/obstacle__type_support.cpp.o] Error 1
+gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make:185: CMakeFiles/eco_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/eco_interfaces/msg/detail/dds_fastrtps/stop_sign__type_support.cpp.o] Error 1
+In file included from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_typesupport_fastrtps_cpp/eco_interfaces/msg/detail/obstacles__rosidl_typesupport_fastrtps_cpp.hpp:11[m[K,
+                 from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_typesupport_fastrtps_cpp/eco_interfaces/msg/detail/dds_fastrtps/obstacles__type_support.cpp:4[m[K:
+[01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_cpp/eco_interfaces/msg/detail/obstacles__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/detail/header__struct.hpp: No such file or directory
+   20 | #include [01;31m[K"std_msgs/msg/detail/header__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+In file included from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_typesupport_fastrtps_cpp/eco_interfaces/msg/detail/lane_detection__rosidl_typesupport_fastrtps_cpp.hpp:11[m[K,
+                 from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_typesupport_fastrtps_cpp/eco_interfaces/msg/detail/dds_fastrtps/lane_detection__type_support.cpp:4[m[K:
+[01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_cpp/eco_interfaces/msg/detail/lane_detection__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/detail/header__struct.hpp: No such file or directory
+   20 | #include [01;31m[K"std_msgs/msg/detail/header__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make:157: CMakeFiles/eco_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/eco_interfaces/msg/detail/dds_fastrtps/obstacles__type_support.cpp.o] Error 1
+gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make:129: CMakeFiles/eco_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/eco_interfaces/msg/detail/dds_fastrtps/lane_detection__type_support.cpp.o] Error 1
+In file included from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_typesupport_fastrtps_cpp/eco_interfaces/msg/detail/system_state__rosidl_typesupport_fastrtps_cpp.hpp:11[m[K,
+                 from [01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_typesupport_fastrtps_cpp/eco_interfaces/msg/detail/dds_fastrtps/system_state__type_support.cpp:4[m[K:
+[01m[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_cpp/eco_interfaces/msg/detail/system_state__struct.hpp:20:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/detail/header__struct.hpp: No such file or directory
+   20 | #include [01;31m[K"std_msgs/msg/detail/header__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make:199: CMakeFiles/eco_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/eco_interfaces/msg/detail/dds_fastrtps/system_state__type_support.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:354: CMakeFiles/eco_interfaces__rosidl_typesupport_fastrtps_cpp.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

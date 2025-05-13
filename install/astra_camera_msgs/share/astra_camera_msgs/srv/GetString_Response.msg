@@ -1,1 +1,4 @@
-/home/ubuntu/eco_marathon_ws/build/astra_camera_msgs/rosidl_cmake/srv/GetString_Response.msg
+
+string data
+bool success
+string message

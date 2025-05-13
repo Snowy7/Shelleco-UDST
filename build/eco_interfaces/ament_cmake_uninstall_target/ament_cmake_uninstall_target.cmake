@@ -21,7 +21,7 @@ function(ament_cmake_uninstall_target_remove_empty_directories path)
   list(LENGTH files length)
   if(length EQUAL 0)
     message(STATUS "Uninstalling: ${path}/")
-    execute_process(COMMAND "/usr/bin/cmake" "-E" "remove_directory" "${path}")
+    execute_process(COMMAND "/home/ubuntu/.local/lib/python3.10/site-packages/cmake/data/bin/cmake" "-E" "remove_directory" "${path}")
     # recursively try to remove parent directories
     get_filename_component(parent_path "${path}" PATH)
     ament_cmake_uninstall_target_remove_empty_directories("${parent_path}")
@@ -55,6 +55,3 @@ endforeach()
 message(STATUS "Execute custom uninstall script")
 
 # begin of custom uninstall code
-
-# uninstall files installed using the symlink install functions
-include("/home/ubuntu/eco_marathon_ws/build/eco_interfaces/ament_cmake_symlink_install/ament_cmake_symlink_install_uninstall_script.cmake")

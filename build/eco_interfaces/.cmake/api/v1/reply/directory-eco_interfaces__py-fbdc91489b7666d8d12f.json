@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "eco_interfaces__py",
+		"source" : "/home/ubuntu/eco_marathon_ws/build/eco_interfaces/eco_interfaces__py"
+	}
+}

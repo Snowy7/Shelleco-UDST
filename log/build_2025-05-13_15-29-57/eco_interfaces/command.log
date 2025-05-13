@@ -1,0 +1,2 @@
+Invoking command in '/home/ubuntu/eco_marathon_ws/build/eco_interfaces': /usr/bin/cmake --build /home/ubuntu/eco_marathon_ws/build/eco_interfaces -- -j8 -l8
+Invoked command in '/home/ubuntu/eco_marathon_ws/build/eco_interfaces' returned '2': /usr/bin/cmake --build /home/ubuntu/eco_marathon_ws/build/eco_interfaces -- -j8 -l8

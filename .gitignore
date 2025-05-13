@@ -19,3 +19,7 @@ __pycache__/
 # any .mypy directory
 .mypy/
 /.idea/
+
+build/
+install/
+log/

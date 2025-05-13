@@ -1,0 +1,30 @@
+[0.017s] Invoking command in '/home/ubuntu/eco_marathon_ws/build/eco_interfaces': /usr/bin/cmake --build /home/ubuntu/eco_marathon_ws/build/eco_interfaces -- -j8 -l8
+[0.044s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.044s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.044s]   CMake.
+[0.044s] 
+[0.044s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.045s]   to tell CMake that the project requires at least <min> but has been updated
+[0.045s]   to work with policies introduced by <max> or earlier.
+[0.045s] 
+[0.045s] [0m
+[0.056s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.471s] Traceback (most recent call last):
+[0.472s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py", line 21, in <module>
+[0.472s]     from ament_package.templates import get_environment_hook_template_path
+[0.472s] ModuleNotFoundError: No module named 'ament_package'
+[0.502s] [31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_package_templates-extras.cmake:41 (message):
+[0.502s]   execute_process(/usr/bin/python3
+[0.503s]   /opt/ros/humble/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py
+[0.503s]   /home/ubuntu/eco_marathon_ws/build/eco_interfaces/ament_cmake_package_templates/templates.cmake)
+[0.503s]   returned error code 1
+[0.504s] Call Stack (most recent call first):
+[0.504s]   /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:41 (include)
+[0.504s]   /opt/ros/humble/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[0.504s]   /opt/ros/humble/share/ament_cmake/cmake/ament_cmakeConfig.cmake:41 (include)
+[0.505s]   CMakeLists.txt:9 (find_package)
+[0.505s] 
+[0.505s] [0m
+[0.505s] -- Configuring incomplete, errors occurred!
+[0.513s] gmake: *** [Makefile:1827: cmake_check_build_system] Error 1
+[0.521s] Invoked command in '/home/ubuntu/eco_marathon_ws/build/eco_interfaces' returned '2': /usr/bin/cmake --build /home/ubuntu/eco_marathon_ws/build/eco_interfaces -- -j8 -l8

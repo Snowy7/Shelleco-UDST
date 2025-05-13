@@ -1,0 +1,135 @@
+[0.033s] Invoking command in '/home/ubuntu/eco_marathon_ws/build/astra_camera': CMAKE_PREFIX_PATH=/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs:/home/ubuntu/eco_marathon_ws/install/eco_interfaces:/home/ubuntu/eco_marathon_ws/install/astra_camera:/home/ubuntu/ros2_ws/install/sn_interfaces:/home/ubuntu/ros2_ws/install/astra_camera:/home/ubuntu/ros2_ws/install/astra_camera_msgs:/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble LD_LIBRARY_PATH=/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib:/home/ubuntu/eco_marathon_ws/install/astra_camera/lib:/home/ubuntu/ros2_ws/install/sn_interfaces/lib:/home/ubuntu/ros2_ws/install/astra_camera/lib:/home/ubuntu/ros2_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64 /home/ubuntu/.local/bin/cmake --build /home/ubuntu/eco_marathon_ws/build/astra_camera -- -j8 -l8
+[0.306s] [  5%] [32mBuilding CXX object CMakeFiles/astra_camera.dir/src/point_cloud_proc/point_cloud_xyzrgb.cpp.o[0m
+[0.311s] [ 10%] [32mBuilding CXX object CMakeFiles/astra_camera.dir/src/point_cloud_proc/point_cloud_xyz.cpp.o[0m
+[0.316s] [ 15%] [32mBuilding CXX object CMakeFiles/astra_camera.dir/src/dynamic_params.cpp.o[0m
+[0.317s] [ 21%] [32mBuilding CXX object CMakeFiles/astra_camera.dir/src/ob_camera_info.cpp.o[0m
+[0.320s] [ 26%] [32mBuilding CXX object CMakeFiles/astra_camera.dir/src/ob_context.cpp.o[0m
+[0.326s] [ 31%] [32mBuilding CXX object CMakeFiles/astra_camera.dir/src/ob_timer_filter.cpp.o[0m
+[0.405s] [ 36%] [32mBuilding CXX object CMakeFiles/astra_camera.dir/src/ob_camera_node_factory.cpp.o[0m
+[0.425s] [ 42%] [32mBuilding CXX object CMakeFiles/astra_camera.dir/src/ob_camera_node.cpp.o[0m
+[13.562s] [ 47%] [32mBuilding CXX object CMakeFiles/astra_camera.dir/src/ros_param_backend.cpp.o[0m
+[14.913s] [ 52%] [32mBuilding CXX object CMakeFiles/astra_camera.dir/src/ros_service.cpp.o[0m
+[17.968s] [ 57%] [32mBuilding CXX object CMakeFiles/astra_camera.dir/src/utils.cpp.o[0m
+[23.566s] [ 63%] [32mBuilding CXX object CMakeFiles/astra_camera.dir/src/uvc_camera_driver.cpp.o[0m
+[74.450s] [ 68%] [32m[1mLinking CXX shared library libastra_camera.so[0m
+[76.574s] [ 68%] Built target astra_camera
+[76.596s] [ 84%] [32mBuilding CXX object CMakeFiles/list_devices_node.dir/src/list_devices_node.cpp.o[0m
+[76.596s] [ 84%] [32mBuilding CXX object CMakeFiles/clean_shm_node.dir/src/clean_up_shm_node.cpp.o[0m
+[76.597s] [ 84%] [32mBuilding CXX object CMakeFiles/astra_camera_node.dir/src/main.cpp.o[0m
+[77.444s] [ 89%] [32m[1mLinking CXX executable clean_shm_node[0m
+[79.890s] [ 89%] Built target clean_shm_node
+[84.998s] [ 94%] [32m[1mLinking CXX executable list_devices_node[0m
+[86.004s] [ 94%] Built target list_devices_node
+[101.838s] [100%] [32m[1mLinking CXX executable astra_camera_node[0m
+[103.044s] [100%] Built target astra_camera_node
+[103.058s] Invoked command in '/home/ubuntu/eco_marathon_ws/build/astra_camera' returned '0': CMAKE_PREFIX_PATH=/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs:/home/ubuntu/eco_marathon_ws/install/eco_interfaces:/home/ubuntu/eco_marathon_ws/install/astra_camera:/home/ubuntu/ros2_ws/install/sn_interfaces:/home/ubuntu/ros2_ws/install/astra_camera:/home/ubuntu/ros2_ws/install/astra_camera_msgs:/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble LD_LIBRARY_PATH=/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib:/home/ubuntu/eco_marathon_ws/install/astra_camera/lib:/home/ubuntu/ros2_ws/install/sn_interfaces/lib:/home/ubuntu/ros2_ws/install/astra_camera/lib:/home/ubuntu/ros2_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64 /home/ubuntu/.local/bin/cmake --build /home/ubuntu/eco_marathon_ws/build/astra_camera -- -j8 -l8
+[103.061s] Invoking command in '/home/ubuntu/eco_marathon_ws/build/astra_camera': CMAKE_PREFIX_PATH=/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs:/home/ubuntu/eco_marathon_ws/install/eco_interfaces:/home/ubuntu/eco_marathon_ws/install/astra_camera:/home/ubuntu/ros2_ws/install/sn_interfaces:/home/ubuntu/ros2_ws/install/astra_camera:/home/ubuntu/ros2_ws/install/astra_camera_msgs:/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble LD_LIBRARY_PATH=/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib:/home/ubuntu/eco_marathon_ws/install/astra_camera/lib:/home/ubuntu/ros2_ws/install/sn_interfaces/lib:/home/ubuntu/ros2_ws/install/astra_camera/lib:/home/ubuntu/ros2_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64 /home/ubuntu/.local/bin/cmake --install /home/ubuntu/eco_marathon_ws/build/astra_camera
+[103.226s] -- Install configuration: "Debug"
+[103.227s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/lib/libastra_camera.so
+[103.333s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/eco_marathon_ws/install/astra_camera/lib/libastra_camera.so" to ""
+[103.334s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/lib/libOpenNI2.so
+[103.335s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/lib//OpenNI2
+[103.335s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/lib//OpenNI2/Drivers
+[103.335s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/lib//OpenNI2/Drivers/liborbbec.so
+[103.338s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/lib//OpenNI2/Drivers/OniFile.ini
+[103.338s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/lib//OpenNI2/Drivers/libOniFile.so
+[103.339s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/lib//OpenNI2/Drivers/orbbec.ini
+[103.339s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/lib/astra_camera/list_devices_node
+[103.341s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/eco_marathon_ws/install/astra_camera/lib/astra_camera/list_devices_node" to ""
+[103.342s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/lib/astra_camera/clean_shm_node
+[103.342s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/eco_marathon_ws/install/astra_camera/lib/astra_camera/clean_shm_node" to ""
+[103.342s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/lib/astra_camera/astra_camera_node
+[103.361s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/eco_marathon_ws/install/astra_camera/lib/astra_camera/astra_camera_node" to ""
+[103.361s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include
+[103.362s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2
+[103.362s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/OniCAPI.h
+[103.362s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/OniProperties.h
+[103.363s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/KinectProperties.h
+[103.364s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/MacOSX
+[103.364s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/MacOSX/OniPlatformMacOSX.h
+[103.364s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/OniPlatform.h
+[103.365s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/Linux-Arm
+[103.365s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/Linux-Arm/OniPlatformLinux-Arm.h
+[103.365s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/Linux-x86
+[103.366s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/Linux-x86/OniPlatformLinux-x86.h
+[103.366s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/SonixCamera.h
+[103.366s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/Driver
+[103.366s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/Driver/OniDriverAPI.h
+[103.367s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/Driver/OniDriverTypes.h
+[103.367s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/OniVersion.h
+[103.367s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/OpenNI.h
+[103.367s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/OniCTypes.h
+[103.368s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/OniEnums.h
+[103.368s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/PSLink.h
+[103.368s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/PS1080.h
+[103.368s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/OniCEnums.h
+[103.369s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/OniCProperties.h
+[103.369s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/Android-Arm
+[103.369s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/Android-Arm/OniPlatformAndroid-Arm.h
+[103.370s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/util.h
+[103.370s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/PrimeSense.h
+[103.370s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/openni2/OniTest.h
+[103.371s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/magic_enum
+[103.371s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/magic_enum/magic_enum.hpp
+[103.371s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/astra_camera
+[103.372s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/astra_camera/json.hpp
+[103.372s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/astra_camera/point_cloud_proc
+[103.372s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/astra_camera/point_cloud_proc/point_cloud_proc.h
+[103.372s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/astra_camera/point_cloud_proc/point_cloud_xyz.h
+[103.373s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/astra_camera/point_cloud_proc/point_cloud_xyzrgb.h
+[103.373s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/astra_camera/point_cloud_proc/depth_traits.h
+[103.373s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/astra_camera/constants.h
+[103.374s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/astra_camera/ob_camera_node_factory.h
+[103.374s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/astra_camera/utils.h
+[103.374s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/astra_camera/ob_context.h
+[103.375s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/astra_camera/uvc_camera_driver.h
+[103.375s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/astra_camera/types.h
+[103.375s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/astra_camera/ros_param_backend.h
+[103.376s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/astra_camera/ob_camera_node.h
+[103.376s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/astra_camera/ob_timer_filter.h
+[103.376s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/include/astra_camera/dynamic_params.h
+[103.377s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera//launch
+[103.377s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera//launch/gemini_e_lite.launch.xml
+[103.377s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera//launch/gemini.launch.xml
+[103.378s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera//launch/astra.launch.xml
+[103.378s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera//launch/multi_astra.launch.xml
+[103.378s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera//launch/multi_dabai_dcw.launch.xml
+[103.378s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera//launch/dabai_pro.launch.xml
+[103.379s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera//launch/stereo_s.launch.xml
+[103.379s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera//launch/deeyea.launch.xml
+[103.379s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera//launch/.gitkeep
+[103.380s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera//launch/dabai_u3.launch.xml
+[103.380s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera//launch/stereo_s_u3.launch.xml
+[103.380s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera//launch/multi_deeyea.launch.xml
+[103.380s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera//launch/dabai_dcw.launch.xml
+[103.381s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera//launch/dabai_dc1.launch.xml
+[103.381s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera//launch/multi_gemini.launch.xml
+[103.381s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera//launch/multi_dabai_pro.launch.xml
+[103.382s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera//launch/astra_pro.launch.xml
+[103.382s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera//launch/astro_pro_plus.launch.xml
+[103.384s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera//launch/list_devices.launch.xml
+[103.386s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera//launch/embedded_s.launch.xml
+[103.386s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera//launch/dabai_dw.launch.xml
+[103.387s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera//launch/embedded_u3.launch.xml
+[103.387s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera//launch/gemini_e.launch.xml
+[103.388s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera/environment/library_path.sh
+[103.388s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera/environment/library_path.dsv
+[103.389s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/ament_index/resource_index/package_run_dependencies/astra_camera
+[103.389s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/ament_index/resource_index/parent_prefix_path/astra_camera
+[103.389s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera/environment/ament_prefix_path.sh
+[103.390s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera/environment/ament_prefix_path.dsv
+[103.390s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera/environment/path.sh
+[103.391s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera/environment/path.dsv
+[103.391s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera/local_setup.bash
+[103.392s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera/local_setup.sh
+[103.392s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera/local_setup.zsh
+[103.393s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera/local_setup.dsv
+[103.393s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera/package.dsv
+[103.393s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/ament_index/resource_index/packages/astra_camera
+[103.394s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera/cmake/ament_cmake_export_include_directories-extras.cmake
+[103.395s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera/cmake/ament_cmake_export_libraries-extras.cmake
+[103.395s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera/cmake/ament_cmake_export_dependencies-extras.cmake
+[103.396s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera/cmake/astra_cameraConfig.cmake
+[103.396s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera/cmake/astra_cameraConfig-version.cmake
+[103.396s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera/share/astra_camera/package.xml
+[103.399s] Invoked command in '/home/ubuntu/eco_marathon_ws/build/astra_camera' returned '0': CMAKE_PREFIX_PATH=/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs:/home/ubuntu/eco_marathon_ws/install/eco_interfaces:/home/ubuntu/eco_marathon_ws/install/astra_camera:/home/ubuntu/ros2_ws/install/sn_interfaces:/home/ubuntu/ros2_ws/install/astra_camera:/home/ubuntu/ros2_ws/install/astra_camera_msgs:/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble LD_LIBRARY_PATH=/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib:/home/ubuntu/eco_marathon_ws/install/astra_camera/lib:/home/ubuntu/ros2_ws/install/sn_interfaces/lib:/home/ubuntu/ros2_ws/install/astra_camera/lib:/home/ubuntu/ros2_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64 /home/ubuntu/.local/bin/cmake --install /home/ubuntu/eco_marathon_ws/build/astra_camera

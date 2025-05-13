@@ -1,1 +1,3 @@
-/home/ubuntu/eco_marathon_ws/build/astra_camera_msgs/rosidl_cmake/srv/SetInt32_Response.msg
+
+bool success
+string message

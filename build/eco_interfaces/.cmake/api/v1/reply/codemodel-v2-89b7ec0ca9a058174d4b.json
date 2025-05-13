@@ -1,0 +1,233 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-9a1eba9962463934b869.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				},
+				{
+					"build" : "eco_interfaces__py",
+					"jsonFile" : "directory-eco_interfaces__py-fbdc91489b7666d8d12f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/ubuntu/eco_marathon_ws/build/eco_interfaces/eco_interfaces__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "eco_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_eco_interfaces_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_eco_interfaces_egg-7362e884fe5b7cf6335c.json",
+					"name" : "ament_cmake_python_build_eco_interfaces_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_eco_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_eco_interfaces-8403cb65cbb8b78577a9.json",
+					"name" : "ament_cmake_python_copy_eco_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "eco_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-eco_interfaces-e7ad7ae31ca6a2edc4fb.json",
+					"name" : "eco_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "eco_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-eco_interfaces__cpp-7201ccfa514b779101f3.json",
+					"name" : "eco_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "eco_interfaces__py::@44b6ffc73d9679ea5c43",
+					"jsonFile" : "target-eco_interfaces__py-304a9d85e032b1f46034.json",
+					"name" : "eco_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "eco_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-eco_interfaces__rosidl_generator_c-2567a9eb631e4b00c82b.json",
+					"name" : "eco_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "eco_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-eco_interfaces__rosidl_generator_py-cda5424eaedf5265ac9a.json",
+					"name" : "eco_interfaces__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "eco_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-eco_interfaces__rosidl_typesupport_c-c87f6e056654beeb2195.json",
+					"name" : "eco_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "eco_interfaces__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-eco_interfaces__rosidl_typesupport_c__pyext-d52e70c49577158823a2.json",
+					"name" : "eco_interfaces__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "eco_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-eco_interfaces__rosidl_typesupport_cpp-abf0a432d5f9aff0455a.json",
+					"name" : "eco_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "eco_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-eco_interfaces__rosidl_typesupport_fastrtps_c-2f38009c2d23da41a6eb.json",
+					"name" : "eco_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "eco_interfaces__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-eco_interfaces__rosidl_typesupport_fastrtps_c__pyext-c89ef11b4f1feccc9c92.json",
+					"name" : "eco_interfaces__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "eco_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-eco_interfaces__rosidl_typesupport_fastrtps_cpp-953084e39763c1074128.json",
+					"name" : "eco_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "eco_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-eco_interfaces__rosidl_typesupport_introspection_c-c8e5c1465e2c2fb49dac.json",
+					"name" : "eco_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "eco_interfaces__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-eco_interfaces__rosidl_typesupport_introspection_c__pyext-ee40205f9a17cc9a67ca.json",
+					"name" : "eco_interfaces__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "eco_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-eco_interfaces__rosidl_typesupport_introspection_cpp-1b8e51b9cc334f9924c4.json",
+					"name" : "eco_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "eco_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-eco_interfaces_uninstall-8a2c03e22f531516ce97.json",
+					"name" : "eco_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-f28cc6139a6e3a5f1619.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/ubuntu/eco_marathon_ws/build/eco_interfaces",
+		"source" : "/home/ubuntu/eco_marathon_ws/src/eco_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

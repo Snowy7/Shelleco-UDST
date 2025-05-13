@@ -1,0 +1,29 @@
+running develop
+Removing /home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages/eco-perception.egg-link (link to .)
+running egg_info
+writing ../../build/eco_perception/eco_perception.egg-info/PKG-INFO
+writing dependency_links to ../../build/eco_perception/eco_perception.egg-info/dependency_links.txt
+writing entry points to ../../build/eco_perception/eco_perception.egg-info/entry_points.txt
+writing requirements to ../../build/eco_perception/eco_perception.egg-info/requires.txt
+writing top-level names to ../../build/eco_perception/eco_perception.egg-info/top_level.txt
+reading manifest file '../../build/eco_perception/eco_perception.egg-info/SOURCES.txt'
+writing manifest file '../../build/eco_perception/eco_perception.egg-info/SOURCES.txt'
+running build
+running build_py
+copying eco_perception/lane_detection_node.py -> /home/ubuntu/eco_marathon_ws/build/eco_perception/build/lib/eco_perception
+running install
+running install_lib
+creating /home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages/eco_perception
+copying /home/ubuntu/eco_marathon_ws/build/eco_perception/build/lib/eco_perception/__init__.py -> /home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages/eco_perception
+copying /home/ubuntu/eco_marathon_ws/build/eco_perception/build/lib/eco_perception/lane_detection_node.py -> /home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages/eco_perception
+byte-compiling /home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages/eco_perception/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages/eco_perception/lane_detection_node.py to lane_detection_node.cpython-310.pyc
+running install_data
+copying resource/eco_perception -> /home/ubuntu/eco_marathon_ws/install/eco_perception/share/ament_index/resource_index/packages
+copying package.xml -> /home/ubuntu/eco_marathon_ws/install/eco_perception/share/eco_perception
+copying launch/eco_mar.launch.py -> /home/ubuntu/eco_marathon_ws/install/eco_perception/share/eco_perception
+running install_egg_info
+Copying ../../build/eco_perception/eco_perception.egg-info to /home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages/eco_perception-0.0.0-py3.10.egg-info
+running install_scripts
+Installing lane_detection script to /home/ubuntu/eco_marathon_ws/install/eco_perception/lib/eco_perception
+writing list of installed files to '/home/ubuntu/eco_marathon_ws/build/eco_perception/install.log'

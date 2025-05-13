@@ -1,0 +1,21 @@
+[3.875s] Invoking command in '/home/ubuntu/eco_marathon_ws/src/eco_perception': PYTHONPATH=/home/ubuntu/eco_marathon_ws/build/eco_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/eco_perception build --build-base /home/ubuntu/eco_marathon_ws/build/eco_perception/build install --record /home/ubuntu/eco_marathon_ws/build/eco_perception/install.log --single-version-externally-managed install_data
+[5.022s] running egg_info
+[5.025s] writing ../../build/eco_perception/eco_perception.egg-info/PKG-INFO
+[5.028s] writing dependency_links to ../../build/eco_perception/eco_perception.egg-info/dependency_links.txt
+[5.030s] writing entry points to ../../build/eco_perception/eco_perception.egg-info/entry_points.txt
+[5.032s] writing requirements to ../../build/eco_perception/eco_perception.egg-info/requires.txt
+[5.034s] writing top-level names to ../../build/eco_perception/eco_perception.egg-info/top_level.txt
+[5.041s] reading manifest file '../../build/eco_perception/eco_perception.egg-info/SOURCES.txt'
+[5.047s] writing manifest file '../../build/eco_perception/eco_perception.egg-info/SOURCES.txt'
+[5.047s] running build
+[5.047s] running build_py
+[5.054s] running install
+[5.055s] running install_lib
+[5.058s] running install_data
+[5.058s] running install_egg_info
+[5.063s] removing '/home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages/eco_perception-0.0.0-py3.10.egg-info' (and everything under it)
+[5.064s] Copying ../../build/eco_perception/eco_perception.egg-info to /home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages/eco_perception-0.0.0-py3.10.egg-info
+[5.066s] running install_scripts
+[5.131s] Installing lane_detection script to /home/ubuntu/eco_marathon_ws/install/eco_perception/lib/eco_perception
+[5.137s] writing list of installed files to '/home/ubuntu/eco_marathon_ws/build/eco_perception/install.log'
+[5.251s] Invoked command in '/home/ubuntu/eco_marathon_ws/src/eco_perception' returned '0': PYTHONPATH=/home/ubuntu/eco_marathon_ws/build/eco_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/eco_perception build --build-base /home/ubuntu/eco_marathon_ws/build/eco_perception/build install --record /home/ubuntu/eco_marathon_ws/build/eco_perception/install.log --single-version-externally-managed install_data

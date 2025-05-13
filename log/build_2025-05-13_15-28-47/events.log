@@ -1,0 +1,704 @@
+[0.000000] (-) TimerEvent: {}
+[0.000898] (astra_camera_msgs) JobQueued: {'identifier': 'astra_camera_msgs', 'dependencies': OrderedDict()}
+[0.001692] (eco_control) JobQueued: {'identifier': 'eco_control', 'dependencies': OrderedDict()}
+[0.002042] (eco_interfaces) JobQueued: {'identifier': 'eco_interfaces', 'dependencies': OrderedDict()}
+[0.002419] (eco_localization) JobQueued: {'identifier': 'eco_localization', 'dependencies': OrderedDict()}
+[0.002542] (eco_perception) JobQueued: {'identifier': 'eco_perception', 'dependencies': OrderedDict()}
+[0.002770] (eco_planning) JobQueued: {'identifier': 'eco_planning', 'dependencies': OrderedDict()}
+[0.002836] (astra_camera) JobQueued: {'identifier': 'astra_camera', 'dependencies': OrderedDict([('astra_camera_msgs', '/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs')])}
+[0.002926] (astra_camera_msgs) JobStarted: {'identifier': 'astra_camera_msgs'}
+[0.018832] (eco_control) JobStarted: {'identifier': 'eco_control'}
+[0.034828] (eco_interfaces) JobStarted: {'identifier': 'eco_interfaces'}
+[0.048772] (eco_localization) JobStarted: {'identifier': 'eco_localization'}
+[0.062388] (eco_perception) JobStarted: {'identifier': 'eco_perception'}
+[0.074632] (eco_planning) JobStarted: {'identifier': 'eco_planning'}
+[0.093691] (astra_camera_msgs) JobProgress: {'identifier': 'astra_camera_msgs', 'progress': 'cmake'}
+[0.096236] (astra_camera_msgs) Command: {'cmd': ['/home/ubuntu/.local/bin/cmake', '/home/ubuntu/eco_marathon_ws/src/sensors/ros2_astra_camera/astra_camera_msgs', '-DCMAKE_INSTALL_PREFIX=/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs'], 'cwd': '/home/ubuntu/eco_marathon_ws/build/astra_camera_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ubuntu'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ubuntu/eco_marathon_ws/install/astra_camera/lib:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib:/home/ubuntu/ros2_ws/install/sn_interfaces/lib:/home/ubuntu/ros2_ws/install/astra_camera/lib:/home/ubuntu/ros2_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:'), ('HOME', '/home/ubuntu'), ('OLDPWD', '/home/ubuntu/eco_marathon_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '6210'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/ubuntu/eco_marathon_ws/install:/home/ubuntu/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ubuntu'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ubuntu'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/home/ubuntu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/3090,unix/ubuntu:/tmp/.ICE-unix/3090'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b8e50f69_cadd_475c_b9a0_c1081bd56b10'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.122'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_interfaces:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/eco_marathon_ws/install/astra_camera:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/sn_interfaces:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/home/ubuntu/ros2_ws/install/astra_camera:/home/ubuntu/ros2_ws/install/astra_camera_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ubuntu/eco_marathon_ws/build/astra_camera_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ubuntu/eco_marathon_ws/build/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_planning/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/build/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_localization/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/build/eco_control:/home/ubuntu/eco_marathon_ws/install/eco_control/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/home/ubuntu/ros2_ws/build/vehicle_interface:/home/ubuntu/ros2_ws/install/vehicle_interface/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/build/stop_sign:/home/ubuntu/ros2_ws/install/stop_sign/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/install/sn_interfaces/local/lib/python3.10/dist-packages:/home/ubuntu/ros2_ws/build/my_robot_controller:/home/ubuntu/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/build/lane_detection:/home/ubuntu/ros2_ws/install/lane_detection/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/build/control:/home/ubuntu/ros2_ws/install/control/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/ubuntu/eco_marathon_ws/install/eco_interfaces:/home/ubuntu/eco_marathon_ws/install/astra_camera:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs:/home/ubuntu/ros2_ws/install/sn_interfaces:/home/ubuntu/ros2_ws/install/astra_camera:/home/ubuntu/ros2_ws/install/astra_camera_msgs:/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble')]), 'shell': False}
+[0.099107] (-) TimerEvent: {}
+[0.199687] (-) TimerEvent: {}
+[0.300393] (-) TimerEvent: {}
+[0.401037] (-) TimerEvent: {}
+[0.501735] (-) TimerEvent: {}
+[0.602397] (-) TimerEvent: {}
+[0.702367] (eco_interfaces) JobProgress: {'identifier': 'eco_interfaces', 'progress': 'cmake'}
+[0.702558] (-) TimerEvent: {}
+[0.703737] (eco_interfaces) Command: {'cmd': ['/home/ubuntu/.local/bin/cmake', '/home/ubuntu/eco_marathon_ws/src/eco_interfaces', '-DCMAKE_INSTALL_PREFIX=/home/ubuntu/eco_marathon_ws/install/eco_interfaces'], 'cwd': '/home/ubuntu/eco_marathon_ws/build/eco_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ubuntu'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ubuntu/eco_marathon_ws/install/astra_camera/lib:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib:/home/ubuntu/ros2_ws/install/sn_interfaces/lib:/home/ubuntu/ros2_ws/install/astra_camera/lib:/home/ubuntu/ros2_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:'), ('HOME', '/home/ubuntu'), ('OLDPWD', '/home/ubuntu/eco_marathon_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '6210'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/ubuntu/eco_marathon_ws/install:/home/ubuntu/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ubuntu'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ubuntu'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/home/ubuntu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/3090,unix/ubuntu:/tmp/.ICE-unix/3090'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b8e50f69_cadd_475c_b9a0_c1081bd56b10'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.122'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_interfaces:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/eco_marathon_ws/install/astra_camera:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/sn_interfaces:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/home/ubuntu/ros2_ws/install/astra_camera:/home/ubuntu/ros2_ws/install/astra_camera_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ubuntu/eco_marathon_ws/build/eco_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ubuntu/eco_marathon_ws/build/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_planning/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/build/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_localization/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/build/eco_control:/home/ubuntu/eco_marathon_ws/install/eco_control/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/home/ubuntu/ros2_ws/build/vehicle_interface:/home/ubuntu/ros2_ws/install/vehicle_interface/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/build/stop_sign:/home/ubuntu/ros2_ws/install/stop_sign/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/install/sn_interfaces/local/lib/python3.10/dist-packages:/home/ubuntu/ros2_ws/build/my_robot_controller:/home/ubuntu/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/build/lane_detection:/home/ubuntu/ros2_ws/install/lane_detection/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/build/control:/home/ubuntu/ros2_ws/install/control/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/ubuntu/eco_marathon_ws/install/eco_interfaces:/home/ubuntu/eco_marathon_ws/install/astra_camera:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs:/home/ubuntu/ros2_ws/install/sn_interfaces:/home/ubuntu/ros2_ws/install/astra_camera:/home/ubuntu/ros2_ws/install/astra_camera_msgs:/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble')]), 'shell': False}
+[0.802736] (-) TimerEvent: {}
+[0.903367] (-) TimerEvent: {}
+[1.003978] (-) TimerEvent: {}
+[1.104621] (-) TimerEvent: {}
+[1.205292] (-) TimerEvent: {}
+[1.305963] (-) TimerEvent: {}
+[1.406644] (-) TimerEvent: {}
+[1.507351] (-) TimerEvent: {}
+[1.607982] (-) TimerEvent: {}
+[1.708606] (-) TimerEvent: {}
+[1.809240] (-) TimerEvent: {}
+[1.909909] (-) TimerEvent: {}
+[1.969519] (astra_camera_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[1.970602] (astra_camera_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.971579] (astra_camera_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.971905] (astra_camera_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.973018] (astra_camera_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.973291] (astra_camera_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.973426] (astra_camera_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.973558] (astra_camera_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.973673] (astra_camera_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.973783] (astra_camera_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.973890] (astra_camera_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.973995] (astra_camera_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.974101] (astra_camera_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.974212] (astra_camera_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter\n'}
+[1.974322] (astra_camera_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[1.974429] (astra_camera_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.974536] (astra_camera_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.974644] (astra_camera_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.974754] (astra_camera_msgs) StdoutLine: {'line': b'-- Found sensor_msgs: 4.8.0 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[1.974861] (astra_camera_msgs) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[1.975042] (astra_camera_msgs) StderrLine: {'line': b'  Compatibility with CMake < 3.10 will be removed from a future version of\n'}
+[1.975152] (astra_camera_msgs) StderrLine: {'line': b'  CMake.\n'}
+[1.975255] (astra_camera_msgs) StderrLine: {'line': b'\n'}
+[1.975403] (astra_camera_msgs) StderrLine: {'line': b'  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax\n'}
+[1.975517] (astra_camera_msgs) StderrLine: {'line': b'  to tell CMake that the project requires at least <min> but has been updated\n'}
+[1.975625] (astra_camera_msgs) StderrLine: {'line': b'  to work with policies introduced by <max> or earlier.\n'}
+[1.975736] (astra_camera_msgs) StderrLine: {'line': b'\n'}
+[1.975841] (astra_camera_msgs) StderrLine: {'line': b'\x1b[0m\n'}
+[1.975950] (eco_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[1.976159] (eco_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.976278] (eco_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.976394] (eco_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.976504] (eco_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.976616] (eco_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.976724] (eco_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.976829] (eco_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.976957] (eco_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.977066] (eco_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.977175] (eco_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.977280] (eco_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.977387] (eco_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.977496] (eco_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter\n'}
+[1.977606] (eco_interfaces) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n'}
+[1.977751] (eco_interfaces) StderrLine: {'line': b'  Compatibility with CMake < 3.10 will be removed from a future version of\n'}
+[1.977862] (eco_interfaces) StderrLine: {'line': b'  CMake.\n'}
+[1.977970] (eco_interfaces) StderrLine: {'line': b'\n'}
+[1.978076] (eco_interfaces) StderrLine: {'line': b'  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax\n'}
+[1.978182] (eco_interfaces) StderrLine: {'line': b'  to tell CMake that the project requires at least <min> but has been updated\n'}
+[1.978287] (eco_interfaces) StderrLine: {'line': b'  to work with policies introduced by <max> or earlier.\n'}
+[1.978392] (eco_interfaces) StderrLine: {'line': b'\n'}
+[1.978496] (eco_interfaces) StderrLine: {'line': b'\x1b[0m\n'}
+[2.010059] (-) TimerEvent: {}
+[2.071241] (eco_interfaces) StdoutLine: {'line': b'-- Found std_msgs: 4.8.0 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[2.110215] (-) TimerEvent: {}
+[2.210887] (-) TimerEvent: {}
+[2.214150] (eco_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[2.238132] (eco_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[2.271208] (eco_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[2.311059] (-) TimerEvent: {}
+[2.314158] (eco_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.373143] (eco_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.411208] (-) TimerEvent: {}
+[2.459112] (eco_interfaces) StdoutLine: {'line': b'-- Found geometry_msgs: 4.8.0 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[2.498174] (eco_interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[2.511413] (-) TimerEvent: {}
+[2.612057] (-) TimerEvent: {}
+[2.712722] (-) TimerEvent: {}
+[2.742588] (eco_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[2.812887] (-) TimerEvent: {}
+[2.913550] (-) TimerEvent: {}
+[3.014276] (-) TimerEvent: {}
+[3.114929] (-) TimerEvent: {}
+[3.215578] (-) TimerEvent: {}
+[3.316658] (-) TimerEvent: {}
+[3.417607] (-) TimerEvent: {}
+[3.419841] (astra_camera_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[3.517771] (-) TimerEvent: {}
+[3.522929] (eco_control) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/eco_control', 'build', '--build-base', '/home/ubuntu/eco_marathon_ws/build/eco_control/build', 'install', '--record', '/home/ubuntu/eco_marathon_ws/build/eco_control/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/ubuntu/eco_marathon_ws/src/eco_control', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ubuntu', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ubuntu/eco_marathon_ws/install/astra_camera/lib:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib:/home/ubuntu/ros2_ws/install/sn_interfaces/lib:/home/ubuntu/ros2_ws/install/astra_camera/lib:/home/ubuntu/ros2_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:', 'HOME': '/home/ubuntu', 'OLDPWD': '/home/ubuntu/eco_marathon_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '6210', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/ubuntu/eco_marathon_ws/install:/home/ubuntu/ros2_ws/install', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'ubuntu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'ubuntu', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/home/ubuntu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/ubuntu:@/tmp/.ICE-unix/3090,unix/ubuntu:/tmp/.ICE-unix/3090', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/b8e50f69_cadd_475c_b9a0_c1081bd56b10', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.122', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_interfaces:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/eco_marathon_ws/install/astra_camera:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/sn_interfaces:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/home/ubuntu/ros2_ws/install/astra_camera:/home/ubuntu/ros2_ws/install/astra_camera_msgs:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/ubuntu/eco_marathon_ws/build/eco_control', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ubuntu/eco_marathon_ws/build/eco_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/eco_marathon_ws/install/eco_control/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/build/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_planning/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/build/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_localization/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/build/eco_control:/home/ubuntu/eco_marathon_ws/install/eco_control/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/home/ubuntu/ros2_ws/build/vehicle_interface:/home/ubuntu/ros2_ws/install/vehicle_interface/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/build/stop_sign:/home/ubuntu/ros2_ws/install/stop_sign/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/install/sn_interfaces/local/lib/python3.10/dist-packages:/home/ubuntu/ros2_ws/build/my_robot_controller:/home/ubuntu/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/build/lane_detection:/home/ubuntu/ros2_ws/install/lane_detection/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/build/control:/home/ubuntu/ros2_ws/install/control/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/ubuntu/eco_marathon_ws/install/eco_interfaces:/home/ubuntu/eco_marathon_ws/install/astra_camera:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs:/home/ubuntu/ros2_ws/install/sn_interfaces:/home/ubuntu/ros2_ws/install/astra_camera:/home/ubuntu/ros2_ws/install/astra_camera_msgs'}, 'shell': False}
+[3.548425] (eco_localization) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/eco_localization', 'build', '--build-base', '/home/ubuntu/eco_marathon_ws/build/eco_localization/build', 'install', '--record', '/home/ubuntu/eco_marathon_ws/build/eco_localization/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/ubuntu/eco_marathon_ws/src/eco_localization', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ubuntu', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ubuntu/eco_marathon_ws/install/astra_camera/lib:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib:/home/ubuntu/ros2_ws/install/sn_interfaces/lib:/home/ubuntu/ros2_ws/install/astra_camera/lib:/home/ubuntu/ros2_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:', 'HOME': '/home/ubuntu', 'OLDPWD': '/home/ubuntu/eco_marathon_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '6210', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/ubuntu/eco_marathon_ws/install:/home/ubuntu/ros2_ws/install', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'ubuntu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'ubuntu', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/home/ubuntu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/ubuntu:@/tmp/.ICE-unix/3090,unix/ubuntu:/tmp/.ICE-unix/3090', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/b8e50f69_cadd_475c_b9a0_c1081bd56b10', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.122', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_interfaces:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/eco_marathon_ws/install/astra_camera:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/sn_interfaces:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/home/ubuntu/ros2_ws/install/astra_camera:/home/ubuntu/ros2_ws/install/astra_camera_msgs:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/ubuntu/eco_marathon_ws/build/eco_localization', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ubuntu/eco_marathon_ws/build/eco_localization/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/eco_marathon_ws/install/eco_localization/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/build/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_planning/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/build/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_localization/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/build/eco_control:/home/ubuntu/eco_marathon_ws/install/eco_control/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/home/ubuntu/ros2_ws/build/vehicle_interface:/home/ubuntu/ros2_ws/install/vehicle_interface/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/build/stop_sign:/home/ubuntu/ros2_ws/install/stop_sign/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/install/sn_interfaces/local/lib/python3.10/dist-packages:/home/ubuntu/ros2_ws/build/my_robot_controller:/home/ubuntu/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/build/lane_detection:/home/ubuntu/ros2_ws/install/lane_detection/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/build/control:/home/ubuntu/ros2_ws/install/control/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/ubuntu/eco_marathon_ws/install/eco_interfaces:/home/ubuntu/eco_marathon_ws/install/astra_camera:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs:/home/ubuntu/ros2_ws/install/sn_interfaces:/home/ubuntu/ros2_ws/install/astra_camera:/home/ubuntu/ros2_ws/install/astra_camera_msgs'}, 'shell': False}
+[3.589658] (eco_perception) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/eco_perception', 'build', '--build-base', '/home/ubuntu/eco_marathon_ws/build/eco_perception/build', 'install', '--record', '/home/ubuntu/eco_marathon_ws/build/eco_perception/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/ubuntu/eco_marathon_ws/src/eco_perception', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ubuntu', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ubuntu/eco_marathon_ws/install/astra_camera/lib:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib:/home/ubuntu/ros2_ws/install/sn_interfaces/lib:/home/ubuntu/ros2_ws/install/astra_camera/lib:/home/ubuntu/ros2_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:', 'HOME': '/home/ubuntu', 'OLDPWD': '/home/ubuntu/eco_marathon_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '6210', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/ubuntu/eco_marathon_ws/install:/home/ubuntu/ros2_ws/install', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'ubuntu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'ubuntu', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/home/ubuntu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/ubuntu:@/tmp/.ICE-unix/3090,unix/ubuntu:/tmp/.ICE-unix/3090', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/b8e50f69_cadd_475c_b9a0_c1081bd56b10', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.122', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_interfaces:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/eco_marathon_ws/install/astra_camera:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/sn_interfaces:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/home/ubuntu/ros2_ws/install/astra_camera:/home/ubuntu/ros2_ws/install/astra_camera_msgs:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/ubuntu/eco_marathon_ws/build/eco_perception', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ubuntu/eco_marathon_ws/build/eco_perception/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/build/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_planning/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/build/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_localization/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/build/eco_control:/home/ubuntu/eco_marathon_ws/install/eco_control/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/home/ubuntu/ros2_ws/build/vehicle_interface:/home/ubuntu/ros2_ws/install/vehicle_interface/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/build/stop_sign:/home/ubuntu/ros2_ws/install/stop_sign/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/install/sn_interfaces/local/lib/python3.10/dist-packages:/home/ubuntu/ros2_ws/build/my_robot_controller:/home/ubuntu/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/build/lane_detection:/home/ubuntu/ros2_ws/install/lane_detection/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/build/control:/home/ubuntu/ros2_ws/install/control/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/ubuntu/eco_marathon_ws/install/eco_interfaces:/home/ubuntu/eco_marathon_ws/install/astra_camera:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs:/home/ubuntu/ros2_ws/install/sn_interfaces:/home/ubuntu/ros2_ws/install/astra_camera:/home/ubuntu/ros2_ws/install/astra_camera_msgs'}, 'shell': False}
+[3.617991] (-) TimerEvent: {}
+[3.719950] (-) TimerEvent: {}
+[3.734882] (eco_planning) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/eco_planning', 'build', '--build-base', '/home/ubuntu/eco_marathon_ws/build/eco_planning/build', 'install', '--record', '/home/ubuntu/eco_marathon_ws/build/eco_planning/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/ubuntu/eco_marathon_ws/src/eco_planning', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ubuntu', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ubuntu/eco_marathon_ws/install/astra_camera/lib:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib:/home/ubuntu/ros2_ws/install/sn_interfaces/lib:/home/ubuntu/ros2_ws/install/astra_camera/lib:/home/ubuntu/ros2_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:', 'HOME': '/home/ubuntu', 'OLDPWD': '/home/ubuntu/eco_marathon_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '6210', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/ubuntu/eco_marathon_ws/install:/home/ubuntu/ros2_ws/install', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'ubuntu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'ubuntu', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/home/ubuntu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/ubuntu:@/tmp/.ICE-unix/3090,unix/ubuntu:/tmp/.ICE-unix/3090', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/b8e50f69_cadd_475c_b9a0_c1081bd56b10', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.122', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_interfaces:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/eco_marathon_ws/install/astra_camera:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/sn_interfaces:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/home/ubuntu/ros2_ws/install/astra_camera:/home/ubuntu/ros2_ws/install/astra_camera_msgs:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/ubuntu/eco_marathon_ws/build/eco_planning', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ubuntu/eco_marathon_ws/build/eco_planning/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/eco_marathon_ws/install/eco_planning/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/build/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_planning/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/build/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_localization/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/build/eco_control:/home/ubuntu/eco_marathon_ws/install/eco_control/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/home/ubuntu/ros2_ws/build/vehicle_interface:/home/ubuntu/ros2_ws/install/vehicle_interface/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/build/stop_sign:/home/ubuntu/ros2_ws/install/stop_sign/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/install/sn_interfaces/local/lib/python3.10/dist-packages:/home/ubuntu/ros2_ws/build/my_robot_controller:/home/ubuntu/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/build/lane_detection:/home/ubuntu/ros2_ws/install/lane_detection/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/build/control:/home/ubuntu/ros2_ws/install/control/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/ubuntu/eco_marathon_ws/install/eco_interfaces:/home/ubuntu/eco_marathon_ws/install/astra_camera:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs:/home/ubuntu/ros2_ws/install/sn_interfaces:/home/ubuntu/ros2_ws/install/astra_camera:/home/ubuntu/ros2_ws/install/astra_camera_msgs'}, 'shell': False}
+[3.784470] (eco_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[3.820087] (-) TimerEvent: {}
+[3.920786] (-) TimerEvent: {}
+[4.021460] (-) TimerEvent: {}
+[4.122279] (-) TimerEvent: {}
+[4.132687] (eco_control) StdoutLine: {'line': b'running egg_info\n'}
+[4.134271] (eco_control) StdoutLine: {'line': b'creating ../../build/eco_control/eco_control.egg-info\n'}
+[4.134690] (eco_control) StdoutLine: {'line': b'writing ../../build/eco_control/eco_control.egg-info/PKG-INFO\n'}
+[4.135236] (eco_control) StdoutLine: {'line': b'writing dependency_links to ../../build/eco_control/eco_control.egg-info/dependency_links.txt\n'}
+[4.135531] (eco_control) StdoutLine: {'line': b'writing entry points to ../../build/eco_control/eco_control.egg-info/entry_points.txt\n'}
+[4.135761] (eco_control) StdoutLine: {'line': b'writing requirements to ../../build/eco_control/eco_control.egg-info/requires.txt\n'}
+[4.135944] (eco_control) StdoutLine: {'line': b'writing top-level names to ../../build/eco_control/eco_control.egg-info/top_level.txt\n'}
+[4.136409] (eco_control) StdoutLine: {'line': b"writing manifest file '../../build/eco_control/eco_control.egg-info/SOURCES.txt'\n"}
+[4.139212] (eco_localization) StdoutLine: {'line': b'running egg_info\n'}
+[4.140039] (eco_localization) StdoutLine: {'line': b'creating ../../build/eco_localization/eco_localization.egg-info\n'}
+[4.143596] (eco_localization) StdoutLine: {'line': b'writing ../../build/eco_localization/eco_localization.egg-info/PKG-INFO\n'}
+[4.144050] (eco_localization) StdoutLine: {'line': b'writing dependency_links to ../../build/eco_localization/eco_localization.egg-info/dependency_links.txt\n'}
+[4.144204] (eco_localization) StdoutLine: {'line': b'writing entry points to ../../build/eco_localization/eco_localization.egg-info/entry_points.txt\n'}
+[4.144329] (eco_localization) StdoutLine: {'line': b'writing requirements to ../../build/eco_localization/eco_localization.egg-info/requires.txt\n'}
+[4.144444] (eco_localization) StdoutLine: {'line': b'writing top-level names to ../../build/eco_localization/eco_localization.egg-info/top_level.txt\n'}
+[4.144551] (eco_localization) StdoutLine: {'line': b"writing manifest file '../../build/eco_localization/eco_localization.egg-info/SOURCES.txt'\n"}
+[4.144653] (eco_control) StdoutLine: {'line': b"reading manifest file '../../build/eco_control/eco_control.egg-info/SOURCES.txt'\n"}
+[4.149517] (eco_control) StdoutLine: {'line': b"writing manifest file '../../build/eco_control/eco_control.egg-info/SOURCES.txt'\n"}
+[4.149936] (eco_control) StdoutLine: {'line': b'running build\n'}
+[4.150082] (eco_control) StdoutLine: {'line': b'running build_py\n'}
+[4.150503] (eco_control) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/build/eco_control/build\n'}
+[4.150672] (eco_control) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/build/eco_control/build/lib\n'}
+[4.150789] (eco_control) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/build/eco_control/build/lib/eco_control\n'}
+[4.151476] (eco_control) StdoutLine: {'line': b'copying eco_control/__init__.py -> /home/ubuntu/eco_marathon_ws/build/eco_control/build/lib/eco_control\n'}
+[4.152277] (eco_control) StdoutLine: {'line': b'running install\n'}
+[4.152532] (eco_localization) StdoutLine: {'line': b"reading manifest file '../../build/eco_localization/eco_localization.egg-info/SOURCES.txt'\n"}
+[4.153559] (eco_control) StdoutLine: {'line': b'running install_lib\n'}
+[4.156245] (eco_control) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/install/eco_control/lib/python3.10/site-packages/eco_control\n'}
+[4.156721] (eco_control) StdoutLine: {'line': b'copying /home/ubuntu/eco_marathon_ws/build/eco_control/build/lib/eco_control/__init__.py -> /home/ubuntu/eco_marathon_ws/install/eco_control/lib/python3.10/site-packages/eco_control\n'}
+[4.157719] (eco_localization) StdoutLine: {'line': b"writing manifest file '../../build/eco_localization/eco_localization.egg-info/SOURCES.txt'\n"}
+[4.158003] (eco_localization) StdoutLine: {'line': b'running build\n'}
+[4.158172] (eco_localization) StdoutLine: {'line': b'running build_py\n'}
+[4.158533] (eco_localization) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/build/eco_localization/build\n'}
+[4.158711] (eco_localization) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/build/eco_localization/build/lib\n'}
+[4.158955] (eco_localization) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/build/eco_localization/build/lib/eco_localization\n'}
+[4.159182] (eco_localization) StdoutLine: {'line': b'copying eco_localization/__init__.py -> /home/ubuntu/eco_marathon_ws/build/eco_localization/build/lib/eco_localization\n'}
+[4.159332] (eco_control) StdoutLine: {'line': b'byte-compiling /home/ubuntu/eco_marathon_ws/install/eco_control/lib/python3.10/site-packages/eco_control/__init__.py to __init__.cpython-310.pyc\n'}
+[4.159467] (eco_localization) StdoutLine: {'line': b'running install\n'}
+[4.160021] (eco_control) StdoutLine: {'line': b'running install_data\n'}
+[4.160224] (eco_localization) StdoutLine: {'line': b'running install_lib\n'}
+[4.161873] (eco_localization) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/install/eco_localization/lib/python3.10/site-packages/eco_localization\n'}
+[4.162275] (eco_localization) StdoutLine: {'line': b'copying /home/ubuntu/eco_marathon_ws/build/eco_localization/build/lib/eco_localization/__init__.py -> /home/ubuntu/eco_marathon_ws/install/eco_localization/lib/python3.10/site-packages/eco_localization\n'}
+[4.163303] (eco_control) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/install/eco_control/share/ament_index\n'}
+[4.163793] (eco_control) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/install/eco_control/share/ament_index/resource_index\n'}
+[4.163992] (eco_control) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/install/eco_control/share/ament_index/resource_index/packages\n'}
+[4.164326] (eco_control) StdoutLine: {'line': b'copying resource/eco_control -> /home/ubuntu/eco_marathon_ws/install/eco_control/share/ament_index/resource_index/packages\n'}
+[4.164591] (eco_localization) StdoutLine: {'line': b'byte-compiling /home/ubuntu/eco_marathon_ws/install/eco_localization/lib/python3.10/site-packages/eco_localization/__init__.py to __init__.cpython-310.pyc\n'}
+[4.164847] (eco_control) StdoutLine: {'line': b'copying package.xml -> /home/ubuntu/eco_marathon_ws/install/eco_control/share/eco_control\n'}
+[4.164974] (eco_control) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.165192] (eco_localization) StdoutLine: {'line': b'running install_data\n'}
+[4.165331] (eco_localization) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/install/eco_localization/share/ament_index\n'}
+[4.165448] (eco_localization) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/install/eco_localization/share/ament_index/resource_index\n'}
+[4.165558] (eco_localization) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/install/eco_localization/share/ament_index/resource_index/packages\n'}
+[4.165778] (eco_localization) StdoutLine: {'line': b'copying resource/eco_localization -> /home/ubuntu/eco_marathon_ws/install/eco_localization/share/ament_index/resource_index/packages\n'}
+[4.165911] (eco_localization) StdoutLine: {'line': b'copying package.xml -> /home/ubuntu/eco_marathon_ws/install/eco_localization/share/eco_localization\n'}
+[4.166022] (eco_localization) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.166219] (eco_perception) StdoutLine: {'line': b'running egg_info\n'}
+[4.166962] (eco_perception) StdoutLine: {'line': b'creating ../../build/eco_perception/eco_perception.egg-info\n'}
+[4.167572] (eco_perception) StdoutLine: {'line': b'writing ../../build/eco_perception/eco_perception.egg-info/PKG-INFO\n'}
+[4.169009] (eco_perception) StdoutLine: {'line': b'writing dependency_links to ../../build/eco_perception/eco_perception.egg-info/dependency_links.txt\n'}
+[4.169237] (eco_perception) StdoutLine: {'line': b'writing entry points to ../../build/eco_perception/eco_perception.egg-info/entry_points.txt\n'}
+[4.169385] (eco_perception) StdoutLine: {'line': b'writing requirements to ../../build/eco_perception/eco_perception.egg-info/requires.txt\n'}
+[4.169514] (eco_perception) StdoutLine: {'line': b'writing top-level names to ../../build/eco_perception/eco_perception.egg-info/top_level.txt\n'}
+[4.169861] (eco_control) StdoutLine: {'line': b'Copying ../../build/eco_control/eco_control.egg-info to /home/ubuntu/eco_marathon_ws/install/eco_control/lib/python3.10/site-packages/eco_control-0.0.0-py3.10.egg-info\n'}
+[4.170042] (eco_perception) StdoutLine: {'line': b"writing manifest file '../../build/eco_perception/eco_perception.egg-info/SOURCES.txt'\n"}
+[4.170802] (eco_localization) StdoutLine: {'line': b'Copying ../../build/eco_localization/eco_localization.egg-info to /home/ubuntu/eco_marathon_ws/install/eco_localization/lib/python3.10/site-packages/eco_localization-0.0.0-py3.10.egg-info\n'}
+[4.171556] (eco_control) StdoutLine: {'line': b'running install_scripts\n'}
+[4.172668] (eco_localization) StdoutLine: {'line': b'running install_scripts\n'}
+[4.173593] (eco_perception) StdoutLine: {'line': b"reading manifest file '../../build/eco_perception/eco_perception.egg-info/SOURCES.txt'\n"}
+[4.179374] (eco_perception) StdoutLine: {'line': b"writing manifest file '../../build/eco_perception/eco_perception.egg-info/SOURCES.txt'\n"}
+[4.180129] (eco_perception) StdoutLine: {'line': b'running build\n'}
+[4.180406] (eco_perception) StdoutLine: {'line': b'running build_py\n'}
+[4.180629] (eco_perception) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/build/eco_perception/build\n'}
+[4.180959] (eco_perception) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/build/eco_perception/build/lib\n'}
+[4.181284] (eco_perception) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/build/eco_perception/build/lib/eco_perception\n'}
+[4.181504] (eco_perception) StdoutLine: {'line': b'copying eco_perception/__init__.py -> /home/ubuntu/eco_marathon_ws/build/eco_perception/build/lib/eco_perception\n'}
+[4.181879] (eco_perception) StdoutLine: {'line': b'copying eco_perception/lane_detection_node.py -> /home/ubuntu/eco_marathon_ws/build/eco_perception/build/lib/eco_perception\n'}
+[4.182695] (eco_perception) StdoutLine: {'line': b'running install\n'}
+[4.183495] (eco_perception) StdoutLine: {'line': b'running install_lib\n'}
+[4.185370] (eco_perception) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages/eco_perception\n'}
+[4.185708] (eco_perception) StdoutLine: {'line': b'copying /home/ubuntu/eco_marathon_ws/build/eco_perception/build/lib/eco_perception/__init__.py -> /home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages/eco_perception\n'}
+[4.189449] (eco_perception) StdoutLine: {'line': b'copying /home/ubuntu/eco_marathon_ws/build/eco_perception/build/lib/eco_perception/lane_detection_node.py -> /home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages/eco_perception\n'}
+[4.189885] (eco_perception) StdoutLine: {'line': b'byte-compiling /home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages/eco_perception/__init__.py to __init__.cpython-310.pyc\n'}
+[4.190420] (eco_perception) StdoutLine: {'line': b'byte-compiling /home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages/eco_perception/lane_detection_node.py to lane_detection_node.cpython-310.pyc\n'}
+[4.196687] (eco_perception) StdoutLine: {'line': b'running install_data\n'}
+[4.197213] (eco_perception) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/install/eco_perception/share/ament_index\n'}
+[4.197531] (eco_perception) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/install/eco_perception/share/ament_index/resource_index\n'}
+[4.197785] (eco_perception) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/install/eco_perception/share/ament_index/resource_index/packages\n'}
+[4.198253] (eco_perception) StdoutLine: {'line': b'copying resource/eco_perception -> /home/ubuntu/eco_marathon_ws/install/eco_perception/share/ament_index/resource_index/packages\n'}
+[4.198477] (eco_perception) StdoutLine: {'line': b'copying package.xml -> /home/ubuntu/eco_marathon_ws/install/eco_perception/share/eco_perception\n'}
+[4.198597] (eco_perception) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.202609] (eco_perception) StdoutLine: {'line': b'Copying ../../build/eco_perception/eco_perception.egg-info to /home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages/eco_perception-0.0.0-py3.10.egg-info\n'}
+[4.206336] (eco_perception) StdoutLine: {'line': b'running install_scripts\n'}
+[4.222508] (eco_localization) StdoutLine: {'line': b"writing list of installed files to '/home/ubuntu/eco_marathon_ws/build/eco_localization/install.log'\n"}
+[4.222954] (-) TimerEvent: {}
+[4.225194] (eco_control) StdoutLine: {'line': b"writing list of installed files to '/home/ubuntu/eco_marathon_ws/build/eco_control/install.log'\n"}
+[4.256489] (eco_perception) StdoutLine: {'line': b'Installing lane_detection script to /home/ubuntu/eco_marathon_ws/install/eco_perception/lib/eco_perception\n'}
+[4.257315] (eco_perception) StdoutLine: {'line': b"writing list of installed files to '/home/ubuntu/eco_marathon_ws/build/eco_perception/install.log'\n"}
+[4.297189] (eco_planning) StdoutLine: {'line': b'running egg_info\n'}
+[4.298774] (eco_planning) StdoutLine: {'line': b'creating ../../build/eco_planning/eco_planning.egg-info\n'}
+[4.299584] (eco_planning) StdoutLine: {'line': b'writing ../../build/eco_planning/eco_planning.egg-info/PKG-INFO\n'}
+[4.300582] (eco_planning) StdoutLine: {'line': b'writing dependency_links to ../../build/eco_planning/eco_planning.egg-info/dependency_links.txt\n'}
+[4.302331] (eco_planning) StdoutLine: {'line': b'writing entry points to ../../build/eco_planning/eco_planning.egg-info/entry_points.txt\n'}
+[4.302624] (eco_planning) StdoutLine: {'line': b'writing requirements to ../../build/eco_planning/eco_planning.egg-info/requires.txt\n'}
+[4.302749] (eco_planning) StdoutLine: {'line': b'writing top-level names to ../../build/eco_planning/eco_planning.egg-info/top_level.txt\n'}
+[4.302860] (eco_planning) StdoutLine: {'line': b"writing manifest file '../../build/eco_planning/eco_planning.egg-info/SOURCES.txt'\n"}
+[4.306722] (eco_planning) StdoutLine: {'line': b"reading manifest file '../../build/eco_planning/eco_planning.egg-info/SOURCES.txt'\n"}
+[4.312341] (eco_planning) StdoutLine: {'line': b"writing manifest file '../../build/eco_planning/eco_planning.egg-info/SOURCES.txt'\n"}
+[4.313284] (eco_planning) StdoutLine: {'line': b'running build\n'}
+[4.313461] (eco_planning) StdoutLine: {'line': b'running build_py\n'}
+[4.313709] (eco_planning) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/build/eco_planning/build\n'}
+[4.314232] (eco_planning) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/build/eco_planning/build/lib\n'}
+[4.314489] (eco_planning) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/build/eco_planning/build/lib/eco_planning\n'}
+[4.314859] (eco_planning) StdoutLine: {'line': b'copying eco_planning/__init__.py -> /home/ubuntu/eco_marathon_ws/build/eco_planning/build/lib/eco_planning\n'}
+[4.315159] (eco_planning) StdoutLine: {'line': b'running install\n'}
+[4.315832] (eco_planning) StdoutLine: {'line': b'running install_lib\n'}
+[4.317760] (eco_planning) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/install/eco_planning/lib/python3.10/site-packages/eco_planning\n'}
+[4.325727] (-) TimerEvent: {}
+[4.335628] (eco_planning) StdoutLine: {'line': b'copying /home/ubuntu/eco_marathon_ws/build/eco_planning/build/lib/eco_planning/__init__.py -> /home/ubuntu/eco_marathon_ws/install/eco_planning/lib/python3.10/site-packages/eco_planning\n'}
+[4.336129] (eco_planning) StdoutLine: {'line': b'byte-compiling /home/ubuntu/eco_marathon_ws/install/eco_planning/lib/python3.10/site-packages/eco_planning/__init__.py to __init__.cpython-310.pyc\n'}
+[4.336535] (eco_planning) StdoutLine: {'line': b'running install_data\n'}
+[4.344850] (eco_planning) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/install/eco_planning/share/ament_index\n'}
+[4.345196] (eco_planning) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/install/eco_planning/share/ament_index/resource_index\n'}
+[4.345627] (eco_planning) StdoutLine: {'line': b'creating /home/ubuntu/eco_marathon_ws/install/eco_planning/share/ament_index/resource_index/packages\n'}
+[4.345889] (eco_planning) StdoutLine: {'line': b'copying resource/eco_planning -> /home/ubuntu/eco_marathon_ws/install/eco_planning/share/ament_index/resource_index/packages\n'}
+[4.346066] (eco_localization) CommandEnded: {'returncode': 0}
+[4.346734] (eco_planning) StdoutLine: {'line': b'copying package.xml -> /home/ubuntu/eco_marathon_ws/install/eco_planning/share/eco_planning\n'}
+[4.346881] (eco_planning) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.347000] (eco_planning) StdoutLine: {'line': b'Copying ../../build/eco_planning/eco_planning.egg-info to /home/ubuntu/eco_marathon_ws/install/eco_planning/lib/python3.10/site-packages/eco_planning-0.0.0-py3.10.egg-info\n'}
+[4.347115] (eco_planning) StdoutLine: {'line': b'running install_scripts\n'}
+[4.352578] (eco_localization) JobEnded: {'identifier': 'eco_localization', 'rc': 0}
+[4.355447] (eco_control) CommandEnded: {'returncode': 0}
+[4.368976] (eco_control) JobEnded: {'identifier': 'eco_control', 'rc': 0}
+[4.371849] (eco_perception) CommandEnded: {'returncode': 0}
+[4.380956] (eco_planning) StdoutLine: {'line': b"writing list of installed files to '/home/ubuntu/eco_marathon_ws/build/eco_planning/install.log'\n"}
+[4.394464] (eco_perception) JobEnded: {'identifier': 'eco_perception', 'rc': 0}
+[4.425915] (-) TimerEvent: {}
+[4.473003] (eco_planning) CommandEnded: {'returncode': 0}
+[4.486067] (eco_planning) JobEnded: {'identifier': 'eco_planning', 'rc': 0}
+[4.526062] (-) TimerEvent: {}
+[4.626696] (-) TimerEvent: {}
+[4.727515] (-) TimerEvent: {}
+[4.828118] (-) TimerEvent: {}
+[4.928736] (-) TimerEvent: {}
+[4.990860] (astra_camera_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[5.028890] (-) TimerEvent: {}
+[5.129541] (-) TimerEvent: {}
+[5.230136] (-) TimerEvent: {}
+[5.330735] (-) TimerEvent: {}
+[5.431381] (-) TimerEvent: {}
+[5.531983] (-) TimerEvent: {}
+[5.632651] (-) TimerEvent: {}
+[5.675491] (eco_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[5.732807] (-) TimerEvent: {}
+[5.833424] (-) TimerEvent: {}
+[5.934022] (-) TimerEvent: {}
+[6.034595] (-) TimerEvent: {}
+[6.135194] (-) TimerEvent: {}
+[6.235833] (-) TimerEvent: {}
+[6.336427] (-) TimerEvent: {}
+[6.349979] (eco_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[6.355179] (eco_interfaces) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:20 (find_package):\n'}
+[6.355494] (eco_interfaces) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[6.355628] (eco_interfaces) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[6.355744] (eco_interfaces) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[6.355851] (eco_interfaces) StderrLine: {'line': b'\n'}
+[6.355958] (eco_interfaces) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[6.356062] (eco_interfaces) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[6.356166] (eco_interfaces) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[6.356267] (eco_interfaces) StderrLine: {'line': b'  CMakeLists.txt:26 (rosidl_generate_interfaces)\n'}
+[6.356365] (eco_interfaces) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[6.356462] (eco_interfaces) StderrLine: {'line': b'\x1b[0m\n'}
+[6.407391] (eco_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6")\n'}
+[6.420679] (eco_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[6.421966] (eco_interfaces) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:52 (find_package):\n'}
+[6.422244] (eco_interfaces) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[6.422376] (eco_interfaces) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[6.422491] (eco_interfaces) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[6.422602] (eco_interfaces) StderrLine: {'line': b'\n'}
+[6.422710] (eco_interfaces) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[6.422814] (eco_interfaces) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)\n'}
+[6.422917] (eco_interfaces) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[6.423017] (eco_interfaces) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[6.423115] (eco_interfaces) StderrLine: {'line': b'  CMakeLists.txt:26 (rosidl_generate_interfaces)\n'}
+[6.423212] (eco_interfaces) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[6.423340] (eco_interfaces) StderrLine: {'line': b'\x1b[0m\n'}
+[6.436578] (-) TimerEvent: {}
+[6.486109] (eco_interfaces) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:140 (find_package):\n'}
+[6.486608] (eco_interfaces) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[6.486762] (eco_interfaces) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[6.486929] (eco_interfaces) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[6.487047] (eco_interfaces) StderrLine: {'line': b'\n'}
+[6.487157] (eco_interfaces) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[6.487265] (eco_interfaces) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)\n'}
+[6.487452] (eco_interfaces) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[6.487566] (eco_interfaces) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[6.487672] (eco_interfaces) StderrLine: {'line': b'  CMakeLists.txt:26 (rosidl_generate_interfaces)\n'}
+[6.487771] (eco_interfaces) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[6.487869] (eco_interfaces) StderrLine: {'line': b'\x1b[0m\n'}
+[6.502280] (eco_interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5")\n'}
+[6.502727] (eco_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[6.502858] (eco_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[6.502971] (eco_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so\n'}
+[6.536725] (-) TimerEvent: {}
+[6.559943] (eco_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so\n'}
+[6.636903] (-) TimerEvent: {}
+[6.663605] (eco_interfaces) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[6.667129] (eco_interfaces) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[6.678476] (eco_interfaces) StdoutLine: {'line': b'-- Configuring done (5.8s)\n'}
+[6.737079] (-) TimerEvent: {}
+[6.745233] (astra_camera_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[6.751269] (astra_camera_msgs) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:20 (find_package):\n'}
+[6.751703] (astra_camera_msgs) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[6.751835] (astra_camera_msgs) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[6.751953] (astra_camera_msgs) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[6.752071] (astra_camera_msgs) StderrLine: {'line': b'\n'}
+[6.752180] (astra_camera_msgs) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[6.752284] (astra_camera_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[6.752387] (astra_camera_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[6.752489] (astra_camera_msgs) StderrLine: {'line': b'  CMakeLists.txt:17 (rosidl_generate_interfaces)\n'}
+[6.752586] (astra_camera_msgs) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[6.752684] (astra_camera_msgs) StderrLine: {'line': b'\x1b[0m\n'}
+[6.775126] (eco_interfaces) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[6.793604] (eco_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/ubuntu/eco_marathon_ws/build/eco_interfaces\n'}
+[6.810011] (astra_camera_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6")\n'}
+[6.821831] (astra_camera_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[6.822647] (astra_camera_msgs) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:52 (find_package):\n'}
+[6.822874] (astra_camera_msgs) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[6.823039] (astra_camera_msgs) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[6.823158] (astra_camera_msgs) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[6.823271] (astra_camera_msgs) StderrLine: {'line': b'\n'}
+[6.823435] (astra_camera_msgs) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[6.823544] (astra_camera_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)\n'}
+[6.823661] (astra_camera_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[6.823765] (astra_camera_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[6.823864] (astra_camera_msgs) StderrLine: {'line': b'  CMakeLists.txt:17 (rosidl_generate_interfaces)\n'}
+[6.823963] (astra_camera_msgs) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[6.824062] (astra_camera_msgs) StderrLine: {'line': b'\x1b[0m\n'}
+[6.826676] (eco_interfaces) CommandEnded: {'returncode': 0}
+[6.828188] (eco_interfaces) JobProgress: {'identifier': 'eco_interfaces', 'progress': 'build'}
+[6.829757] (eco_interfaces) Command: {'cmd': ['/home/ubuntu/.local/bin/cmake', '--build', '/home/ubuntu/eco_marathon_ws/build/eco_interfaces', '--', '-j8', '-l8'], 'cwd': '/home/ubuntu/eco_marathon_ws/build/eco_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ubuntu'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ubuntu/eco_marathon_ws/install/astra_camera/lib:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib:/home/ubuntu/ros2_ws/install/sn_interfaces/lib:/home/ubuntu/ros2_ws/install/astra_camera/lib:/home/ubuntu/ros2_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:'), ('HOME', '/home/ubuntu'), ('OLDPWD', '/home/ubuntu/eco_marathon_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '6210'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/ubuntu/eco_marathon_ws/install:/home/ubuntu/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ubuntu'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ubuntu'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/home/ubuntu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/3090,unix/ubuntu:/tmp/.ICE-unix/3090'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b8e50f69_cadd_475c_b9a0_c1081bd56b10'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.122'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_interfaces:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/eco_marathon_ws/install/astra_camera:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/sn_interfaces:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/home/ubuntu/ros2_ws/install/astra_camera:/home/ubuntu/ros2_ws/install/astra_camera_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ubuntu/eco_marathon_ws/build/eco_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ubuntu/eco_marathon_ws/build/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_planning/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/build/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_localization/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/build/eco_control:/home/ubuntu/eco_marathon_ws/install/eco_control/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/home/ubuntu/ros2_ws/build/vehicle_interface:/home/ubuntu/ros2_ws/install/vehicle_interface/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/build/stop_sign:/home/ubuntu/ros2_ws/install/stop_sign/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/install/sn_interfaces/local/lib/python3.10/dist-packages:/home/ubuntu/ros2_ws/build/my_robot_controller:/home/ubuntu/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/build/lane_detection:/home/ubuntu/ros2_ws/install/lane_detection/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/build/control:/home/ubuntu/ros2_ws/install/control/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/ubuntu/eco_marathon_ws/install/eco_interfaces:/home/ubuntu/eco_marathon_ws/install/astra_camera:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs:/home/ubuntu/ros2_ws/install/sn_interfaces:/home/ubuntu/ros2_ws/install/astra_camera:/home/ubuntu/ros2_ws/install/astra_camera_msgs:/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble')]), 'shell': False}
+[6.837228] (-) TimerEvent: {}
+[6.885949] (astra_camera_msgs) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:140 (find_package):\n'}
+[6.886379] (astra_camera_msgs) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[6.886511] (astra_camera_msgs) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[6.886627] (astra_camera_msgs) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[6.886734] (astra_camera_msgs) StderrLine: {'line': b'\n'}
+[6.886836] (astra_camera_msgs) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[6.886935] (astra_camera_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)\n'}
+[6.887035] (astra_camera_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[6.887181] (astra_camera_msgs) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[6.887282] (astra_camera_msgs) StderrLine: {'line': b'  CMakeLists.txt:17 (rosidl_generate_interfaces)\n'}
+[6.887417] (astra_camera_msgs) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[6.887538] (astra_camera_msgs) StderrLine: {'line': b'\x1b[0m\n'}
+[6.900804] (astra_camera_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5")\n'}
+[6.901406] (astra_camera_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[6.901554] (astra_camera_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[6.901669] (astra_camera_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so\n'}
+[6.937391] (-) TimerEvent: {}
+[6.953601] (astra_camera_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so\n'}
+[7.037589] (-) TimerEvent: {}
+[7.046823] (eco_interfaces) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[7.053702] (eco_interfaces) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[7.060915] (eco_interfaces) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_copy_eco_interfaces\n'}
+[7.137745] (-) TimerEvent: {}
+[7.160082] (astra_camera_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[7.237900] (-) TimerEvent: {}
+[7.279483] (astra_camera_msgs) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[7.285175] (astra_camera_msgs) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[7.288991] (astra_camera_msgs) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[7.296527] (astra_camera_msgs) StdoutLine: {'line': b'-- Configuring done (7.0s)\n'}
+[7.338087] (-) TimerEvent: {}
+[7.439268] (astra_camera_msgs) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[7.439684] (-) TimerEvent: {}
+[7.467400] (astra_camera_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/ubuntu/eco_marathon_ws/build/astra_camera_msgs\n'}
+[7.503512] (astra_camera_msgs) CommandEnded: {'returncode': 0}
+[7.506653] (astra_camera_msgs) JobProgress: {'identifier': 'astra_camera_msgs', 'progress': 'build'}
+[7.506736] (astra_camera_msgs) Command: {'cmd': ['/home/ubuntu/.local/bin/cmake', '--build', '/home/ubuntu/eco_marathon_ws/build/astra_camera_msgs', '--', '-j8', '-l8'], 'cwd': '/home/ubuntu/eco_marathon_ws/build/astra_camera_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ubuntu'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ubuntu/eco_marathon_ws/install/astra_camera/lib:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib:/home/ubuntu/ros2_ws/install/sn_interfaces/lib:/home/ubuntu/ros2_ws/install/astra_camera/lib:/home/ubuntu/ros2_ws/install/astra_camera_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.6/lib64:'), ('HOME', '/home/ubuntu'), ('OLDPWD', '/home/ubuntu/eco_marathon_ws/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '6210'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/ubuntu/eco_marathon_ws/install:/home/ubuntu/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ubuntu'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ubuntu'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-12.6/bin:/home/ubuntu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ubuntu:@/tmp/.ICE-unix/3090,unix/ubuntu:/tmp/.ICE-unix/3090'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b8e50f69_cadd_475c_b9a0_c1081bd56b10'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.122'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_interfaces:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/eco_marathon_ws/install/astra_camera:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/sn_interfaces:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/home/ubuntu/ros2_ws/install/astra_camera:/home/ubuntu/ros2_ws/install/astra_camera_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ubuntu/eco_marathon_ws/build/astra_camera_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ubuntu/eco_marathon_ws/build/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_planning/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/install/eco_perception/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/build/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_localization/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/build/eco_control:/home/ubuntu/eco_marathon_ws/install/eco_control/lib/python3.10/site-packages:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/home/ubuntu/ros2_ws/build/vehicle_interface:/home/ubuntu/ros2_ws/install/vehicle_interface/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/build/stop_sign:/home/ubuntu/ros2_ws/install/stop_sign/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/install/sn_interfaces/local/lib/python3.10/dist-packages:/home/ubuntu/ros2_ws/build/my_robot_controller:/home/ubuntu/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/build/lane_detection:/home/ubuntu/ros2_ws/install/lane_detection/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/build/control:/home/ubuntu/ros2_ws/install/control/lib/python3.10/site-packages:/home/ubuntu/ros2_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/ubuntu/eco_marathon_ws/install/eco_interfaces:/home/ubuntu/eco_marathon_ws/install/astra_camera:/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs:/home/ubuntu/ros2_ws/install/sn_interfaces:/home/ubuntu/ros2_ws/install/astra_camera:/home/ubuntu/ros2_ws/install/astra_camera_msgs:/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble')]), 'shell': False}
+[7.539866] (-) TimerEvent: {}
+[7.605031] (eco_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[7.606644] (eco_interfaces) StdoutLine: {'line': b'creating eco_interfaces.egg-info\n'}
+[7.607399] (eco_interfaces) StdoutLine: {'line': b'writing eco_interfaces.egg-info/PKG-INFO\n'}
+[7.614914] (eco_interfaces) StdoutLine: {'line': b'writing dependency_links to eco_interfaces.egg-info/dependency_links.txt\n'}
+[7.615409] (eco_interfaces) StdoutLine: {'line': b'writing top-level names to eco_interfaces.egg-info/top_level.txt\n'}
+[7.615580] (eco_interfaces) StdoutLine: {'line': b"writing manifest file 'eco_interfaces.egg-info/SOURCES.txt'\n"}
+[7.615707] (eco_interfaces) StdoutLine: {'line': b"reading manifest file 'eco_interfaces.egg-info/SOURCES.txt'\n"}
+[7.615912] (eco_interfaces) StdoutLine: {'line': b"writing manifest file 'eco_interfaces.egg-info/SOURCES.txt'\n"}
+[7.642380] (-) TimerEvent: {}
+[7.694063] (eco_interfaces) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_build_eco_interfaces_egg\n'}
+[7.742538] (-) TimerEvent: {}
+[7.756094] (astra_camera_msgs) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[7.768158] (astra_camera_msgs) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[7.775024] (astra_camera_msgs) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_copy_astra_camera_msgs\n'}
+[7.842721] (-) TimerEvent: {}
+[7.943403] (-) TimerEvent: {}
+[8.044046] (-) TimerEvent: {}
+[8.144717] (-) TimerEvent: {}
+[8.245360] (-) TimerEvent: {}
+[8.304860] (eco_interfaces) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/eco_interfaces__rosidl_generator_c.dir/rosidl_generator_c/eco_interfaces/msg/detail/lane_detection__functions.c.o\x1b[0m\n'}
+[8.307551] (eco_interfaces) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/eco_interfaces__rosidl_generator_c.dir/rosidl_generator_c/eco_interfaces/msg/detail/obstacle__functions.c.o\x1b[0m\n'}
+[8.312842] (eco_interfaces) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/eco_interfaces__rosidl_generator_c.dir/rosidl_generator_c/eco_interfaces/msg/detail/obstacles__functions.c.o\x1b[0m\n'}
+[8.315765] (eco_interfaces) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/eco_interfaces__rosidl_generator_c.dir/rosidl_generator_c/eco_interfaces/msg/detail/parking_area__functions.c.o\x1b[0m\n'}
+[8.323475] (eco_interfaces) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/eco_interfaces__rosidl_generator_c.dir/rosidl_generator_c/eco_interfaces/msg/detail/stop_sign__functions.c.o\x1b[0m\n'}
+[8.346055] (-) TimerEvent: {}
+[8.352239] (eco_interfaces) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/parking_area__functions.h:19\x1b[m\x1b[K,\n'}
+[8.352687] (eco_interfaces) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/parking_area__functions.c:4\x1b[m\x1b[K:\n'}
+[8.352826] (eco_interfaces) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/parking_area__struct.h:22:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kstd_msgs/msg/detail/header__struct.h: No such file or directory\n'}
+[8.352950] (eco_interfaces) StderrLine: {'line': b'   22 | #include \x1b[01;31m\x1b[K"std_msgs/msg/detail/header__struct.h"\x1b[m\x1b[K\n'}
+[8.353060] (eco_interfaces) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.353163] (eco_interfaces) StderrLine: {'line': b'compilation terminated.\n'}
+[8.354182] (eco_interfaces) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/lane_detection__functions.h:19\x1b[m\x1b[K,\n'}
+[8.354418] (eco_interfaces) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/lane_detection__functions.c:4\x1b[m\x1b[K:\n'}
+[8.354547] (eco_interfaces) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/lane_detection__struct.h:22:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kstd_msgs/msg/detail/header__struct.h: No such file or directory\n'}
+[8.354663] (eco_interfaces) StderrLine: {'line': b'   22 | #include \x1b[01;31m\x1b[K"std_msgs/msg/detail/header__struct.h"\x1b[m\x1b[K\n'}
+[8.354798] (eco_interfaces) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.354902] (eco_interfaces) StderrLine: {'line': b'compilation terminated.\n'}
+[8.356696] (eco_interfaces) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_generator_c.dir/build.make:230: CMakeFiles/eco_interfaces__rosidl_generator_c.dir/rosidl_generator_c/eco_interfaces/msg/detail/parking_area__functions.c.o] Error 1\n'}
+[8.357065] (eco_interfaces) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[8.367873] (eco_interfaces) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/eco_interfaces__rosidl_generator_c.dir/rosidl_generator_c/eco_interfaces/msg/detail/system_state__functions.c.o\x1b[0m\n'}
+[8.371500] (eco_interfaces) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_generator_c.dir/build.make:188: CMakeFiles/eco_interfaces__rosidl_generator_c.dir/rosidl_generator_c/eco_interfaces/msg/detail/lane_detection__functions.c.o] Error 1\n'}
+[8.387807] (eco_interfaces) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/obstacle__functions.h:19\x1b[m\x1b[K,\n'}
+[8.388574] (eco_interfaces) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/obstacle__functions.c:4\x1b[m\x1b[K:\n'}
+[8.388900] (eco_interfaces) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/obstacle__struct.h:22:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kstd_msgs/msg/detail/header__struct.h: No such file or directory\n'}
+[8.389186] (eco_interfaces) StderrLine: {'line': b'   22 | #include \x1b[01;31m\x1b[K"std_msgs/msg/detail/header__struct.h"\x1b[m\x1b[K\n'}
+[8.389567] (eco_interfaces) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.389859] (eco_interfaces) StderrLine: {'line': b'compilation terminated.\n'}
+[8.392991] (eco_interfaces) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_generator_c.dir/build.make:202: CMakeFiles/eco_interfaces__rosidl_generator_c.dir/rosidl_generator_c/eco_interfaces/msg/detail/obstacle__functions.c.o] Error 1\n'}
+[8.396659] (eco_interfaces) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/obstacles__functions.h:19\x1b[m\x1b[K,\n'}
+[8.397139] (eco_interfaces) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/obstacles__functions.c:4\x1b[m\x1b[K:\n'}
+[8.397483] (eco_interfaces) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/obstacles__struct.h:22:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kstd_msgs/msg/detail/header__struct.h: No such file or directory\n'}
+[8.397936] (eco_interfaces) StderrLine: {'line': b'   22 | #include \x1b[01;31m\x1b[K"std_msgs/msg/detail/header__struct.h"\x1b[m\x1b[K\n'}
+[8.398389] (eco_interfaces) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.398830] (eco_interfaces) StderrLine: {'line': b'compilation terminated.\n'}
+[8.402292] (eco_interfaces) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_generator_c.dir/build.make:216: CMakeFiles/eco_interfaces__rosidl_generator_c.dir/rosidl_generator_c/eco_interfaces/msg/detail/obstacles__functions.c.o] Error 1\n'}
+[8.406114] (eco_interfaces) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/system_state__functions.h:19\x1b[m\x1b[K,\n'}
+[8.406649] (eco_interfaces) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/system_state__functions.c:4\x1b[m\x1b[K:\n'}
+[8.406922] (eco_interfaces) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/system_state__struct.h:82:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kstd_msgs/msg/detail/header__struct.h: No such file or directory\n'}
+[8.407154] (eco_interfaces) StderrLine: {'line': b'   82 | #include \x1b[01;31m\x1b[K"std_msgs/msg/detail/header__struct.h"\x1b[m\x1b[K\n'}
+[8.407392] (eco_interfaces) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.407676] (eco_interfaces) StderrLine: {'line': b'compilation terminated.\n'}
+[8.408047] (eco_interfaces) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/stop_sign__functions.h:19\x1b[m\x1b[K,\n'}
+[8.408469] (eco_interfaces) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/stop_sign__functions.c:4\x1b[m\x1b[K:\n'}
+[8.408736] (eco_interfaces) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ubuntu/eco_marathon_ws/build/eco_interfaces/rosidl_generator_c/eco_interfaces/msg/detail/stop_sign__struct.h:22:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kstd_msgs/msg/detail/header__struct.h: No such file or directory\n'}
+[8.408952] (eco_interfaces) StderrLine: {'line': b'   22 | #include \x1b[01;31m\x1b[K"std_msgs/msg/detail/header__struct.h"\x1b[m\x1b[K\n'}
+[8.409160] (eco_interfaces) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.409424] (eco_interfaces) StderrLine: {'line': b'compilation terminated.\n'}
+[8.410848] (eco_interfaces) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_generator_c.dir/build.make:258: CMakeFiles/eco_interfaces__rosidl_generator_c.dir/rosidl_generator_c/eco_interfaces/msg/detail/system_state__functions.c.o] Error 1\n'}
+[8.414535] (eco_interfaces) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/eco_interfaces__rosidl_generator_c.dir/build.make:244: CMakeFiles/eco_interfaces__rosidl_generator_c.dir/rosidl_generator_c/eco_interfaces/msg/detail/stop_sign__functions.c.o] Error 1\n'}
+[8.415194] (eco_interfaces) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:258: CMakeFiles/eco_interfaces__rosidl_generator_c.dir/all] Error 2\n'}
+[8.415461] (eco_interfaces) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[8.425480] (eco_interfaces) StdoutLine: {'line': b'[ 11%] Built target eco_interfaces__cpp\n'}
+[8.425900] (astra_camera_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[8.426912] (astra_camera_msgs) StdoutLine: {'line': b'creating astra_camera_msgs.egg-info\n'}
+[8.427261] (eco_interfaces) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[8.427550] (astra_camera_msgs) StdoutLine: {'line': b'writing astra_camera_msgs.egg-info/PKG-INFO\n'}
+[8.428189] (astra_camera_msgs) StdoutLine: {'line': b'writing dependency_links to astra_camera_msgs.egg-info/dependency_links.txt\n'}
+[8.428580] (astra_camera_msgs) StdoutLine: {'line': b'writing top-level names to astra_camera_msgs.egg-info/top_level.txt\n'}
+[8.429090] (astra_camera_msgs) StdoutLine: {'line': b"writing manifest file 'astra_camera_msgs.egg-info/SOURCES.txt'\n"}
+[8.430877] (eco_interfaces) CommandEnded: {'returncode': 2}
+[8.434647] (astra_camera_msgs) StdoutLine: {'line': b"reading manifest file 'astra_camera_msgs.egg-info/SOURCES.txt'\n"}
+[8.435659] (astra_camera_msgs) StdoutLine: {'line': b"writing manifest file 'astra_camera_msgs.egg-info/SOURCES.txt'\n"}
+[8.446204] (-) TimerEvent: {}
+[8.453202] (eco_interfaces) JobEnded: {'identifier': 'eco_interfaces', 'rc': 2}
+[8.510275] (astra_camera_msgs) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_build_astra_camera_msgs_egg\n'}
+[8.546379] (-) TimerEvent: {}
+[8.647220] (-) TimerEvent: {}
+[8.748083] (-) TimerEvent: {}
+[8.848855] (-) TimerEvent: {}
+[8.949605] (-) TimerEvent: {}
+[9.050242] (-) TimerEvent: {}
+[9.150818] (-) TimerEvent: {}
+[9.251459] (-) TimerEvent: {}
+[9.308599] (astra_camera_msgs) StdoutLine: {'line': b'[  2%] Built target astra_camera_msgs__cpp\n'}
+[9.319263] (astra_camera_msgs) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[9.324185] (astra_camera_msgs) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[9.324632] (astra_camera_msgs) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[9.351640] (-) TimerEvent: {}
+[9.382683] (astra_camera_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_generator_c.dir/rosidl_generator_c/astra_camera_msgs/msg/detail/device_info__functions.c.o\x1b[0m\n'}
+[9.384579] (astra_camera_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_generator_c.dir/rosidl_generator_c/astra_camera_msgs/msg/detail/metadata__functions.c.o\x1b[0m\n'}
+[9.389067] (astra_camera_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_generator_c.dir/rosidl_generator_c/astra_camera_msgs/srv/detail/get_camera_info__functions.c.o\x1b[0m\n'}
+[9.391020] (astra_camera_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_generator_c.dir/rosidl_generator_c/astra_camera_msgs/msg/detail/extrinsics__functions.c.o\x1b[0m\n'}
+[9.394335] (astra_camera_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_generator_c.dir/rosidl_generator_c/astra_camera_msgs/srv/detail/get_device_info__functions.c.o\x1b[0m\n'}
+[9.451801] (-) TimerEvent: {}
+[9.488487] (astra_camera_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_generator_c.dir/rosidl_generator_c/astra_camera_msgs/srv/detail/get_camera_params__functions.c.o\x1b[0m\n'}
+[9.516231] (astra_camera_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_generator_c.dir/rosidl_generator_c/astra_camera_msgs/srv/detail/get_int32__functions.c.o\x1b[0m\n'}
+[9.519107] (astra_camera_msgs) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_generator_c.dir/rosidl_generator_c/astra_camera_msgs/srv/detail/get_string__functions.c.o\x1b[0m\n'}
+[9.521920] (astra_camera_msgs) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_generator_c.dir/rosidl_generator_c/astra_camera_msgs/srv/detail/set_int32__functions.c.o\x1b[0m\n'}
+[9.551961] (-) TimerEvent: {}
+[9.649241] (astra_camera_msgs) StdoutLine: {'line': b'[ 15%] \x1b[32m\x1b[1mLinking C shared library libastra_camera_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[9.652518] (-) TimerEvent: {}
+[9.707763] (astra_camera_msgs) StdoutLine: {'line': b'[ 15%] Built target astra_camera_msgs__rosidl_generator_c\n'}
+[9.719757] (astra_camera_msgs) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[9.720330] (astra_camera_msgs) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[9.722378] (astra_camera_msgs) StdoutLine: {'line': b'[ 18%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[9.752656] (-) TimerEvent: {}
+[9.859476] (-) TimerEvent: {}
+[9.960136] (-) TimerEvent: {}
+[10.060777] (-) TimerEvent: {}
+[10.161392] (-) TimerEvent: {}
+[10.261984] (-) TimerEvent: {}
+[10.291815] (astra_camera_msgs) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/astra_camera_msgs/msg/metadata__type_support.cpp.o\x1b[0m\n'}
+[10.292256] (astra_camera_msgs) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/astra_camera_msgs/msg/extrinsics__type_support.cpp.o\x1b[0m\n'}
+[10.292497] (astra_camera_msgs) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/astra_camera_msgs/msg/device_info__type_support.cpp.o\x1b[0m\n'}
+[10.362149] (-) TimerEvent: {}
+[10.462745] (-) TimerEvent: {}
+[10.563360] (-) TimerEvent: {}
+[10.663970] (-) TimerEvent: {}
+[10.664637] (astra_camera_msgs) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/astra_camera_msgs/msg/detail/device_info__type_support.cpp.o\x1b[0m\n'}
+[10.764156] (-) TimerEvent: {}
+[10.790388] (astra_camera_msgs) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/astra_camera_msgs/msg/device_info__type_support.cpp.o\x1b[0m\n'}
+[10.852128] (astra_camera_msgs) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/astra_camera_msgs/msg/detail/dds_fastrtps/device_info__type_support.cpp.o\x1b[0m\n'}
+[10.864328] (-) TimerEvent: {}
+[10.877215] (astra_camera_msgs) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/astra_camera_msgs/msg/extrinsics__type_support.cpp.o\x1b[0m\n'}
+[10.878873] (astra_camera_msgs) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/astra_camera_msgs/msg/detail/dds_fastrtps/extrinsics__type_support.cpp.o\x1b[0m\n'}
+[10.941039] (astra_camera_msgs) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/astra_camera_msgs/msg/metadata__type_support.cpp.o\x1b[0m\n'}
+[10.948885] (astra_camera_msgs) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/astra_camera_msgs/srv/get_device_info__type_support.cpp.o\x1b[0m\n'}
+[10.964480] (-) TimerEvent: {}
+[10.994136] (astra_camera_msgs) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/astra_camera_msgs/srv/get_camera_info__type_support.cpp.o\x1b[0m\n'}
+[11.063493] (astra_camera_msgs) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/astra_camera_msgs/srv/get_camera_params__type_support.cpp.o\x1b[0m\n'}
+[11.064572] (-) TimerEvent: {}
+[11.067939] (astra_camera_msgs) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/astra_camera_msgs/srv/get_device_info__type_support.cpp.o\x1b[0m\n'}
+[11.076438] (astra_camera_msgs) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/astra_camera_msgs/srv/get_int32__type_support.cpp.o\x1b[0m\n'}
+[11.140010] (astra_camera_msgs) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/astra_camera_msgs/msg/detail/dds_fastrtps/metadata__type_support.cpp.o\x1b[0m\n'}
+[11.144250] (astra_camera_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/astra_camera_msgs/srv/get_string__type_support.cpp.o\x1b[0m\n'}
+[11.164778] (-) TimerEvent: {}
+[11.233420] (astra_camera_msgs) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/astra_camera_msgs/srv/set_int32__type_support.cpp.o\x1b[0m\n'}
+[11.264993] (-) TimerEvent: {}
+[11.276162] (astra_camera_msgs) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/astra_camera_msgs/msg/detail/device_info__type_support_c.cpp.o\x1b[0m\n'}
+[11.337260] (astra_camera_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32m\x1b[1mLinking CXX shared library libastra_camera_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[11.365201] (-) TimerEvent: {}
+[11.428855] (astra_camera_msgs) StdoutLine: {'line': b'[ 38%] Built target astra_camera_msgs__rosidl_typesupport_c\n'}
+[11.437604] (astra_camera_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/astra_camera_msgs/srv/detail/dds_fastrtps/get_device_info__type_support.cpp.o\x1b[0m\n'}
+[11.449000] (astra_camera_msgs) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/astra_camera_msgs/msg/detail/device_info__type_support.c.o\x1b[0m\n'}
+[11.465425] (-) TimerEvent: {}
+[11.473001] (astra_camera_msgs) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/astra_camera_msgs/msg/detail/extrinsics__type_support.cpp.o\x1b[0m\n'}
+[11.532515] (astra_camera_msgs) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/astra_camera_msgs/msg/detail/extrinsics__type_support.c.o\x1b[0m\n'}
+[11.565632] (-) TimerEvent: {}
+[11.640026] (astra_camera_msgs) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/astra_camera_msgs/msg/detail/metadata__type_support.c.o\x1b[0m\n'}
+[11.665827] (-) TimerEvent: {}
+[11.672084] (astra_camera_msgs) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/astra_camera_msgs/srv/get_camera_info__type_support.cpp.o\x1b[0m\n'}
+[11.731073] (astra_camera_msgs) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/astra_camera_msgs/srv/detail/get_device_info__type_support.c.o\x1b[0m\n'}
+[11.744528] (astra_camera_msgs) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/astra_camera_msgs/srv/detail/get_camera_info__type_support.c.o\x1b[0m\n'}
+[11.766024] (-) TimerEvent: {}
+[11.804918] (astra_camera_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/astra_camera_msgs/msg/detail/extrinsics__type_support_c.cpp.o\x1b[0m\n'}
+[11.822794] (astra_camera_msgs) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/astra_camera_msgs/srv/detail/get_int32__type_support.c.o\x1b[0m\n'}
+[11.835297] (astra_camera_msgs) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/astra_camera_msgs/srv/detail/get_camera_params__type_support.c.o\x1b[0m\n'}
+[11.866222] (-) TimerEvent: {}
+[11.934625] (astra_camera_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/astra_camera_msgs/srv/detail/get_string__type_support.c.o\x1b[0m\n'}
+[11.966444] (astra_camera_msgs) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/astra_camera_msgs/srv/detail/set_int32__type_support.c.o\x1b[0m\n'}
+[11.966921] (-) TimerEvent: {}
+[11.991347] (astra_camera_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/astra_camera_msgs/srv/detail/dds_fastrtps/get_camera_info__type_support.cpp.o\x1b[0m\n'}
+[12.039687] (astra_camera_msgs) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/astra_camera_msgs/srv/detail/dds_fastrtps/get_camera_params__type_support.cpp.o\x1b[0m\n'}
+[12.050577] (astra_camera_msgs) StdoutLine: {'line': b'[ 55%] \x1b[32m\x1b[1mLinking C shared library libastra_camera_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[12.067163] (-) TimerEvent: {}
+[12.157794] (astra_camera_msgs) StdoutLine: {'line': b'[ 55%] Built target astra_camera_msgs__rosidl_typesupport_introspection_c\n'}
+[12.166272] (astra_camera_msgs) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/astra_camera_msgs/srv/detail/dds_fastrtps/get_int32__type_support.cpp.o\x1b[0m\n'}
+[12.167274] (-) TimerEvent: {}
+[12.268187] (-) TimerEvent: {}
+[12.284451] (astra_camera_msgs) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/astra_camera_msgs/msg/detail/metadata__type_support_c.cpp.o\x1b[0m\n'}
+[12.316484] (astra_camera_msgs) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/astra_camera_msgs/srv/get_camera_params__type_support.cpp.o\x1b[0m\n'}
+[12.318750] (astra_camera_msgs) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/astra_camera_msgs/srv/detail/dds_fastrtps/get_string__type_support.cpp.o\x1b[0m\n'}
+[12.368390] (-) TimerEvent: {}
+[12.469512] (-) TimerEvent: {}
+[12.540296] (astra_camera_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/astra_camera_msgs/msg/detail/metadata__type_support.cpp.o\x1b[0m\n'}
+[12.550091] (astra_camera_msgs) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/astra_camera_msgs/srv/detail/get_device_info__type_support_c.cpp.o\x1b[0m\n'}
+[12.569717] (-) TimerEvent: {}
+[12.670398] (-) TimerEvent: {}
+[12.771114] (-) TimerEvent: {}
+[12.871835] (-) TimerEvent: {}
+[12.936293] (astra_camera_msgs) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/astra_camera_msgs/srv/detail/dds_fastrtps/set_int32__type_support.cpp.o\x1b[0m\n'}
+[12.945721] (astra_camera_msgs) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/astra_camera_msgs/srv/get_int32__type_support.cpp.o\x1b[0m\n'}
+[12.972031] (-) TimerEvent: {}
+[13.013367] (astra_camera_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/astra_camera_msgs/srv/detail/get_camera_info__type_support_c.cpp.o\x1b[0m\n'}
+[13.033420] (astra_camera_msgs) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/astra_camera_msgs/srv/detail/get_camera_params__type_support_c.cpp.o\x1b[0m\n'}
+[13.072320] (-) TimerEvent: {}
+[13.173018] (-) TimerEvent: {}
+[13.273741] (-) TimerEvent: {}
+[13.283512] (astra_camera_msgs) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/astra_camera_msgs/srv/detail/get_device_info__type_support.cpp.o\x1b[0m\n'}
+[13.336338] (astra_camera_msgs) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/astra_camera_msgs/srv/detail/get_camera_info__type_support.cpp.o\x1b[0m\n'}
+[13.373955] (-) TimerEvent: {}
+[13.444846] (astra_camera_msgs) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/astra_camera_msgs/srv/detail/get_camera_params__type_support.cpp.o\x1b[0m\n'}
+[13.463754] (astra_camera_msgs) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/astra_camera_msgs/srv/detail/get_int32__type_support_c.cpp.o\x1b[0m\n'}
+[13.474159] (-) TimerEvent: {}
+[13.575541] (-) TimerEvent: {}
+[13.676522] (-) TimerEvent: {}
+[13.777521] (-) TimerEvent: {}
+[13.793826] (astra_camera_msgs) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/astra_camera_msgs/srv/get_string__type_support.cpp.o\x1b[0m\n'}
+[13.877568] (astra_camera_msgs) StdoutLine: {'line': b'[ 72%] \x1b[32m\x1b[1mLinking CXX shared library libastra_camera_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[13.878061] (-) TimerEvent: {}
+[13.932596] (astra_camera_msgs) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/astra_camera_msgs/srv/detail/get_string__type_support_c.cpp.o\x1b[0m\n'}
+[13.978299] (-) TimerEvent: {}
+[14.077381] (astra_camera_msgs) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/astra_camera_msgs/srv/detail/set_int32__type_support_c.cpp.o\x1b[0m\n'}
+[14.078392] (-) TimerEvent: {}
+[14.171628] (astra_camera_msgs) StdoutLine: {'line': b'[ 74%] Built target astra_camera_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[14.178622] (-) TimerEvent: {}
+[14.192281] (astra_camera_msgs) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/astra_camera_msgs/srv/detail/get_int32__type_support.cpp.o\x1b[0m\n'}
+[14.278831] (-) TimerEvent: {}
+[14.380067] (-) TimerEvent: {}
+[14.385318] (astra_camera_msgs) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/astra_camera_msgs/srv/detail/get_string__type_support.cpp.o\x1b[0m\n'}
+[14.454911] (astra_camera_msgs) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/astra_camera_msgs/srv/detail/set_int32__type_support.cpp.o\x1b[0m\n'}
+[14.480306] (-) TimerEvent: {}
+[14.490739] (astra_camera_msgs) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/astra_camera_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/astra_camera_msgs/srv/set_int32__type_support.cpp.o\x1b[0m\n'}
+[14.580526] (-) TimerEvent: {}
+[14.681578] (-) TimerEvent: {}
+[14.782627] (-) TimerEvent: {}
+[14.856145] (astra_camera_msgs) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking CXX shared library libastra_camera_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[14.882825] (-) TimerEvent: {}
+[14.983808] (-) TimerEvent: {}
+[14.995896] (astra_camera_msgs) StdoutLine: {'line': b'[ 80%] Built target astra_camera_msgs__rosidl_typesupport_fastrtps_c\n'}
+[15.057186] (astra_camera_msgs) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking CXX shared library libastra_camera_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[15.083970] (-) TimerEvent: {}
+[15.114300] (astra_camera_msgs) StdoutLine: {'line': b'[ 81%] Built target astra_camera_msgs__rosidl_typesupport_cpp\n'}
+[15.184140] (-) TimerEvent: {}
+[15.284800] (-) TimerEvent: {}
+[15.369654] (astra_camera_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32m\x1b[1mLinking CXX shared library libastra_camera_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[15.385090] (-) TimerEvent: {}
+[15.486138] (-) TimerEvent: {}
+[15.506409] (astra_camera_msgs) StdoutLine: {'line': b'[ 82%] Built target astra_camera_msgs__rosidl_typesupport_introspection_cpp\n'}
+[15.528534] (astra_camera_msgs) StdoutLine: {'line': b'[ 82%] Built target astra_camera_msgs\n'}
+[15.555858] (astra_camera_msgs) StdoutLine: {'line': b'[ 83%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[15.586264] (-) TimerEvent: {}
+[15.686835] (-) TimerEvent: {}
+[15.787419] (-) TimerEvent: {}
+[15.888022] (-) TimerEvent: {}
+[15.988629] (-) TimerEvent: {}
+[16.089224] (-) TimerEvent: {}
+[16.189837] (-) TimerEvent: {}
+[16.290614] (-) TimerEvent: {}
+[16.391453] (-) TimerEvent: {}
+[16.492212] (-) TimerEvent: {}
+[16.592992] (-) TimerEvent: {}
+[16.693762] (-) TimerEvent: {}
+[16.794436] (-) TimerEvent: {}
+[16.895217] (-) TimerEvent: {}
+[16.996025] (-) TimerEvent: {}
+[17.096793] (-) TimerEvent: {}
+[17.197578] (-) TimerEvent: {}
+[17.298350] (-) TimerEvent: {}
+[17.399136] (-) TimerEvent: {}
+[17.499961] (-) TimerEvent: {}
+[17.600732] (-) TimerEvent: {}
+[17.701516] (-) TimerEvent: {}
+[17.802277] (-) TimerEvent: {}
+[17.903046] (-) TimerEvent: {}
+[18.003839] (-) TimerEvent: {}
+[18.104740] (-) TimerEvent: {}
+[18.132404] (astra_camera_msgs) StdoutLine: {'line': b'[ 83%] Built target astra_camera_msgs__py\n'}
+[18.158830] (astra_camera_msgs) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_generator_py.dir/rosidl_generator_py/astra_camera_msgs/msg/_device_info_s.c.o\x1b[0m\n'}
+[18.159442] (astra_camera_msgs) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_generator_py.dir/rosidl_generator_py/astra_camera_msgs/msg/_metadata_s.c.o\x1b[0m\n'}
+[18.160215] (astra_camera_msgs) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_generator_py.dir/rosidl_generator_py/astra_camera_msgs/srv/_get_device_info_s.c.o\x1b[0m\n'}
+[18.160495] (astra_camera_msgs) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_generator_py.dir/rosidl_generator_py/astra_camera_msgs/msg/_extrinsics_s.c.o\x1b[0m\n'}
+[18.160947] (astra_camera_msgs) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_generator_py.dir/rosidl_generator_py/astra_camera_msgs/srv/_get_camera_params_s.c.o\x1b[0m\n'}
+[18.161156] (astra_camera_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_generator_py.dir/rosidl_generator_py/astra_camera_msgs/srv/_get_int32_s.c.o\x1b[0m\n'}
+[18.164539] (astra_camera_msgs) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_generator_py.dir/rosidl_generator_py/astra_camera_msgs/srv/_get_string_s.c.o\x1b[0m\n'}
+[18.170384] (astra_camera_msgs) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_generator_py.dir/rosidl_generator_py/astra_camera_msgs/srv/_get_camera_info_s.c.o\x1b[0m\n'}
+[18.204881] (-) TimerEvent: {}
+[18.305594] (-) TimerEvent: {}
+[18.378564] (astra_camera_msgs) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_generator_py.dir/rosidl_generator_py/astra_camera_msgs/srv/_set_int32_s.c.o\x1b[0m\n'}
+[18.405779] (-) TimerEvent: {}
+[18.506726] (-) TimerEvent: {}
+[18.573443] (astra_camera_msgs) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/astra_camera_msgs/libastra_camera_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[18.606901] (-) TimerEvent: {}
+[18.648433] (astra_camera_msgs) StdoutLine: {'line': b'[ 93%] Built target astra_camera_msgs__rosidl_generator_py\n'}
+[18.670659] (astra_camera_msgs) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/astra_camera_msgs/_astra_camera_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[18.671149] (astra_camera_msgs) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/astra_camera_msgs/_astra_camera_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[18.672103] (astra_camera_msgs) StdoutLine: {'line': b'[ 96%] \x1b[32mBuilding C object CMakeFiles/astra_camera_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/astra_camera_msgs/_astra_camera_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[18.707061] (-) TimerEvent: {}
+[18.807749] (-) TimerEvent: {}
+[18.908385] (-) TimerEvent: {}
+[18.937462] (astra_camera_msgs) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/astra_camera_msgs/astra_camera_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[18.937967] (astra_camera_msgs) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/astra_camera_msgs/astra_camera_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[18.947952] (astra_camera_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/astra_camera_msgs/astra_camera_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[18.998579] (astra_camera_msgs) StdoutLine: {'line': b'[100%] Built target astra_camera_msgs__rosidl_typesupport_c__pyext\n'}
+[18.999062] (astra_camera_msgs) StdoutLine: {'line': b'[100%] Built target astra_camera_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[19.008573] (-) TimerEvent: {}
+[19.016487] (astra_camera_msgs) StdoutLine: {'line': b'[100%] Built target astra_camera_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[19.031070] (astra_camera_msgs) JobEnded: {'identifier': 'astra_camera_msgs', 'rc': 'SIGINT'}
+[19.043226] (astra_camera) JobSkipped: {'identifier': 'astra_camera'}
+[19.043616] (-) EventReactorShutdown: {}

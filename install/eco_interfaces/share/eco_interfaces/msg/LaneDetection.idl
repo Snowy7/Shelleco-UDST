@@ -1,0 +1,29 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from eco_interfaces/msg/LaneDetection.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module eco_interfaces {
+  module msg {
+    struct LaneDetection {
+      std_msgs::msg::Header header;
+
+      sequence<float> left_line_x;
+
+      sequence<float> left_line_y;
+
+      sequence<float> right_line_x;
+
+      sequence<float> right_line_y;
+
+      @verbatim (language="comment", text=
+        "Offset from vehicle center to lane center")
+      float lane_center_offset;
+
+      @verbatim (language="comment", text=
+        "Heading error relative to lane")
+      float lane_heading_error;
+    };
+  };
+};

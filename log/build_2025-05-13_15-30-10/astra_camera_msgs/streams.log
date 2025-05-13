@@ -1,0 +1,355 @@
+[0.093s] Invoking command in '/home/ubuntu/eco_marathon_ws/build/astra_camera_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble /home/ubuntu/.local/bin/cmake --build /home/ubuntu/eco_marathon_ws/build/astra_camera_msgs -- -j8 -l8
+[1.876s] [ 11%] Built target astra_camera_msgs__rosidl_generator_c
+[1.877s] [ 12%] Built target astra_camera_msgs__cpp
+[1.878s] [ 12%] Built target ament_cmake_python_copy_astra_camera_msgs
+[1.878s] [ 24%] Built target astra_camera_msgs__rosidl_typesupport_c
+[1.879s] [ 53%] Built target astra_camera_msgs__rosidl_typesupport_fastrtps_cpp
+[1.880s] [ 57%] Built target astra_camera_msgs__rosidl_typesupport_introspection_c
+[1.881s] [ 58%] Built target astra_camera_msgs__rosidl_typesupport_fastrtps_c
+[1.882s] [ 74%] Built target astra_camera_msgs__rosidl_typesupport_introspection_cpp
+[1.882s] [ 82%] Built target astra_camera_msgs__rosidl_typesupport_cpp
+[1.882s] [ 82%] Built target astra_camera_msgs
+[1.882s] [ 83%] Built target astra_camera_msgs__py
+[1.882s] [ 93%] Built target astra_camera_msgs__rosidl_generator_py
+[1.883s] [ 97%] Built target astra_camera_msgs__rosidl_typesupport_introspection_c__pyext
+[1.883s] [ 97%] Built target astra_camera_msgs__rosidl_typesupport_c__pyext
+[1.883s] [100%] Built target astra_camera_msgs__rosidl_typesupport_fastrtps_c__pyext
+[1.883s] running egg_info
+[1.883s] writing astra_camera_msgs.egg-info/PKG-INFO
+[1.883s] writing dependency_links to astra_camera_msgs.egg-info/dependency_links.txt
+[1.883s] writing top-level names to astra_camera_msgs.egg-info/top_level.txt
+[1.884s] reading manifest file 'astra_camera_msgs.egg-info/SOURCES.txt'
+[1.884s] writing manifest file 'astra_camera_msgs.egg-info/SOURCES.txt'
+[1.884s] [100%] Built target ament_cmake_python_build_astra_camera_msgs_egg
+[2.493s] Invoked command in '/home/ubuntu/eco_marathon_ws/build/astra_camera_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble /home/ubuntu/.local/bin/cmake --build /home/ubuntu/eco_marathon_ws/build/astra_camera_msgs -- -j8 -l8
+[2.664s] Invoking command in '/home/ubuntu/eco_marathon_ws/build/astra_camera_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble /home/ubuntu/.local/bin/cmake --install /home/ubuntu/eco_marathon_ws/build/astra_camera_msgs
+[2.841s] -- Install configuration: ""
+[2.842s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/ament_index/resource_index/rosidl_interfaces/astra_camera_msgs
+[2.842s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs
+[2.842s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv
+[2.842s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/get_camera_info.h
+[2.843s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/get_int32.h
+[2.843s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail
+[2.843s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__type_support.h
+[2.843s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__functions.c
+[2.843s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__type_support.h
+[2.844s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__functions.h
+[2.844s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__struct.h
+[2.844s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__functions.h
+[2.844s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__type_support.h
+[2.844s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__struct.h
+[2.845s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__type_support.h
+[2.845s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__functions.h
+[2.845s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__functions.c
+[2.845s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__type_support.h
+[2.846s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__functions.c
+[2.846s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__functions.h
+[2.846s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__functions.h
+[2.847s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__struct.h
+[2.847s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__struct.h
+[2.847s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__struct.h
+[2.847s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__type_support.h
+[2.847s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__functions.c
+[2.848s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__struct.h
+[2.848s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__functions.c
+[2.848s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__functions.c
+[2.848s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__functions.h
+[2.848s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/set_int32.h
+[2.849s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/get_camera_params.h
+[2.849s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/get_device_info.h
+[2.849s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/get_string.h
+[2.849s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg
+[2.850s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/device_info.h
+[2.850s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/extrinsics.h
+[2.850s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/metadata.h
+[2.850s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail
+[2.850s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__functions.h
+[2.850s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__functions.c
+[2.851s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__struct.h
+[2.851s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__functions.h
+[2.851s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__struct.h
+[2.851s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__type_support.h
+[2.851s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__type_support.h
+[2.852s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__functions.c
+[2.852s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__functions.c
+[2.852s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__type_support.h
+[2.852s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__functions.h
+[2.853s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__struct.h
+[2.853s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/rosidl_generator_c__visibility_control.h
+[2.853s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/environment/library_path.sh
+[2.854s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/environment/library_path.dsv
+[2.854s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib/libastra_camera_msgs__rosidl_generator_c.so
+[2.855s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib/libastra_camera_msgs__rosidl_generator_c.so" to ""
+[2.855s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs
+[2.855s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv
+[2.855s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail
+[2.856s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__rosidl_typesupport_fastrtps_c.h
+[2.856s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__rosidl_typesupport_fastrtps_c.h
+[2.856s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__rosidl_typesupport_fastrtps_c.h
+[2.856s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__rosidl_typesupport_fastrtps_c.h
+[2.856s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__rosidl_typesupport_fastrtps_c.h
+[2.857s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__rosidl_typesupport_fastrtps_c.h
+[2.857s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg
+[2.857s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[2.857s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail
+[2.857s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__rosidl_typesupport_fastrtps_c.h
+[2.857s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__rosidl_typesupport_fastrtps_c.h
+[2.857s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__rosidl_typesupport_fastrtps_c.h
+[2.858s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib/libastra_camera_msgs__rosidl_typesupport_fastrtps_c.so
+[2.858s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib/libastra_camera_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[2.858s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs
+[2.859s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv
+[2.859s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail
+[2.859s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__rosidl_typesupport_introspection_c.h
+[2.859s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__type_support.c
+[2.859s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__rosidl_typesupport_introspection_c.h
+[2.859s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__type_support.c
+[2.860s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__rosidl_typesupport_introspection_c.h
+[2.860s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__type_support.c
+[2.860s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__rosidl_typesupport_introspection_c.h
+[2.860s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__type_support.c
+[2.860s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__type_support.c
+[2.861s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__type_support.c
+[2.861s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__rosidl_typesupport_introspection_c.h
+[2.861s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__rosidl_typesupport_introspection_c.h
+[2.861s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg
+[2.861s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[2.862s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail
+[2.862s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__rosidl_typesupport_introspection_c.h
+[2.862s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__type_support.c
+[2.862s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__type_support.c
+[2.862s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__rosidl_typesupport_introspection_c.h
+[2.869s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__rosidl_typesupport_introspection_c.h
+[2.879s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__type_support.c
+[2.880s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib/libastra_camera_msgs__rosidl_typesupport_introspection_c.so
+[2.880s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib/libastra_camera_msgs__rosidl_typesupport_introspection_c.so" to ""
+[2.880s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib/libastra_camera_msgs__rosidl_typesupport_c.so
+[2.881s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib/libastra_camera_msgs__rosidl_typesupport_c.so" to ""
+[2.881s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs
+[2.881s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv
+[2.881s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/set_int32.hpp
+[2.881s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/get_camera_info.hpp
+[2.882s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/get_device_info.hpp
+[2.882s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/get_int32.hpp
+[2.882s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail
+[2.882s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__type_support.hpp
+[2.882s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__traits.hpp
+[2.882s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__struct.hpp
+[2.882s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__type_support.hpp
+[2.883s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__traits.hpp
+[2.883s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__struct.hpp
+[2.883s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__struct.hpp
+[2.883s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__builder.hpp
+[2.883s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__builder.hpp
+[2.884s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__type_support.hpp
+[2.884s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__builder.hpp
+[2.884s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__type_support.hpp
+[2.884s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__builder.hpp
+[2.884s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__traits.hpp
+[2.884s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__struct.hpp
+[2.884s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__struct.hpp
+[2.886s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__traits.hpp
+[2.887s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__struct.hpp
+[2.887s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__type_support.hpp
+[2.887s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__traits.hpp
+[2.887s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__traits.hpp
+[2.888s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__builder.hpp
+[2.888s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__type_support.hpp
+[2.888s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__builder.hpp
+[2.888s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/get_string.hpp
+[2.888s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/get_camera_params.hpp
+[2.889s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg
+[2.889s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/device_info.hpp
+[2.889s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/metadata.hpp
+[2.891s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[2.891s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail
+[2.891s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__type_support.hpp
+[2.891s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__type_support.hpp
+[2.892s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__struct.hpp
+[2.892s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__struct.hpp
+[2.892s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__type_support.hpp
+[2.892s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__builder.hpp
+[2.903s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__traits.hpp
+[2.904s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__struct.hpp
+[2.904s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__traits.hpp
+[2.904s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__traits.hpp
+[2.904s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__builder.hpp
+[2.904s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__builder.hpp
+[2.905s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/extrinsics.hpp
+[2.905s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs
+[2.905s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv
+[2.905s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail
+[2.905s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__rosidl_typesupport_fastrtps_cpp.hpp
+[2.905s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__rosidl_typesupport_fastrtps_cpp.hpp
+[2.905s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__rosidl_typesupport_fastrtps_cpp.hpp
+[2.905s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/dds_fastrtps
+[2.906s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__rosidl_typesupport_fastrtps_cpp.hpp
+[2.906s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__rosidl_typesupport_fastrtps_cpp.hpp
+[2.906s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__rosidl_typesupport_fastrtps_cpp.hpp
+[2.906s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg
+[2.906s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[2.906s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail
+[2.906s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__rosidl_typesupport_fastrtps_cpp.hpp
+[2.906s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__rosidl_typesupport_fastrtps_cpp.hpp
+[2.906s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/dds_fastrtps
+[2.907s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__rosidl_typesupport_fastrtps_cpp.hpp
+[2.907s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib/libastra_camera_msgs__rosidl_typesupport_fastrtps_cpp.so
+[2.907s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib/libastra_camera_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[2.907s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs
+[2.907s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv
+[2.907s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail
+[2.907s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__rosidl_typesupport_introspection_cpp.hpp
+[2.907s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__rosidl_typesupport_introspection_cpp.hpp
+[2.908s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__rosidl_typesupport_introspection_cpp.hpp
+[2.908s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/set_int32__type_support.cpp
+[2.908s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__type_support.cpp
+[2.908s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__rosidl_typesupport_introspection_cpp.hpp
+[2.908s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_params__type_support.cpp
+[2.908s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_string__type_support.cpp
+[2.908s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_camera_info__type_support.cpp
+[2.908s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__type_support.cpp
+[2.909s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_int32__rosidl_typesupport_introspection_cpp.hpp
+[2.909s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/srv/detail/get_device_info__rosidl_typesupport_introspection_cpp.hpp
+[2.909s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg
+[2.909s] -- Up-to-date: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail
+[2.909s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__rosidl_typesupport_introspection_cpp.hpp
+[2.909s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__type_support.cpp
+[2.909s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/extrinsics__rosidl_typesupport_introspection_cpp.hpp
+[2.909s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/metadata__type_support.cpp
+[2.909s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__rosidl_typesupport_introspection_cpp.hpp
+[2.910s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/include/astra_camera_msgs/astra_camera_msgs/msg/detail/device_info__type_support.cpp
+[2.910s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib/libastra_camera_msgs__rosidl_typesupport_introspection_cpp.so
+[2.910s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib/libastra_camera_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[2.910s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib/libastra_camera_msgs__rosidl_typesupport_cpp.so
+[2.910s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib/libastra_camera_msgs__rosidl_typesupport_cpp.so" to ""
+[2.910s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/environment/pythonpath.sh
+[2.910s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/environment/pythonpath.dsv
+[2.910s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs-1.0.1-py3.10.egg-info
+[2.910s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs-1.0.1-py3.10.egg-info/dependency_links.txt
+[2.911s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs-1.0.1-py3.10.egg-info/top_level.txt
+[2.911s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs-1.0.1-py3.10.egg-info/SOURCES.txt
+[2.911s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs-1.0.1-py3.10.egg-info/PKG-INFO
+[2.911s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs
+[2.911s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv
+[2.912s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_get_int32_s.c
+[2.912s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_get_camera_params_s.c
+[2.912s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_get_string_s.c
+[2.912s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_get_camera_params.py
+[2.912s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/__init__.py
+[2.912s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_set_int32_s.c
+[2.912s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_get_camera_info.py
+[2.912s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_get_camera_info_s.c
+[2.913s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_get_device_info_s.c
+[2.913s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_get_int32.py
+[2.913s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_set_int32.py
+[2.913s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_get_string.py
+[2.913s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_get_device_info.py
+[2.913s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/msg
+[2.913s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/msg/_device_info.py
+[2.913s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/msg/_device_info_s.c
+[2.913s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/msg/_metadata.py
+[2.914s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/msg/__init__.py
+[2.914s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/msg/_metadata_s.c
+[2.914s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/msg/_extrinsics.py
+[2.914s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/msg/_extrinsics_s.c
+[2.914s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/__init__.py
+[2.914s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/astra_camera_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[2.914s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/_astra_camera_msgs_s.ep.rosidl_typesupport_c.c
+[2.914s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/astra_camera_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[2.914s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/_astra_camera_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[2.915s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/libastra_camera_msgs__rosidl_generator_py.so
+[2.915s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/astra_camera_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[2.915s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/_astra_camera_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[3.040s] Listing '/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs'...
+[3.041s] Compiling '/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/__init__.py'...
+[3.041s] Listing '/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/msg'...
+[3.041s] Compiling '/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/msg/__init__.py'...
+[3.041s] Compiling '/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/msg/_device_info.py'...
+[3.041s] Compiling '/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/msg/_extrinsics.py'...
+[3.041s] Compiling '/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/msg/_metadata.py'...
+[3.041s] Listing '/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv'...
+[3.042s] Compiling '/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/__init__.py'...
+[3.042s] Compiling '/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_get_camera_info.py'...
+[3.042s] Compiling '/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_get_camera_params.py'...
+[3.042s] Compiling '/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_get_device_info.py'...
+[3.042s] Compiling '/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_get_int32.py'...
+[3.042s] Compiling '/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_get_string.py'...
+[3.042s] Compiling '/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/srv/_set_int32.py'...
+[3.056s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/astra_camera_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[3.057s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/astra_camera_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so" to ""
+[3.059s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/astra_camera_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[3.060s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/astra_camera_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so" to ""
+[3.061s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/astra_camera_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[3.062s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/local/lib/python3.10/dist-packages/astra_camera_msgs/astra_camera_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so" to ""
+[3.062s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib/libastra_camera_msgs__rosidl_generator_py.so
+[3.063s] -- Set non-toolchain portion of runtime path of "/home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/lib/libastra_camera_msgs__rosidl_generator_py.so" to ""
+[3.064s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/msg/DeviceInfo.idl
+[3.065s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/msg/Extrinsics.idl
+[3.066s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/msg/Metadata.idl
+[3.067s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetDeviceInfo.idl
+[3.067s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetCameraInfo.idl
+[3.068s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetCameraParams.idl
+[3.069s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetInt32.idl
+[3.070s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetString.idl
+[3.071s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/SetInt32.idl
+[3.072s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/msg/DeviceInfo.msg
+[3.073s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/msg/Extrinsics.msg
+[3.074s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/msg/Metadata.msg
+[3.074s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetDeviceInfo.srv
+[3.075s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetDeviceInfo_Request.msg
+[3.075s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetDeviceInfo_Response.msg
+[3.076s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetCameraInfo.srv
+[3.076s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetCameraInfo_Request.msg
+[3.077s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetCameraInfo_Response.msg
+[3.077s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetCameraParams.srv
+[3.077s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetCameraParams_Request.msg
+[3.078s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetCameraParams_Response.msg
+[3.078s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetInt32.srv
+[3.079s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetInt32_Request.msg
+[3.079s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetInt32_Response.msg
+[3.079s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetString.srv
+[3.080s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetString_Request.msg
+[3.080s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/GetString_Response.msg
+[3.081s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/SetInt32.srv
+[3.081s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/SetInt32_Request.msg
+[3.081s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/srv/SetInt32_Response.msg
+[3.082s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/ament_index/resource_index/package_run_dependencies/astra_camera_msgs
+[3.082s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/ament_index/resource_index/parent_prefix_path/astra_camera_msgs
+[3.083s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/environment/ament_prefix_path.sh
+[3.083s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/environment/ament_prefix_path.dsv
+[3.084s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/environment/path.sh
+[3.084s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/environment/path.dsv
+[3.084s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/local_setup.bash
+[3.085s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/local_setup.sh
+[3.086s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/local_setup.zsh
+[3.086s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/local_setup.dsv
+[3.086s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/package.dsv
+[3.087s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/ament_index/resource_index/packages/astra_camera_msgs
+[3.087s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/export_astra_camera_msgs__rosidl_generator_cExport.cmake
+[3.088s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/export_astra_camera_msgs__rosidl_generator_cExport-noconfig.cmake
+[3.092s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/export_astra_camera_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[3.093s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/export_astra_camera_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[3.094s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/astra_camera_msgs__rosidl_typesupport_introspection_cExport.cmake
+[3.098s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/astra_camera_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[3.098s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/astra_camera_msgs__rosidl_typesupport_cExport.cmake
+[3.098s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/astra_camera_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[3.099s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/export_astra_camera_msgs__rosidl_generator_cppExport.cmake
+[3.099s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/export_astra_camera_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[3.099s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/export_astra_camera_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[3.099s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/astra_camera_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[3.100s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/astra_camera_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[3.100s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/astra_camera_msgs__rosidl_typesupport_cppExport.cmake
+[3.100s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/astra_camera_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[3.101s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/export_astra_camera_msgs__rosidl_generator_pyExport.cmake
+[3.101s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/export_astra_camera_msgs__rosidl_generator_pyExport-noconfig.cmake
+[3.101s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/rosidl_cmake-extras.cmake
+[3.102s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.102s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.102s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[3.102s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[3.103s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[3.103s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[3.105s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/astra_camera_msgsConfig.cmake
+[3.105s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/cmake/astra_camera_msgsConfig-version.cmake
+[3.105s] -- Installing: /home/ubuntu/eco_marathon_ws/install/astra_camera_msgs/share/astra_camera_msgs/package.xml
+[3.106s] Invoked command in '/home/ubuntu/eco_marathon_ws/build/astra_camera_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/eco_marathon_ws/install/eco_planning:/home/ubuntu/eco_marathon_ws/install/eco_perception:/home/ubuntu/eco_marathon_ws/install/eco_localization:/home/ubuntu/eco_marathon_ws/install/eco_control:/home/ubuntu/ros2_ws/install/vehicle_interface:/home/ubuntu/ros2_ws/install/stop_sign:/home/ubuntu/ros2_ws/install/my_robot_controller:/home/ubuntu/ros2_ws/install/lane_detection:/home/ubuntu/ros2_ws/install/control:/opt/ros/humble /home/ubuntu/.local/bin/cmake --install /home/ubuntu/eco_marathon_ws/build/astra_camera_msgs

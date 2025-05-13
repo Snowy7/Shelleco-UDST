@@ -1,0 +1,27 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from eco_interfaces/msg/SystemState.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module eco_interfaces {
+  module msg {
+    module SystemState_Constants {
+      const uint8 IDLE = 0;
+      const uint8 SECTION1_LANE_FOLLOWING = 1;
+      const uint8 APPROACHING_STOP_SIGN_SECTION1 = 2;
+      const uint8 STOPPED_SECTION1 = 3;
+      const uint8 SECTION2_OBSTACLE_AVOIDANCE = 4;
+      const uint8 APPROACHING_STOP_SIGN_SECTION2 = 5;
+      const uint8 STOPPED_SECTION2 = 6;
+      const uint8 SECTION3_PARKING = 7;
+      const uint8 PARKED = 8;
+      const uint8 EMERGENCY_STOP = 9;
+    };
+    struct SystemState {
+      std_msgs::msg::Header header;
+
+      uint8 state;
+    };
+  };
+};
