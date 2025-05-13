@@ -1,0 +1,1 @@
+/home/ubuntu/eco_marathon_ws/build/astra_camera_msgs/rosidl_cmake/srv/GetDeviceInfo_Request.msg

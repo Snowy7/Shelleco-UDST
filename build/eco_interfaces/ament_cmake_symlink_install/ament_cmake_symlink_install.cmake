@@ -292,7 +292,7 @@ function(_ament_cmake_symlink_install_create_symlink absolute_file symlink)
   endif()
 
   execute_process(
-    COMMAND "/home/ubuntu/.local/lib/python3.10/site-packages/cmake/data/bin/cmake" "-E" "create_symlink"
+    COMMAND "/usr/bin/cmake" "-E" "create_symlink"
       "${absolute_file}"
       "${symlink}"
   )
