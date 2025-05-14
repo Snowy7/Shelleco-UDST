@@ -60,7 +60,6 @@ class LaneDetectionNode(Node):
         self.last_valid_edges = None
 
         # Publishers
-        # Original publishers
         self.lane_publisher = self.create_publisher(Image, '/lane_detection/lane_mask', 10)
         self.steering_publisher = self.create_publisher(Float32, '/lane_detection/steering', 10)
         self.debug_publisher = self.create_publisher(Image, '/lane_detection/debug_image', 10)
@@ -68,7 +67,6 @@ class LaneDetectionNode(Node):
         self.raw_lane_publisher = self.create_publisher(Image, '/lane_detection/raw_lane_mask', 10)
         self.raw_driving_publisher = self.create_publisher(Image, '/lane_detection/raw_driving_mask', 10)
         
-        # New publisher for eco_interfaces/LaneDetection
         self.lane_detection_publisher = self.create_publisher(
             LaneDetection, 
             '/perception/lane_detections', 
@@ -118,38 +116,31 @@ class LaneDetectionNode(Node):
         self.original_size = (frame.shape[1], frame.shape[0])
         self.get_logger().debug(f"Original image size: {self.original_size}")
         
-        # Store original frame for visualization
         original_image = frame.copy()
         
-        # Resize frame to model input size
         frame_resized = cv2.resize(frame, (self.img_size[0], self.img_size[1]), interpolation=cv2.INTER_LINEAR)
         self.get_logger().debug(f"Resized frame size: {frame_resized.shape}")
         
-        # Process with model
         image = self.preprocess_image(frame_resized)
         with torch.no_grad():
             [predictions, anchor_grid], segmentation, lane_lines = self.model(image)
         predictions = split_for_trace_model(predictions, anchor_grid)
         predictions = non_max_suppression(predictions, self.conf_thres, 0.45)
 
-        # Generate masks
         lane_mask = lane_line_mask(lane_lines, grid_size=6)
         driving_mask = driving_area_mask(segmentation)
         lane_mask = (lane_mask > 0).astype(np.uint8)
         driving_mask = (driving_mask > 0).astype(np.uint8)
         
-        # Ensure masks are the same size as the resized frame
         if lane_mask.shape[:2] != (self.img_size[1], self.img_size[0]):
             lane_mask = cv2.resize(lane_mask, (self.img_size[0], self.img_size[1]), interpolation=cv2.INTER_NEAREST)
         
         if driving_mask.shape[:2] != (self.img_size[1], self.img_size[0]):
             driving_mask = cv2.resize(driving_mask, (self.img_size[0], self.img_size[1]), interpolation=cv2.INTER_NEAREST)
         
-        # Publish raw masks
         self.raw_lane_publisher.publish(self.bridge.cv2_to_imgmsg(lane_mask * 255, encoding='mono8'))
         self.raw_driving_publisher.publish(self.bridge.cv2_to_imgmsg(driving_mask * 255, encoding='mono8'))
 
-        # Create ROI visualization
         scaled_roi = self.scale_roi(self.original_size)
         roi_image = frame_resized.copy()
         cv2.rectangle(roi_image, (scaled_roi['width_lower'], scaled_roi['height_lower']),
@@ -159,8 +150,7 @@ class LaneDetectionNode(Node):
         return lane_mask, driving_mask, frame_resized, scaled_roi
         
     def get_road_center(self, lane_mask, driving_mask, scaled_roi):
-        """Get road center by checking x-axis at the vertical center of the ROI."""
-        # Calculate the vertical center of the ROI
+        """Get road center by checking x-axis at the vertical center of the ROI, using only the most left and right lane lines."""
         roi_center_y = (scaled_roi['height_lower'] + scaled_roi['height_upper']) // 2
         roi_width_lower = scaled_roi['width_lower']
         roi_width_upper = scaled_roi['width_upper']
@@ -168,65 +158,54 @@ class LaneDetectionNode(Node):
         left_edge = right_edge = None
         is_using_fallback = False
 
-        # Extract the horizontal slice at the ROI's vertical center for lane mask
         lane_slice = lane_mask[roi_center_y, roi_width_lower:roi_width_upper]
         
         if np.any(lane_slice > 0):
-            # Find all non-zero positions (lane markings)
             nonzero_indices = np.where(lane_slice > 0)[0]
             
             if len(nonzero_indices) > 0:
-                # Group continuous segments
                 segments = []
                 current_segment = [nonzero_indices[0]]
                 
                 for i in range(1, len(nonzero_indices)):
-                    if nonzero_indices[i] - nonzero_indices[i-1] <= 5:  # Allow small gaps (5 pixels)
+                    if nonzero_indices[i] - nonzero_indices[i-1] <= 5:
                         current_segment.append(nonzero_indices[i])
                     else:
-                        if len(current_segment) >= 5:  # Minimum segment width
+                        if len(current_segment) >= 5:
                             segments.append(current_segment)
                         current_segment = [nonzero_indices[i]]
                 
                 if len(current_segment) >= 5:
                     segments.append(current_segment)
                 
-                # Filter valid segments (minimum width)
                 valid_segments = [seg for seg in segments if len(seg) >= 5]
                 
-                if len(valid_segments) >= 2:
-                    # Get leftmost and rightmost segments
+                if len(valid_segments) >= 1:
+                    # Select only the leftmost and rightmost segments
                     leftmost_segment = valid_segments[0]
                     rightmost_segment = valid_segments[-1]
                     
-                    # Use the leftmost point of the leftmost segment
                     left_edge = leftmost_segment[0] + roi_width_lower
-                    
-                    # Use the rightmost point of the rightmost segment
                     right_edge = rightmost_segment[-1] + roi_width_lower
                     
                     width = right_edge - left_edge
-                    if width > 50:  # Ensure reasonable lane width
-                        self.get_logger().debug(f'Lane edges detected at y={roi_center_y}: left={left_edge}, right={right_edge}, width={width}')
+                    if width > 50:
+                        self.get_logger().debug(f'Most left and right lane edges detected at y={roi_center_y}: left={left_edge}, right={right_edge}, width={width}')
                         self.last_valid_edges = (left_edge, right_edge)
                         return left_edge, right_edge, False
+                    else:
+                        self.get_logger().debug(f'Lane width {width} too narrow, falling back to drivable area')
                 
                 elif len(valid_segments) == 1:
-                    # Only one lane detected, determine if it's left or right
                     segment = valid_segments[0]
                     segment_center = (segment[0] + segment[-1]) / 2 + roi_width_lower
                     img_center = self.img_size[0] / 2
                     
                     if segment_center < img_center:
-                        # Left lane detected
                         left_edge = segment[0] + roi_width_lower
-                        # Need to estimate right edge from drivable area
                     else:
-                        # Right lane detected
                         right_edge = segment[-1] + roi_width_lower
-                        # Need to estimate left edge from drivable area
 
-        # If we need to estimate one or both edges from drivable area
         if left_edge is None or right_edge is None:
             driving_slice = driving_mask[roi_center_y, roi_width_lower:roi_width_upper]
             if np.any(driving_slice > 0):
@@ -235,7 +214,6 @@ class LaneDetectionNode(Node):
                     drivable_left = nonzero_cols[0] + roi_width_lower
                     drivable_right = nonzero_cols[-1] + roi_width_lower
                     
-                    # Use detected edge if available, otherwise use drivable area
                     if left_edge is None:
                         left_edge = drivable_left
                         is_using_fallback = True
@@ -250,7 +228,6 @@ class LaneDetectionNode(Node):
                         self.last_valid_edges = (left_edge, right_edge)
                         return left_edge, right_edge, is_using_fallback
 
-        # If still no valid edges, use full drivable area
         if left_edge is None or right_edge is None:
             driving_slice = driving_mask[roi_center_y, roi_width_lower:roi_width_upper]
             if np.any(driving_slice > 0):
@@ -264,12 +241,10 @@ class LaneDetectionNode(Node):
                         self.last_valid_edges = (left_edge, right_edge)
                         return left_edge, right_edge, True
 
-        # Use last valid edges if available
         if self.last_valid_edges is not None:
             self.get_logger().debug(f'Using last valid edges: left={self.last_valid_edges[0]}, right={self.last_valid_edges[1]}')
             return self.last_valid_edges[0], self.last_valid_edges[1], True
 
-        # Default to image center
         self.get_logger().debug('No valid edges detected, using image center')
         left_edge = self.img_size[0] // 2 - 100
         right_edge = self.img_size[0] // 2 + 100
@@ -277,17 +252,13 @@ class LaneDetectionNode(Node):
 
     def draw_lanes_on_blank_image(self, lane_mask, target_center, steering_angle, left_edge, right_edge, is_using_fallback):
         """Draw lanes, target center, car position, steering angle, and edge lines."""
-        # Create blank image with same dimensions as lane mask
         lanes_image = np.zeros((lane_mask.shape[0], lane_mask.shape[1], 3), dtype=np.uint8)
         
-        # Add lane mask (red channel)
         lanes_image[:, :, 0] = lane_mask * 255
         
-        # Draw filled polygon representing the lane
         roi_center_y = (self.roi_height_lower + self.roi_height_upper) // 2
         bottom_y = lane_mask.shape[0]
         
-        # Create polygon points
         lane_polygon = np.array([
             [left_edge, roi_center_y],
             [right_edge, roi_center_y],
@@ -295,8 +266,7 @@ class LaneDetectionNode(Node):
             [left_edge, bottom_y]
         ], np.int32)
         
-        # Draw filled polygon
-        cv2.fillPoly(lanes_image, [lane_polygon], (0, 128, 0))  # Green fill
+        cv2.fillPoly(lanes_image, [lane_polygon], (0, 128, 0))
         
         if target_center is not None:
             cv2.circle(lanes_image, (int(target_center), roi_center_y), 5, (0, 255, 0), -1)
@@ -304,7 +274,6 @@ class LaneDetectionNode(Node):
         car_position = lane_mask.shape[1] // 2
         cv2.circle(lanes_image, (car_position, roi_center_y), 5, (0, 0, 255), -1)
         
-        # Draw edge lines if detected
         if left_edge is not None:
             cv2.line(lanes_image, (left_edge, 0), (left_edge, lane_mask.shape[0]), (255, 0, 0), 2)
         if right_edge is not None:
@@ -321,33 +290,27 @@ class LaneDetectionNode(Node):
 
     def draw_debug_image(self, input_image, lane_mask, driving_mask, target_center, steering_angle, left_edge, right_edge, is_using_fallback):
         """Draw drivable area, lanes, target center, car position, steering angle, and edge lines."""
-        # Start with a copy of the input image
         debug_image = input_image.copy()
         
-        # Ensure masks are the same size as the input image
         if lane_mask.shape[:2] != debug_image.shape[:2]:
             lane_mask = cv2.resize(lane_mask, (debug_image.shape[1], debug_image.shape[0]), interpolation=cv2.INTER_NEAREST)
         
         if driving_mask.shape[:2] != debug_image.shape[:2]:
             driving_mask = cv2.resize(driving_mask, (debug_image.shape[1], debug_image.shape[0]), interpolation=cv2.INTER_NEAREST)
         
-        # Add drivable area overlay (green)
         driving_overlay = np.zeros_like(debug_image)
-        driving_overlay[:, :, 1] = driving_mask * 128  # Semi-transparent green
+        driving_overlay[:, :, 1] = driving_mask * 128
         debug_image = cv2.addWeighted(debug_image, 1.0, driving_overlay, 0.5, 0)
         
-        # Add lane mask overlay (red)
         lane_overlay = np.zeros_like(debug_image)
-        lane_overlay[:, :, 2] = lane_mask * 200  # Red
+        lane_overlay[:, :, 2] = lane_mask * 200
         debug_image = cv2.addWeighted(debug_image, 1.0, lane_overlay, 0.5, 0)
         
-        # Draw ROI rectangle
         roi_height_lower = self.roi_height_lower
         roi_height_upper = self.roi_height_upper
         roi_width_lower = self.roi_width_lower
         roi_width_upper = self.roi_width_upper
         
-        # Ensure ROI coordinates are scaled to match the debug image
         if debug_image.shape[:2] != (self.img_size[1], self.img_size[0]):
             h_scale = debug_image.shape[0] / self.img_size[1]
             w_scale = debug_image.shape[1] / self.img_size[0]
@@ -365,7 +328,6 @@ class LaneDetectionNode(Node):
                      (roi_width_upper, roi_height_upper), 
                      (255, 255, 255), 2)
         
-        # Calculate center y position for visualization
         roi_center_y = (roi_height_lower + roi_height_upper) // 2
         
         if target_center is not None:
@@ -374,20 +336,18 @@ class LaneDetectionNode(Node):
         car_position = debug_image.shape[1] // 2
         cv2.circle(debug_image, (car_position, roi_center_y), 5, (0, 0, 255), -1)
         
-        # Draw edge lines if detected
         if left_edge is not None:
             cv2.line(debug_image, (left_edge, 0), (left_edge, debug_image.shape[0]), (255, 255, 0), 2)
         if right_edge is not None:
             cv2.line(debug_image, (right_edge, 0), (right_edge, debug_image.shape[0]), (255, 255, 0), 2)
         
-        # Add steering indicator
         steering_length = 50
         steering_end_x = car_position + int(steering_angle * steering_length)
         steering_end_y = roi_center_y - steering_length
         cv2.line(debug_image, 
                 (car_position, roi_center_y), 
                 (steering_end_x, steering_end_y), 
-                (255, 0, 0), 2)  # Blue
+                (255, 0, 0), 2)
         
         cv2.putText(debug_image, f"Steering: {steering_angle:.2f}", (10, 30),
                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
@@ -426,9 +386,7 @@ class LaneDetectionNode(Node):
         lane_msg = LaneDetection()
         lane_msg.header = header
         
-        # Convert lane edges to lane lines (arrays of points)
         if left_edge is not None and right_edge is not None:
-            # Create simple vertical lines for left and right edges
             y_coords = np.linspace(0, self.img_size[1]-1, 10).astype(float)
             left_x = np.ones_like(y_coords) * float(left_edge)
             right_x = np.ones_like(y_coords) * float(right_edge)
@@ -438,13 +396,10 @@ class LaneDetectionNode(Node):
             lane_msg.right_line_x = right_x.tolist()
             lane_msg.right_line_y = y_coords.tolist()
             
-            # Calculate lane center offset from vehicle center
             img_center = self.img_size[0] / 2.0
             lane_center = (left_edge + right_edge) / 2.0
             lane_msg.lane_center_offset = float(lane_center - img_center)
             
-            # Calculate lane heading error (simplified as 0 for straight lanes)
-            # In a more advanced implementation, this could be calculated from the slope of the lanes
             lane_msg.lane_heading_error = 0.0
         
         return lane_msg
@@ -486,13 +441,10 @@ class LaneDetectionNode(Node):
             left_edge, right_edge, is_using_fallback = self.get_road_center(lane_mask, driving_mask, scaled_roi)
             steering_angle, target_center = self.calculate_steering_angle(left_edge, right_edge)
             
-            # Create visualizations
             lanes_image = self.draw_lanes_on_blank_image(lane_mask, target_center, steering_angle, left_edge, right_edge, is_using_fallback)
             
-            # For debug image, use the original frame to ensure proper alignment
             debug_image = self.draw_debug_image(frame, lane_mask, driving_mask, target_center, steering_angle, left_edge, right_edge, is_using_fallback)
             
-            # Create messages
             lane_msg = self.bridge.cv2_to_imgmsg(lanes_image, encoding='bgr8')
             debug_msg = self.bridge.cv2_to_imgmsg(debug_image, encoding='bgr8')
             if header:
@@ -501,11 +453,9 @@ class LaneDetectionNode(Node):
             
             steering_msg = Float32(data=float(steering_angle))
             
-            # Create and publish LaneDetection message for eco_interfaces
             lane_detection_msg = self.create_lane_detection_msg(left_edge, right_edge, steering_angle, header)
             self.lane_detection_publisher.publish(lane_detection_msg)
             
-            # Publish original messages
             self.lane_publisher.publish(lane_msg)
             self.steering_publisher.publish(steering_msg)
             self.debug_publisher.publish(debug_msg)
