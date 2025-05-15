@@ -14,7 +14,13 @@ find_package(geometry_msgs REQUIRED)
 # Generate messages
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/LaneDetection.msg"
+  "msg/Obstacle.msg"
+  "msg/Obstacles.msg"
+  "msg/ParkingArea.msg"
+  "msg/StopSign.msg"
+  "msg/SystemState.msg"
   DEPENDENCIES std_msgs
+  DEPENDENCIES geometry_msgs
 )
 
 ament_package()

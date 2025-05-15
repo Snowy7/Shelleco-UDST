@@ -20,6 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'steering = eco_control.steering_node:main',
+            'lateral_controller = eco_control.lateral_controller_node:main',
         ],
     },
 )

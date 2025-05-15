@@ -55,4 +55,52 @@ def generate_launch_description():
                 'smoothing_factor': 0.3
             }]
         ),
+        
+        # control nodes
+        Node(
+            package='eco_control',
+            executable='steering',
+            name='steering',
+            output='screen',
+        ),
+        
+        Node(
+            package='eco_control',
+            executable='lateral_controller',
+            name='lateral_controller',
+            output='screen',
+            parameters=[{
+                'kp': 1.0,
+                'ki': 0.0,
+                'kd': 0.1,
+                'max_steering_angle_deg': 30.0,  # degrees
+                'max_angular_velocity_deg': 28.6,  # degrees/sec (equivalent to 0.5 rad/s)
+                'wheelbase': 1.42,  # meters
+            }]
+        ),
+        
+        # planning nodes
+        Node(
+            package='eco_planning',
+            executable='state_machine',
+            name='state_machine',
+            output='screen',
+            parameters=[{
+                'stop_duration': 3.0,
+            }]
+        ),
+        
+        Node(
+            package='eco_planning',
+            executable='section1_planner',
+            name='section1_planner',
+            output='screen',
+            parameters=[{
+                'max_speed': 0.5, # m/s
+                'min_speed': 0.1, # m/s
+                'max_angular_velocity': 0.5, # rad/s
+                'lane_center_gain': 1.0, # Gain for lane center
+                'lane_heading_gain': 1.5 # Gain for lane heading
+            }]
+        ),
     ])

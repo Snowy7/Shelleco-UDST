@@ -382,27 +382,55 @@ class LaneDetectionNode(Node):
         return steering_angle, self.smoothed_center
 
     def create_lane_detection_msg(self, left_edge, right_edge, steering_angle, header):
-        """Create LaneDetection message for the eco_interfaces format."""
+        """Create LaneDetection message for the eco_interfaces format with normalized values."""
         lane_msg = LaneDetection()
         lane_msg.header = header
         
         if left_edge is not None and right_edge is not None:
+            # Create y coordinates from top to bottom of image
             y_coords = np.linspace(0, self.img_size[1]-1, 10).astype(float)
             left_x = np.ones_like(y_coords) * float(left_edge)
             right_x = np.ones_like(y_coords) * float(right_edge)
             
+            # Store the raw pixel coordinates for visualization if needed
             lane_msg.left_line_x = left_x.tolist()
             lane_msg.left_line_y = y_coords.tolist()
             lane_msg.right_line_x = right_x.tolist()
             lane_msg.right_line_y = y_coords.tolist()
             
+            # Calculate lane center in pixel coordinates
             img_center = self.img_size[0] / 2.0
             lane_center = (left_edge + right_edge) / 2.0
-            lane_msg.lane_center_offset = float(lane_center - img_center)
+            pixel_offset = lane_center - img_center
             
-            lane_msg.lane_heading_error = 0.0
+            # Normalize the offset to range [-1, 1]
+            # Where -1 means lane is at the far left of the image
+            # and +1 means lane is at the far right of the image
+            max_possible_offset = img_center  # Maximum possible offset is half the image width
+            normalized_offset = pixel_offset / max_possible_offset
+            
+            # Clamp to [-1, 1] in case the lane is detected outside the image bounds
+            normalized_offset = max(-1.0, min(1.0, normalized_offset))
+            
+            # Store the normalized offset
+            lane_msg.lane_center_offset = float(normalized_offset)
+            
+            # Log the conversion for debugging
+            self.get_logger().debug(
+                f"Lane center: {lane_center:.1f}px, Image center: {img_center:.1f}px, "
+                f"Pixel offset: {pixel_offset:.1f}px, Normalized offset: {normalized_offset:.2f}"
+            )
+            
+            # For heading error, we could also normalize it if we have a steering angle
+            # For now, just set it to 0 or use the provided steering angle if it's normalized
+            if steering_angle is not None:
+                # Assuming steering_angle is already normalized to [-1, 1]
+                lane_msg.lane_heading_error = 0.0 #float(steering_angle)
+            else:
+                lane_msg.lane_heading_error = 0.0
         
         return lane_msg
+
 
     def image_callback(self, msg):
         """Process incoming image messages."""
