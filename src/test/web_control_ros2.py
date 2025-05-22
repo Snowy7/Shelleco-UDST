@@ -113,7 +113,7 @@ class EcoMarathonDashboardNode(Node):
         
         # System data
         self.system_data = {
-            "mode": "manual",
+            "mode": "MANUAL",
             "emergency_stopped": False,
             "state_machine": {
                 "current_state": 0,

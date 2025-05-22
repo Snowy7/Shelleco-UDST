@@ -15,7 +15,7 @@ class SteeringInterfaceNode(Node):
         self.declare_parameter('baud_rate', 9600)
         self.declare_parameter('center_angle_degrees', 90)
         self.declare_parameter('angle_range_degrees', 35)  # Range on each side of center
-        self.declare_parameter('max_steering_angle_radians', 0.5)  # Max steering angle in radians
+        self.declare_parameter('max_steering_angle_deg', 180)  # Max steering angle in radians
         self.declare_parameter('command_repeat_count', 3)  # Number of times to repeat a command
         self.declare_parameter('reconnect_delay', 1.0)  # Delay between reconnection attempts (seconds)
         
@@ -23,15 +23,14 @@ class SteeringInterfaceNode(Node):
         self.baud_rate = self.get_parameter('baud_rate').value
         self.center_angle_degrees = self.get_parameter('center_angle_degrees').value
         self.angle_range_degrees = self.get_parameter('angle_range_degrees').value
-        self.max_steering_angle_radians = self.get_parameter('max_steering_angle_radians').value
+        self.max_steering_angle_deg = self.get_parameter('max_steering_angle_deg').value
         self.command_repeat_count = self.get_parameter('command_repeat_count').value
         self.reconnect_delay = self.get_parameter('reconnect_delay').value
         
         # Calculate min and max angles based on center and range
-        self.min_angle_degrees = self.center_angle_degrees - self.angle_range_degrees
-        self.max_angle_degrees = self.center_angle_degrees + self.angle_range_degrees
+        self.min_angle_degrees = 0
         
-        self.get_logger().info(f"Steering angle range: {self.min_angle_degrees}° to {self.max_angle_degrees}°")
+        self.get_logger().info(f"Steering angle range: {self.min_angle_degrees}° to {self.max_steering_angle_deg}°")
         
         # State variables
         self.ser = None
@@ -61,7 +60,7 @@ class SteeringInterfaceNode(Node):
         self.timer = self.create_timer(0.1, self.timer_callback)
         
         self.get_logger().info('Steering interface node initialized')
-    
+        
     def connect_serial(self):
         """Attempt to connect to the serial port"""
         if self.ser is not None:
@@ -114,25 +113,20 @@ class SteeringInterfaceNode(Node):
             self.command_repeats_left -= 1
         
         # Read feedback
-        self.read_feedback()
+        # self.read_feedback()
+        self.publish_angle_feedback(self.current_angle)
     
     def steering_callback(self, msg):
-        # Convert steering angle in radians to servo angle in degrees
-        steering_angle_radians = msg.data
-        
-        # Clamp the steering angle to the allowed range
-        steering_angle_radians = max(-self.max_steering_angle_radians, 
-                                    min(self.max_steering_angle_radians, steering_angle_radians))
-        
-        # Map to servo angle
-        normalized = (steering_angle_radians + self.max_steering_angle_radians) / (2 * self.max_steering_angle_radians)
-        servo_angle = self.min_angle_degrees + normalized * (self.max_angle_degrees - self.min_angle_degrees)
+        # recieved the steering in degrees
+        servo_angle = msg.data
         
         # Ensure the angle is within the allowed range
-        servo_angle = max(self.min_angle_degrees, min(self.max_angle_degrees, servo_angle))
+        servo_angle = max(self.min_angle_degrees, min(self.max_steering_angle_deg, servo_angle))
         
         # Round to integer
         servo_angle = int(round(servo_angle))
+        
+        # self.get_logger().info(f"Received steering command: {servo_angle}°, current angle: {self.target_angle}°, command repeats left: {self.command_repeats_left}, serial connected: {self.serial_connected}")
         
         # Only process if the angle has changed
         if servo_angle != self.target_angle:
@@ -148,14 +142,15 @@ class SteeringInterfaceNode(Node):
     def send_angle(self, angle_degrees):
         """Send angle with validation and update current angle if successful"""
         # Ensure angle is within bounds
-        angle_degrees = max(self.min_angle_degrees, min(self.max_angle_degrees, angle_degrees))
+        angle_degrees = max(self.min_angle_degrees, min(self.max_steering_angle_deg, angle_degrees))
         
+        self.get_logger().info(f"Sending angle: {angle_degrees}°")
         success = self.send_angle_raw(angle_degrees)
         if success:
             self.current_angle = angle_degrees
             
             # Publish the current steering angle (in degrees) for feedback
-            self.publish_angle_feedback(angle_degrees)
+            # self.publish_angle_feedback(angle_degrees)
     
     def send_angle_raw(self, angle_degrees):
         """Send angle to Arduino without validation"""
@@ -168,7 +163,7 @@ class SteeringInterfaceNode(Node):
             self.ser.write(command.encode())
             self.ser.flush()
             
-            self.get_logger().debug(f"Sent angle: {angle_degrees} degrees")
+            self.get_logger().info(f"Sent angle: {angle_degrees} degrees")
             return True
             
         except Exception as e:
@@ -196,7 +191,7 @@ class SteeringInterfaceNode(Node):
                         
                         # Validate the angle more strictly
                         if (angle_degrees >= self.min_angle_degrees - 10 and 
-                            angle_degrees <= self.max_angle_degrees + 10):
+                            angle_degrees <= self.max_steering_angle_deg + 10):
                             
                             # Update current angle
                             self.current_angle = angle_degrees
@@ -206,7 +201,7 @@ class SteeringInterfaceNode(Node):
                         else:
                             self.get_logger().warn(
                                 f"Received angle out of expected range: {angle_degrees}°. "
-                                f"Expected range: {self.min_angle_degrees}° to {self.max_angle_degrees}°"
+                                f"Expected range: {self.min_angle_degrees}° to {self.max_steering_angle_deg}°"
                             )
                     except ValueError:
                         # Not a valid angle, just log if it's not empty

@@ -95,9 +95,34 @@ echo "Downloading models..."
 mkdir -p "$WORKSPACE_ROOT/models"
 cd "$WORKSPACE_ROOT/models" || exit
 
-# Download YOLO model
-echo "Downloading YOLO model..."
-wget -P "$WORKSPACE_ROOT/models" https://github.com/CAIC-AD/YOLOPv2/releases/download/V0.0.1/yolopv2.pt
+# check of yolo model already exists
+if [ -f "yolopv2.pt" ]; then
+    echo "YOLO model already exists. Skipping download."
+else
+    echo "Downloading YOLO model..."
+    wget -P "$WORKSPACE_ROOT/models" https://github.com/CAIC-AD/YOLOPv2/releases/download/V0.0.1/yolopv2.pt
 
+    if [ $? -ne 0 ]; then
+        echo "Failed to download YOLO model."
+        exit 1
+    fi
+fi
+
+# check for nodejs and npm
+if ! command -v node &>/dev/null; then
+    # Download and install nvm:
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+    # in lieu of restarting the shell
+    \. "$HOME/.nvm/nvm.sh"
+    # Download and install Node.js:
+    nvm install 22
+    # Verify the Node.js version:
+    node -v # Should print "v22.15.1".
+    nvm current # Should print "v22.15.1".
+    # Verify npm version:
+    npm -v # Should print "10.9.2".
+else
+    echo "Node.js is already installed."
+fi
 
 echo "Setup complete. All dependencies are installed and udev rules are set."

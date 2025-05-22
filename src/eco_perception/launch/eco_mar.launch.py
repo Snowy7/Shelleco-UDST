@@ -55,15 +55,7 @@ def generate_launch_description():
                 'smoothing_factor': 0.3
             }]
         ),
-        
-        # control nodes
-        Node(
-            package='eco_control',
-            executable='steering',
-            name='steering',
-            output='screen',
-        ),
-        
+                
         Node(
             package='eco_control',
             executable='lateral_controller',
@@ -72,10 +64,24 @@ def generate_launch_description():
             parameters=[{
                 'kp': 1.0,
                 'ki': 0.0,
-                'kd': 0.1,
+                'kd': 0.0,
                 'max_steering_angle_deg': 30.0,  # degrees
-                'max_angular_velocity_deg': 28.6,  # degrees/sec (equivalent to 0.5 rad/s)
+                'max_angular_velocity_deg': 70,  # degrees/sec (equivalent to 0.5 rad/s)
                 'wheelbase': 1.42,  # meters
+                'center_angle_deg': 90.0,  # degrees
+            }]
+        ),
+        Node(
+            package='eco_control',
+            executable='longitudinal_controller',
+            name='longitudinal_controller',
+            output='screen',
+            parameters=[{
+                'kp': 1.0,
+                'ki': 0.0,
+                'kd': 0.0,
+                'max_throttle': 0.8,  # degrees
+                'min_throttle': -0.5,  # degrees/sec (equivalent to 0.5 rad/s)
             }]
         ),
         
@@ -103,4 +109,20 @@ def generate_launch_description():
                 'lane_heading_gain': 1.5 # Gain for lane heading
             }]
         ),
+        
+        # control nodes
+        Node(
+            package='eco_control',
+            executable='steering',
+            name='steering',
+            output='screen',
+        ),
+        
+        Node(
+            package='eco_control',
+            executable='motor',
+            name='motor',
+            output='screen',
+        ),
+
     ])

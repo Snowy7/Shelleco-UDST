@@ -35,7 +35,7 @@ class LongitudinalControllerNode(Node):
         # Publishers
         self.motor_pub = self.create_publisher(
             Float32,
-            '/control/motor_commands',
+            '/control/motor_speed',
             10)
         
         self.event_pub = self.create_publisher(
@@ -72,7 +72,44 @@ class LongitudinalControllerNode(Node):
         )
     
     def control_update(self):
-        # Calculate time delta
+        """ current_time = self.get_clock().now()
+        dt = (current_time - self.last_time).nanoseconds / 1e9
+        self.last_time = current_time
+        
+        if dt <= 0:
+            return
+        
+        # Calculate error
+        error = self.target_speed - self.current_speed
+        
+        # Update error sum (with anti-windup)
+        self.error_sum += error * dt
+        self.error_sum = max(-1.0, min(1.0, self.error_sum))
+        
+        # Calculate error derivative
+        error_derivative = (error - self.last_error) / dt if dt > 0 else 0.0
+        self.last_error = error
+        
+        # PID control
+        control_output = (
+            self.kp * error +
+            self.ki * self.error_sum +
+            self.kd * error_derivative
+        )
+        
+        # Limit control output
+        throttle = max(self.min_throttle, min(self.max_throttle, control_output))
+        
+        # Publish motor command
+        motor_msg = Float32()
+        motor_msg.data = float(throttle)
+        self.motor_pub.publish(motor_msg)
+        
+        # Publish stop event if speed is close to zero
+        if abs(self.current_speed) < 0.05 and abs(self.target_speed) < 0.05:
+            event_msg = Bool()
+            event_msg.data = True
+            self.event_pub.publish(event_msg)# Calculate time delta
         current_time = self.get_clock().now()
         dt = (current_time - self.last_time).nanoseconds / 1e9
         self.last_time = current_time
@@ -110,6 +147,20 @@ class LongitudinalControllerNode(Node):
         if abs(self.current_speed) < 0.05 and abs(self.target_speed) < 0.05:
             event_msg = Bool()
             event_msg.data = True
+            self.event_pub.publish(event_msg) """
+            
+        # for now send the value as it is
+        motor_msg = Float32()
+        motor_msg.data = float(self.target_speed)
+        self.motor_pub.publish(motor_msg)
+        # Publish stop event if speed is close to zero
+        if abs(self.current_speed) < 0.05 and abs(self.target_speed) < 0.05:
+            event_msg = Bool()
+            event_msg.data = True
+            self.event_pub.publish(event_msg)
+        else:
+            event_msg = Bool()
+            event_msg.data = False
             self.event_pub.publish(event_msg)
 
 def main(args=None):

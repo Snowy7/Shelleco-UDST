@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
 
-# Copyright (C) [2023] Byounggun Park
-# MIT License
-
 import cv2
 import torch
 import numpy as np

@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'dashboard = eco_planning.dashboard_node:main',
             'state_machine = eco_planning.state_machine_node:main',
             'section1_planner = eco_planning.section1_planner_node:main',
         ],

@@ -17,7 +17,7 @@ class StateMachineNode(Node):
         self.parking_area_detected = False
         self.current_position = None
         self.stop_start_time = None
-        self.control_mode = "manual"  # Default to manual control
+        self.control_mode = "MANUAL"  # Default to manual control
         self.emergency_stopped = False
         
         # Parameters
@@ -32,7 +32,7 @@ class StateMachineNode(Node):
         
         self.cmd_vel_pub = self.create_publisher(
             Twist,
-            '/cmd_vel',
+            '/planning/cmd_vel',
             10)
         
         # Subscribers
@@ -97,19 +97,20 @@ class StateMachineNode(Node):
         self.current_position = msg.pose.pose
     
     def control_mode_callback(self, msg):
-        new_mode = msg.data
+        new_mode: str = msg.data
         if new_mode != self.control_mode:
             self.get_logger().info(f'Control mode changed: {self.control_mode} -> {new_mode}')
             self.control_mode = new_mode
             
             # If switching to manual, reset to IDLE state
-            if new_mode == "manual" and self.current_state != SystemState.IDLE:
+            if new_mode.lower() == "manual" and self.current_state != SystemState.IDLE:
                 self.transition_to(SystemState.IDLE)
                 self.get_logger().info('Switched to manual control, resetting to IDLE state')
     
     def manual_control_callback(self, msg):
         # Only forward manual control commands if in manual mode and not emergency stopped
-        if self.control_mode == "manual" and not self.emergency_stopped:
+        # If in manual mode, publish the command
+        if self.control_mode.lower() == "manual" and not self.emergency_stopped:
             self.cmd_vel_pub.publish(msg)
     
     def emergency_stop_callback(self, msg):
@@ -127,12 +128,12 @@ class StateMachineNode(Node):
             self.get_logger().info('Emergency stop reset')
             
             # If in autonomous mode, restart from IDLE
-            if self.control_mode == "autonomous":
+            if self.control_mode.lower() == "autonomous":
                 self.transition_to(SystemState.IDLE)
     
     def update_state(self):
         # Only update state if in autonomous mode and not emergency stopped
-        if self.control_mode != "autonomous" or self.emergency_stopped:
+        if self.control_mode.lower() != "autonomous" or self.emergency_stopped:
             return
         
         # State transition logic

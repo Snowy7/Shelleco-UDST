@@ -106,7 +106,7 @@ class Section1PlannerNode(Node):
         
         # Convert normalized steering to angular velocity for ROS
         # This maps [-1, 1] to [-max_angular_velocity, max_angular_velocity] in radians/sec
-        cmd_vel.angular.z = normalized_steering * self.max_angular_velocity
+        cmd_vel.angular.z = normalized_steering
         
         # Set forward velocity based on curvature
         # Reduce speed in curves (when normalized_steering is far from 0)
@@ -115,10 +115,11 @@ class Section1PlannerNode(Node):
         
         # For debugging, calculate the equivalent steering angle in degrees
         # Maps [-1, 1] to [90-30, 90+30] degrees (60° to 120°)
-        steering_angle_deg = 90.0 + (normalized_steering * 30.0)
+        steering_angle_deg = 90.0 + (normalized_steering * 70.0)
         
         # Log periodically
-        self.get_logger().info(
+        if self.get_clock().now().nanoseconds % 1e9 < 1e6:
+            self.get_logger().info(
                 f'Lane offset: {self.lane_data.lane_center_offset:.2f}, '
                 f'Heading error: {self.lane_data.lane_heading_error:.2f}, '
                 f'Normalized steering: {normalized_steering:.2f}, '

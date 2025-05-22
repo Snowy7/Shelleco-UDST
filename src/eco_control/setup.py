@@ -21,7 +21,9 @@ setup(
     entry_points={
         'console_scripts': [
             'steering = eco_control.steering_node:main',
+            'motor = eco_control.motor_node:main',
             'lateral_controller = eco_control.lateral_controller_node:main',
+            'longitudinal_controller = eco_control.longitudinal_controller_node:main',
         ],
     },
 )

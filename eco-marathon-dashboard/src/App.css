@@ -1,0 +1,185 @@
+/* Variables for easy color changes */
+:root {
+  --background-dark: #1f1f1f;
+  --card-background: #181818;
+  --text-light: #e0e0e0;
+  --border-color: #444;
+  --primary-blue: #007bff; /* Bootstrap primary blue */
+  --primary-dark-blue: #0056b3; /* Darker blue for hover/active */
+  --success-green: #28a745; /* Bootstrap success green */
+  --danger-red: #dc3545; /* Bootstrap danger red */
+  --warning-yellow: #ffc107; /* Bootstrap warning yellow */
+  --info-cyan: #17a2b8; /* Bootstrap info cyan */
+  --secondary-grey: #6c757d; /* Bootstrap secondary grey */
+}
+
+.App {
+  min-height: 100vh;
+  background-color: var(--background-dark);
+  color: var(--text-light); /* Default text color */
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: var(--card-background) !important; /* Use card background for a darker navbar */
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-brand,
+.navbar-nav .nav-link,
+.navbar-text {
+  color: var(--text-light) !important;
+}
+
+.navbar-brand:hover,
+.navbar-nav .nav-link:hover {
+  color: var(--primary-blue) !important;
+}
+
+/* Card styling */
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Darker shadow for dark theme */
+  margin-bottom: 1rem;
+  background-color: var(--card-background);
+  color: var(--text-light);
+  border-color: var(--border-color);
+}
+
+.card-header {
+  font-weight: bold;
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* List group styling (used in Sensor and Node status) */
+.list-group-item {
+  background-color: var(--card-background);
+  color: var(--text-light);
+  border-color: var(--border-color);
+}
+
+/* Specific text colors for status indicators */
+.list-group-item.text-success {
+  color: var(--success-green) !important;
+}
+
+.list-group-item.text-danger {
+  color: var(--danger-red) !important;
+}
+
+/* Alert styling */
+.alert-danger {
+  background-color: rgba(var(--danger-red-rgb), 0.2); /* Slightly transparent red background */
+  color: var(--danger-red);
+  border-color: var(--danger-red);
+}
+
+/* Button styling */
+.btn-primary {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark-blue);
+  border-color: var(--primary-dark-blue);
+}
+
+.btn-outline-primary {
+  color: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
+.btn-outline-primary:hover {
+  color: var(--text-light);
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
+.btn-danger {
+  background-color: var(--danger-red);
+  border-color: var(--danger-red);
+}
+
+.btn-danger:hover {
+  background-color: darken(var(--danger-red), 10%); /* Darken red for hover */
+  border-color: darken(var(--danger-red), 10%);
+}
+
+.btn-warning {
+  background-color: var(--warning-yellow);
+  border-color: var(--warning-yellow);
+  color: #212529; /* Dark text for the yellow button */
+}
+
+.btn-warning:hover {
+  background-color: darken(var(--warning-yellow), 10%);
+  border-color: darken(var(--warning-yellow), 10%);
+}
+
+
+/* Badge styling (used for system state and perception) */
+.badge {
+  color: #fff; /* Default text color for badges */
+}
+
+.badge-secondary {
+  background-color: var(--secondary-grey) !important;
+}
+
+.badge-primary {
+  background-color: var(--primary-blue) !important;
+}
+
+.badge-warning {
+  background-color: var(--warning-yellow) !important;
+  color: #212529 !important; /* Dark text for yellow badge */
+}
+
+.badge-info {
+  background-color: var(--info-cyan) !important;
+}
+
+.badge-success {
+  background-color: var(--success-green) !important;
+}
+
+.badge-danger {
+  background-color: var(--danger-red) !important;
+}
+
+
+/* ProgressBar styling */
+.progress-bar {
+  background-color: var(--primary-blue);
+}
+
+.progress-bar-success {
+  background-color: var(--success-green); /* Keep green for success */
+}
+
+/* Recharts chart styling */
+/* You might need to adjust some styles within the Recharts components themselves 
+   or add custom styles to the chart container to match the dark theme. */
+/* Example for text color on chart axes and tooltips */
+.recharts-wrapper text {
+  fill: var(--text-light);
+}
+
+.recharts-tooltip-wrapper .recharts-tooltip-item {
+  color: #000; /* Tooltip text color */
+}
+
+
+/* Image display fallback */
+.bg-light {
+  background-color: var(--background-dark) !important;
+}
+
+.text-muted {
+  color: var(--border-color) !important; /* Use border color for muted text in dark theme */
+}
+
+/* Joystick styling adjustments */
+/* The joystick library might have its own styles, you might need to inspect and override them */
