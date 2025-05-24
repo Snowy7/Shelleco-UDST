@@ -1,77 +1,141 @@
 #!/usr/bin/env python3
-
 import rclpy
 from rclpy.node import Node
-from eco_interfaces.msg import Obstacles
-from std_msgs.msg import Float64
+from nav_msgs.msg import Odometry
+from geometry_msgs.msg import Twist
+from eco_interfaces.msg import Obstacles, SystemState
 import math
 
 class Section2PlannerNode(Node):
     def __init__(self):
         super().__init__('section2_planner_node')
         
-        # Obstacle avoidance parameters
+        # Parameters
+        self.declare_parameter('max_speed', 0.5)  # m/s
+        self.declare_parameter('min_speed', 0.1)  # m/s
+        self.declare_parameter('max_angular_velocity', 0.5)  # rad/s
         self.declare_parameter('safety_distance', 1.0)      # Distance to start avoiding
         self.declare_parameter('critical_distance', 0.4)    # Distance for max steering
         self.declare_parameter('max_steering', 0.8)         # Maximum steering output
         self.declare_parameter('min_steering', 0.1)         # Minimum steering when avoiding
         self.declare_parameter('steering_smoothness', 0.7)  # Smoothing factor (0-1)
         
-        # Subscribers and Publishers
+        self.max_speed = self.get_parameter('max_speed').value
+        self.min_speed = self.get_parameter('min_speed').value
+        self.max_angular_velocity = self.get_parameter('max_angular_velocity').value
+        self.safety_distance = self.get_parameter('safety_distance').value
+        self.critical_distance = self.get_parameter('critical_distance').value
+        self.max_steering = self.get_parameter('max_steering').value
+        self.min_steering = self.get_parameter('min_steering').value
+        self.steering_smoothness = self.get_parameter('steering_smoothness').value
+        
+        # State variables
+        self.current_state = SystemState.IDLE
+        self.obstacles_data = None
+        self.odometry = None
+        self.message_count = 0
+        self.last_steering = 0.0
+        
+        # Publishers
+        self.cmd_vel_pub = self.create_publisher(
+            Twist,
+            '/planning/cmd_vel',
+            10)
+        
+        # Subscribers
+        self.state_sub = self.create_subscription(
+            SystemState,
+            '/state_machine/current_state',
+            self.state_callback,
+            10)
+        
         self.obstacles_sub = self.create_subscription(
             Obstacles,
             '/obstacles',
             self.obstacles_callback,
-            10
-        )
+            10)
         
-        self.steering_pub = self.create_publisher(Float64, '/obstacle_avoidance/steering', 10)
+        self.odom_sub = self.create_subscription(
+            Odometry,
+            '/odometry/filtered',
+            self.odometry_callback,
+            10)
         
-        # State tracking
-        self.message_count = 0
-        self.last_steering = 0.0
+        # Timer for planning updates
+        self.timer = self.create_timer(0.05, self.plan_update)
         
-        self.get_logger().info("=== Section 2 Planner Node Started ===")
+        self.get_logger().info('Section 2 planner node initialized')
         self.get_logger().info("Obstacle avoidance active for front-facing obstacles (-50° to +50°)")
         self.get_logger().info("Steering: -1.0 = Hard Left, +1.0 = Hard Right")
-
+    
+    def state_callback(self, msg):
+        self.current_state = msg.state
+    
     def obstacles_callback(self, msg):
-        """Process obstacles and generate steering commands"""
+        self.obstacles_data = msg
         self.message_count += 1
+    
+    def odometry_callback(self, msg):
+        self.odometry = msg
+    
+    def plan_update(self):
+        # Only plan if in Section 2 states
+        active_states = [
+            SystemState.SECTION2_OBSTACLE_AVOIDANCE,
+            # Add other Section 2 states as needed
+        ]
+        
+        if self.current_state not in active_states:
+            return
+        
+        if self.obstacles_data is None:
+            self.get_logger().warn('Missing obstacles data')
+            return
+        
+        # Calculate control commands based on obstacle avoidance
+        cmd_vel = self.calculate_obstacle_avoidance_commands()
+        
+        # Publish command
+        self.cmd_vel_pub.publish(cmd_vel)
+    
+    def calculate_obstacle_avoidance_commands(self):
+        cmd_vel = Twist()
         
         # Calculate steering based on obstacles
-        raw_steering = self.calculate_avoidance_steering(msg.obstacles)
+        raw_steering = self.calculate_avoidance_steering(self.obstacles_data.obstacles)
         
         # Apply smoothing to prevent jerky movements
-        smoothing_factor = self.get_parameter('steering_smoothness').value
-        smoothed_steering = (smoothing_factor * self.last_steering + 
-                           (1 - smoothing_factor) * raw_steering)
+        smoothed_steering = (self.steering_smoothness * self.last_steering + 
+                           (1 - self.steering_smoothness) * raw_steering)
         
-        # Clamp to valid range
+        # Clamp to valid range and convert to angular velocity
         final_steering = max(-1.0, min(1.0, smoothed_steering))
         self.last_steering = final_steering
         
-        # Publish steering command
-        steering_msg = Float64()
-        steering_msg.data = final_steering
-        self.steering_pub.publish(steering_msg)
+        # Convert normalized steering to angular velocity for ROS
+        cmd_vel.angular.z = final_steering * self.max_angular_velocity
+        
+        # Set forward velocity based on obstacle proximity
+        # Reduce speed when avoiding obstacles (when steering is far from 0)
+        avoidance_factor = 1.0 - min(1.0, abs(final_steering) * 0.5)
+        cmd_vel.linear.x = self.min_speed + (self.max_speed - self.min_speed) * avoidance_factor
         
         # Debug logging
         if self.message_count % 15 == 0 or abs(final_steering) > 0.1:
             self.get_logger().info(
-                f"Obstacles: {len(msg.obstacles)}, "
-                f"Raw: {raw_steering:.3f}, Final: {final_steering:.3f}"
+                f'Obstacles: {len(self.obstacles_data.obstacles)}, '
+                f'Raw steering: {raw_steering:.3f}, '
+                f'Final steering: {final_steering:.3f}, '
+                f'Angular velocity: {cmd_vel.angular.z:.2f} rad/s, '
+                f'Speed: {cmd_vel.linear.x:.2f} m/s'
             )
-
+        
+        return cmd_vel
+    
     def calculate_avoidance_steering(self, obstacles):
         """Calculate steering to avoid obstacles - gradual and proportional"""
         if not obstacles:
             return 0.0
-        
-        safety_distance = self.get_parameter('safety_distance').value
-        critical_distance = self.get_parameter('critical_distance').value
-        max_steering = self.get_parameter('max_steering').value
-        min_steering = self.get_parameter('min_steering').value
         
         # Find the most threatening obstacle (closest and most forward)
         best_obstacle = None
@@ -85,11 +149,11 @@ class Section2PlannerNode(Node):
             distance = math.sqrt(obs_x**2 + obs_y**2)
             
             # Skip obstacles that are too far
-            if distance > safety_distance:
+            if distance > self.safety_distance:
                 continue
             
             # Calculate threat score (closer and more forward = higher threat)
-            distance_threat = max(0.0, (safety_distance - distance) / safety_distance)
+            distance_threat = max(0.0, (self.safety_distance - distance) / self.safety_distance)
             
             # Forward bias - obstacles ahead are more threatening
             angle = abs(math.atan2(obs_y, obs_x))
@@ -119,30 +183,31 @@ class Section2PlannerNode(Node):
             steering_direction = -0.5  # Obstacle dead ahead, slight left
         
         # Calculate steering magnitude based on distance
-        if distance <= critical_distance:
+        if distance <= self.critical_distance:
             # Very close - maximum steering
-            steering_magnitude = max_steering
-        elif distance >= safety_distance:
+            steering_magnitude = self.max_steering
+        elif distance >= self.safety_distance:
             # Far away - no steering
             steering_magnitude = 0.0
         else:
             # Proportional steering based on distance
-            distance_ratio = (safety_distance - distance) / (safety_distance - critical_distance)
-            steering_magnitude = min_steering + (max_steering - min_steering) * distance_ratio
+            distance_ratio = (self.safety_distance - distance) / (self.safety_distance - self.critical_distance)
+            steering_magnitude = self.min_steering + (self.max_steering - self.min_steering) * distance_ratio
         
         final_steering = steering_direction * steering_magnitude
         
-        # Debug info
-        side = "LEFT" if obs_y < 0 else "RIGHT"
-        steer_dir = "RIGHT" if final_steering > 0 else "LEFT"
-        self.get_logger().info(
-            f"Obstacle on {side} at {distance:.2f}m -> "
-            f"Steer {steer_dir} {abs(final_steering):.3f} "
-            f"(threat: {best_threat_score:.2f})"
-        )
+        # Debug info for periodic logging
+        if self.get_clock().now().nanoseconds % 1e9 < 1e6:
+            side = "LEFT" if obs_y < 0 else "RIGHT"
+            steer_dir = "RIGHT" if final_steering > 0 else "LEFT"
+            self.get_logger().info(
+                f"Obstacle on {side} at {distance:.2f}m -> "
+                f"Steer {steer_dir} {abs(final_steering):.3f} "
+                f"(threat: {best_threat_score:.2f})"
+            )
         
         return final_steering
-
+    
     def calculate_obstacle_force(self, obs_x, obs_y, distance, 
                                safety_dist, critical_dist, gain, forward_bias):
         """Calculate steering force for a single obstacle"""
@@ -189,14 +254,9 @@ class Section2PlannerNode(Node):
 def main(args=None):
     rclpy.init(args=args)
     node = Section2PlannerNode()
-    
-    try:
-        rclpy.spin(node)
-    except KeyboardInterrupt:
-        node.get_logger().info("Shutting down Section 2 Planner...")
-    finally:
-        node.destroy_node()
-        rclpy.shutdown()
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
