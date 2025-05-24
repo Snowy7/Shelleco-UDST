@@ -84,6 +84,12 @@ class StateMachineNode(Node):
         # Timer for state machine updates
         self.timer = self.create_timer(0.1, self.update_state)
         
+        # publish initial state
+        initial_state_msg = SystemState()
+        initial_state_msg.header.stamp = self.get_clock().now().to_msg()
+        initial_state_msg.state = self.current_state
+        self.state_pub.publish(initial_state_msg)
+        
         self.get_logger().info('State machine node initialized in IDLE state')
     
     def stop_sign_callback(self, msg):
@@ -190,6 +196,7 @@ class StateMachineNode(Node):
         if new_state != self.current_state:
             self.get_logger().info(f'State transition: {self.current_state} -> {new_state}')
             self.current_state = new_state
+            self.publish_state()
     
     def publish_state(self):
         msg = SystemState()

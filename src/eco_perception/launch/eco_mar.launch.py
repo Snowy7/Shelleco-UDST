@@ -35,9 +35,28 @@ def generate_launch_description():
         # Launch arguments
         model_path_arg,
         
-        astra_launch,
+        # astra_launch,
+        Node(
+            package='simple_camera',
+            executable='camera_node',
+            name='camera_node',
+            output='screen',
+        ),
         
         # Perception nodes
+        Node(
+            package='eco_perception',
+            executable='stop_sign_detection',
+            name='stop_sign_detection',
+            output='screen',
+            parameters=[{
+                'stop_sign_cascade_path': os.path.join(models_dir, 'haarcascade_stop.xml'),
+                'camera_focal_length': 800.0,  # Focal length in pixels (needs calibration)
+                'stop_sign_real_width': 0.6,  # Actual width of a stop sign in meters (needs verification)
+                'min_detection_width': 30  # Minimum pixel width for a detected stop sign
+            }]
+        ),
+        
         Node(
             package='eco_perception',
             executable='lane_detection',
@@ -50,8 +69,8 @@ def generate_launch_description():
                 'device': '0',  # Use '0' for first GPU, 'cpu' for CPU
                 'roi_width_lower': 0,
                 'roi_width_upper': 637,
-                'roi_height_lower': 380,
-                'roi_height_upper': 480,
+                'roi_height_lower': 330,
+                'roi_height_upper': 400,
                 'smoothing_factor': 0.3
             }]
         ),
@@ -65,10 +84,7 @@ def generate_launch_description():
                 'kp': 1.0,
                 'ki': 0.0,
                 'kd': 0.0,
-                'max_steering_angle_deg': 30.0,  # degrees
-                'max_angular_velocity_deg': 70,  # degrees/sec (equivalent to 0.5 rad/s)
                 'wheelbase': 1.42,  # meters
-                'center_angle_deg': 90.0,  # degrees
             }]
         ),
         Node(
@@ -102,11 +118,11 @@ def generate_launch_description():
             name='section1_planner',
             output='screen',
             parameters=[{
-                'max_speed': 0.5, # m/s
+                'max_speed': 0.4, # m/s
                 'min_speed': 0.1, # m/s
                 'max_angular_velocity': 0.5, # rad/s
                 'lane_center_gain': 1.0, # Gain for lane center
-                'lane_heading_gain': 1.5 # Gain for lane heading
+                'lane_heading_gain': 2.0 # Gain for lane heading
             }]
         ),
         

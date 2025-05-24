@@ -14,7 +14,7 @@ class Section1PlannerNode(Node):
         self.declare_parameter('min_speed', 0.1)  # m/s
         self.declare_parameter('max_angular_velocity', 0.5)  # rad/s
         self.declare_parameter('lane_center_gain', 1.0)
-        self.declare_parameter('lane_heading_gain', 1.5)
+        self.declare_parameter('lane_heading_gain', 2.5)
         
         self.max_speed = self.get_parameter('max_speed').value
         self.min_speed = self.get_parameter('min_speed').value
@@ -115,7 +115,7 @@ class Section1PlannerNode(Node):
         
         # For debugging, calculate the equivalent steering angle in degrees
         # Maps [-1, 1] to [90-30, 90+30] degrees (60° to 120°)
-        steering_angle_deg = 90.0 + (normalized_steering * 70.0)
+        steering_angle_deg = normalized_steering
         
         # Log periodically
         if self.get_clock().now().nanoseconds % 1e9 < 1e6:

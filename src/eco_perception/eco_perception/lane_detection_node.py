@@ -176,8 +176,8 @@ class LaneDetectionNode(Node):
                     segments.append(current_segment)
                 
                 valid_segments = [seg for seg in segments if len(seg) >= 5]
-                
-                if len(valid_segments) >= 1:
+                self.get_logger().debug(f'Valid lane segments: {valid_segments}')
+                if len(valid_segments) >= 2:
                     # Select only the leftmost and rightmost segments
                     leftmost_segment = valid_segments[0]
                     rightmost_segment = valid_segments[-1]
@@ -192,17 +192,8 @@ class LaneDetectionNode(Node):
                         return left_edge, right_edge, False
                     else:
                         self.get_logger().debug(f'Lane width {width} too narrow, falling back to drivable area')
-                
-                elif len(valid_segments) == 1:
-                    segment = valid_segments[0]
-                    segment_center = (segment[0] + segment[-1]) / 2 + roi_width_lower
-                    img_center = self.img_size[0] / 2
-                    
-                    if segment_center < img_center:
-                        left_edge = segment[0] + roi_width_lower
-                    else:
-                        right_edge = segment[-1] + roi_width_lower
 
+        self.get_logger().debug(f'Lane edges: left={left_edge}, right={right_edge}')
         if left_edge is None or right_edge is None:
             driving_slice = driving_mask[roi_center_y, roi_width_lower:roi_width_upper]
             if np.any(driving_slice > 0):
@@ -366,7 +357,7 @@ class LaneDetectionNode(Node):
             return 0.0, self.smoothed_center
 
         target_center = (left_edge + right_edge) / 2.0
-        alpha = 0.3
+        alpha = 0.2
         if self.smoothed_center is None:
             self.smoothed_center = target_center
         else:
@@ -376,7 +367,9 @@ class LaneDetectionNode(Node):
         img_center = self.img_size[0] / 2.0
         deviation = self.smoothed_center - img_center
         steering_angle = np.clip(deviation / (self.img_size[0] / 2.0), -1.0, 1.0)
-        return steering_angle, self.smoothed_center
+        
+        # todo: convert the 2.5 to a gain value editable
+        return steering_angle * 2.5, self.smoothed_center
 
     def create_lane_detection_msg(self, left_edge, right_edge, steering_angle, header):
         """Create LaneDetection message for the eco_interfaces format with normalized values."""
@@ -427,7 +420,6 @@ class LaneDetectionNode(Node):
                 lane_msg.lane_heading_error = 0.0
         
         return lane_msg
-
 
     def image_callback(self, msg):
         """Process incoming image messages."""
