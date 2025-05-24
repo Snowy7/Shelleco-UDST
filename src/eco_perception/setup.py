@@ -25,6 +25,7 @@ setup(
         'console_scripts': [
             'lane_detection = eco_perception.lane_detection_node:main',
             'stop_sign_detection = eco_perception.stop_sign_node:main',
+            'obstacle_detection = eco_perception.obstacle_detection_node:main',
         ],
     },
 )

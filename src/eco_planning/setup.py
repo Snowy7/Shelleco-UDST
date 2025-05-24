@@ -23,6 +23,7 @@ setup(
             'dashboard = eco_planning.dashboard_node:main',
             'state_machine = eco_planning.state_machine_node:main',
             'section1_planner = eco_planning.section1_planner_node:main',
+            'section2_planner = eco_planning.section2_planner_node:main',
         ],
     },
 )
