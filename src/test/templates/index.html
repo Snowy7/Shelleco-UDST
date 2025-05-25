@@ -1,688 +1,787 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
     <title>Shell Eco-marathon Dashboard</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-        /* Optimized CSS for performance */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --bg-color: #1a1a1a; /* Slightly lighter dark */
+        --card-bg: #2c2c2c; /* Darker card */
+        --text-color: #e8e8e8;
+        --accent-color: #ffa500; /* Orange */
+        --danger-color: #ff4d4d;
+        --success-color: #4dff88;
+        --warning-color: #ffcc4d;
+        --disabled-color: #555;
+        --state-active-bg: #4a3700; /* Darker orange for active state */
+        --state-inactive-bg: rgba(255, 255, 255, 0.03);
+        --sensor-unknown-color: #777; /* For UNKNOWN sensor status */
+      }
+      body {
+        font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        overflow-x: hidden;
+        line-height: 1.6;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        max-width: 1700px;
+        margin: 0 auto;
+      }
+      .card {
+        background-color: var(--card-bg);
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        display: flex;
+        flex-direction: column;
+      }
+      .card-header {
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--accent-color);
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #444;
+        padding-bottom: 10px;
+      }
+      .status-indicator {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: var(--warning-color);
+        box-shadow: 0 0 5px var(--warning-color);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
+      .status-ok {
+        background-color: var(--success-color);
+        box-shadow: 0 0 5px var(--success-color);
+      }
+      .status-error {
+        background-color: var(--danger-color);
+        box-shadow: 0 0 5px var(--danger-color);
+      }
+      .status-unknown {
+        background-color: var(--sensor-unknown-color);
+        box-shadow: 0 0 5px var(--sensor-unknown-color);
+      } /* ADDED */
+
+      .mode-toggle {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+      .mode-btn {
+        flex: 1;
+        padding: 15px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: opacity 0.2s, transform 0.1s, background-color 0.2s;
+      }
+      .mode-btn:active {
+        transform: scale(0.97);
+      }
+      .mode-btn.manual {
+        background-color: var(--accent-color);
+        color: white;
+      }
+      .mode-btn.autonomous {
+        background-color: var(--warning-color);
+        color: #222;
+      }
+      .mode-btn:not(.active) {
+        opacity: 0.6;
+        background-color: var(--disabled-color);
+        color: #aaa;
+      }
+      .mode-btn:disabled {
+        background-color: var(--disabled-color) !important;
+        color: #888 !important;
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+
+      .joystick-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .joystick-container {
+        position: relative;
+        width: 220px;
+        height: 220px;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 50%;
+        margin: 10px auto 20px auto;
+        touch-action: none;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        transition: opacity 0.3s ease;
+      }
+      .joystick-thumb {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        background-color: var(--accent-color);
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: grab;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+      .joystick-thumb:active {
+        cursor: grabbing;
+      }
+
+      .control-button {
+        width: 100%;
+        padding: 18px;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 15px;
+        transition: background-color 0.2s, transform 0.1s;
+      }
+      .control-button:active {
+        transform: scale(0.98);
+      }
+      .control-button:disabled {
+        background-color: var(--disabled-color) !important;
+        color: #888 !important;
+        cursor: not-allowed;
+        opacity: 0.7;
+      }
+      .emergency-btn {
+        background-color: var(--danger-color);
+        color: white;
+      }
+      .emergency-btn:hover:not(:disabled) {
+        background-color: #d63031;
+      }
+      .reset-btn {
+        background-color: var(--warning-color);
+        color: #222;
+        display: none;
+      }
+      .reset-btn:hover:not(:disabled) {
+        background-color: #e67e22;
+      }
+
+      .data-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-top: 10px;
+      }
+      .data-item {
+        background-color: rgba(255, 255, 255, 0.03);
+        padding: 15px;
+        border-radius: 8px;
+      }
+      .data-label {
+        font-size: 15px;
+        opacity: 0.7;
+        margin-bottom: 8px;
+        display: block;
+      }
+      .data-value {
+        font-size: 20px;
+        font-weight: bold;
+        word-break: break-all;
+      }
+
+      .state-machine-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 10px;
+        max-height: 500px;
+        overflow-y: auto;
+      }
+      .state-machine-list li {
+        background-color: var(--state-inactive-bg);
+        color: #aaa;
+        padding: 10px 15px;
+        margin-bottom: 8px;
+        border-radius: 6px;
+        border-left: 5px solid var(--disabled-color);
+        transition: background-color 0.3s ease, border-left-color 0.3s ease, color 0.3s ease;
+        font-size: 16px;
+      }
+      .state-machine-list li.active-state {
+        background-color: var(--state-active-bg);
+        color: var(--accent-color);
+        font-weight: bold;
+        border-left: 5px solid var(--accent-color);
+      }
+
+      .image-container {
+        text-align: center;
+        margin-top: 20px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .image-container h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #ccc;
+      }
+      .image-placeholder,
+      .image-container img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 150px;
+        border-radius: 8px;
+        background-color: rgba(0, 0, 0, 0.3);
+        object-fit: contain;
+      }
+      .image-placeholder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #777;
+        font-style: italic;
+        font-size: 16px;
+      }
+
+      .connection-status {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: bold;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
+      .connected {
+        background-color: var(--success-color);
+        color: #222;
+      }
+      .disconnected {
+        background-color: var(--danger-color);
+        color: white;
+      }
+
+      .emergency-banner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--danger-color);
+        color: white;
+        text-align: center;
+        padding: 12px;
+        font-weight: bold;
+        font-size: 18px;
+        z-index: 1001;
+        display: none;
+        animation: pulse 1.5s infinite ease-in-out;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
         }
-        
-        :root {
-            --bg-color: #121212;
-            --card-bg: #1e1e1e;
-            --text-color: #e0e0e0;
-            --accent-color: #4d84ff;
-            --danger-color: #ff4d4d;
-            --success-color: #4dff88;
-            --warning-color: #ffcc4d;
+        50% {
+          opacity: 0.7;
+          transform: scale(1.02);
         }
-        
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            overflow-x: hidden;
-        }
-        
+      }
+
+      .sensor-status-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .sensor-led {
+        width: 18px;
+        height: 18px;
+      }
+
+      @media (max-width: 768px) {
         .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 15px;
-            padding: 15px;
-            max-width: 1400px;
-            margin: 0 auto;
+          grid-template-columns: 1fr;
+          padding: 15px;
+          gap: 15px;
         }
-        
-        .card {
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            padding: 15px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-        }
-        
-        .card-header {
-            font-size: 18px;
-            font-weight: bold;
-            color: var(--accent-color);
-            margin-bottom: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .status-indicator {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: var(--warning-color);
-        }
-        
-        .status-ok { background-color: var(--success-color); }
-        .status-error { background-color: var(--danger-color); }
-        
-        .mode-toggle {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-        
-        .mode-btn {
-            flex: 1;
-            padding: 12px;
-            border: none;
-            border-radius: 6px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: opacity 0.2s;
-        }
-        
-        .mode-btn.manual {
-            background-color: var(--accent-color);
-            color: white;
-        }
-        
-        .mode-btn.autonomous {
-            background-color: var(--warning-color);
-            color: #333;
-        }
-        
-        .mode-btn:not(.active) {
-            opacity: 0.5;
-        }
-        
         .joystick-container {
-            position: relative;
-            width: 200px;
-            height: 200px;
-            background-color: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            margin: 20px auto;
-            touch-action: none;
+          width: 180px;
+          height: 180px;
         }
-        
         .joystick-thumb {
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            background-color: var(--accent-color);
-            border-radius: 50%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            cursor: pointer;
+          width: 60px;
+          height: 60px;
         }
-        
-        .emergency-btn {
-            width: 100%;
-            padding: 15px;
-            background-color: var(--danger-color);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 15px;
+        .card-header {
+          font-size: 20px;
         }
-        
-        .reset-btn {
-            width: 100%;
-            padding: 12px;
-            background-color: var(--warning-color);
-            color: #333;
-            border: none;
-            border-radius: 8px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 10px;
-            display: none;
-        }
-        
-        .data-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-        
-        .data-item {
-            background-color: rgba(255,255,255,0.05);
-            padding: 10px;
-            border-radius: 6px;
-        }
-        
-        .data-label {
-            font-size: 12px;
-            opacity: 0.7;
-            margin-bottom: 5px;
-        }
-        
         .data-value {
-            font-size: 16px;
-            font-weight: bold;
+          font-size: 18px;
         }
-        
-        .image-container {
-            text-align: center;
-            margin-top: 15px;
+        .state-machine-list li {
+          font-size: 15px;
+          padding: 8px 12px;
         }
-        
-        .image-container img {
-            max-width: 100%;
-            border-radius: 6px;
-            background-color: rgba(0,0,0,0.3);
-        }
-        
-        .connection-status {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            padding: 8px 12px;
-            border-radius: 6px;
-            font-size: 12px;
-            font-weight: bold;
-            z-index: 1000;
-        }
-        
-        .connected {
-            background-color: var(--success-color);
-            color: #333;
-        }
-        
-        .disconnected {
-            background-color: var(--danger-color);
-            color: white;
-        }
-        
-        .emergency-banner {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background-color: var(--danger-color);
-            color: white;
-            text-align: center;
-            padding: 10px;
-            font-weight: bold;
-            z-index: 1000;
-            display: none;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-        
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .container {
-                grid-template-columns: 1fr;
-                padding: 10px;
-                gap: 10px;
-            }
-            
-            .joystick-container {
-                width: 150px;
-                height: 150px;
-            }
-            
-            .joystick-thumb {
-                width: 45px;
-                height: 45px;
-            }
-        }
+      }
     </style>
-</head>
-<body>
-    <div id="emergency-banner" class="emergency-banner">
-        ⚠️ EMERGENCY STOP ACTIVE ⚠️
-    </div>
-    
-    <div id="connection-status" class="connection-status disconnected">
-        Disconnected
-    </div>
-    
+  </head>
+  <body>
+    <div id="emergency-banner" class="emergency-banner">⚠️ EMERGENCY STOP ACTIVE ⚠️</div>
+    <div id="connection-status" class="connection-status disconnected">Connecting...</div>
+
     <div class="container">
-        <!-- Control Panel -->
-        <div class="card">
-            <div class="card-header">
-                Control Panel
-                <div id="mode-indicator" class="status-indicator"></div>
-            </div>
-            
-            <div class="mode-toggle">
-                <button id="manual-btn" class="mode-btn manual active" onclick="setMode('MANUAL')">
-                    Manual
-                </button>
-                <button id="auto-btn" class="mode-btn autonomous" onclick="setMode('AUTONOMOUS')">
-                    Autonomous
-                </button>
-            </div>
-            
-            <div id="joystick-container" class="joystick-container">
-                <div id="joystick-thumb" class="joystick-thumb"></div>
-            </div>
-            
-            <div class="data-grid">
-                <div class="data-item">
-                    <div class="data-label">Speed</div>
-                    <div id="speed-value" class="data-value">0.00</div>
-                </div>
-                <div class="data-item">
-                    <div class="data-label">Steering</div>
-                    <div id="steering-value" class="data-value">0.00</div>
-                </div>
-            </div>
-            
-            <button class="emergency-btn" onclick="emergencyStop()">
-                EMERGENCY STOP
-            </button>
-            <button id="reset-btn" class="reset-btn" onclick="resetEmergency()">
-                RESET EMERGENCY
-            </button>
+      <div class="card">
+        <div class="card-header">
+          Control Panel
+          <div id="mode-indicator" class="status-indicator"></div>
         </div>
-        
-        <!-- State Machine -->
-        <div class="card">
-            <div class="card-header">
-                State Machine
-                <div id="state-indicator" class="status-indicator"></div>
-            </div>
-            <div id="current-state" class="data-value">IDLE</div>
+        <div class="mode-toggle">
+          <button id="manual-btn" class="mode-btn manual active" onclick="setMode('MANUAL')">Manual</button>
+          <button id="auto-btn" class="mode-btn autonomous" onclick="setMode('AUTONOMOUS')">Autonomous</button>
         </div>
-        
-        <!-- Lane Detection -->
-        <div class="card">
-            <div class="card-header">Lane Detection</div>
-            <div class="data-grid">
-                <div class="data-item">
-                    <div class="data-label">Center Offset</div>
-                    <div id="lane-offset" class="data-value">0.00</div>
-                </div>
-                <div class="data-item">
-                    <div class="data-label">Heading Error</div>
-                    <div id="lane-heading" class="data-value">0.00</div>
-                </div>
-                <div class="data-item">
-                    <div class="data-label">Left Line</div>
-                    <div id="left-line" class="data-value">No</div>
-                </div>
-                <div class="data-item">
-                    <div class="data-label">Right Line</div>
-                    <div id="right-line" class="data-value">No</div>
-                </div>
-            </div>
-            
-            <div class="image-container">
-                <div>Lane Mask</div>
-                <div id="lane-mask-container">
-                    <div style="padding: 40px; background: rgba(0,0,0,0.3); border-radius: 6px; margin-top: 10px;">
-                        No Image
-                    </div>
-                </div>
-            </div>
+        <div class="joystick-area">
+          <div id="joystick-container" class="joystick-container"><div id="joystick-thumb" class="joystick-thumb"></div></div>
+          <div class="data-grid" style="width: 100%; max-width: 280px">
+            <div class="data-item"><span class="data-label">Speed</span><span id="speed-value" class="data-value">0.00</span></div>
+            <div class="data-item"><span class="data-label">Steering</span><span id="steering-value" class="data-value">0.00</span></div>
+          </div>
         </div>
-        
-        <!-- Debug Image -->
-        <div class="card">
-            <div class="card-header">Debug View</div>
-            <div class="image-container">
-                <div id="debug-image-container">
-                    <div style="padding: 40px; background: rgba(0,0,0,0.3); border-radius: 6px;">
-                        No Image
-                    </div>
-                </div>
-            </div>
+        <button id="emergency-btn" class="control-button emergency-btn" onclick="emergencyStop()">EMERGENCY STOP</button>
+        <button id="reset-btn" class="control-button reset-btn" onclick="resetEmergency()">RESET EMERGENCY</button>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          State Machine
+          <div id="state-indicator" class="status-indicator"></div>
         </div>
-        
-        <!-- Sensors -->
-        <div class="card">
-            <div class="card-header">Sensors</div>
-            <div class="data-grid">
-                <div class="data-item">
-                    <div class="data-label">Front Distance</div>
-                    <div id="lidar-front" class="data-value">0.00 m</div>
-                </div>
-                <div class="data-item">
-                    <div class="data-label">Left Distance</div>
-                    <div id="lidar-left" class="data-value">0.00 m</div>
-                </div>
-                <div class="data-item">
-                    <div class="data-label">Right Distance</div>
-                    <div id="lidar-right" class="data-value">0.00 m</div>
-                </div>
-                <div class="data-item">
-                    <div class="data-label">Speed</div>
-                    <div id="current-speed" class="data-value">0.00 m/s</div>
-                </div>
-            </div>
+        <ul id="state-machine-display" class="state-machine-list"></ul>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Lane Detection</div>
+        <div class="data-grid">
+          <div class="data-item"><span class="data-label">Center Offset</span><span id="lane-offset" class="data-value">0.00</span></div>
+          <div class="data-item"><span class="data-label">Heading Error</span><span id="lane-heading" class="data-value">0.00</span></div>
+          <div class="data-item"><span class="data-label">Left Line</span><span id="left-line" class="data-value">No</span></div>
+          <div class="data-item"><span class="data-label">Right Line</span><span id="right-line" class="data-value">No</span></div>
         </div>
-        
-        <!-- Stop Sign & Obstacles -->
-        <div class="card">
-            <div class="card-header">Detection</div>
-            <div class="data-grid">
-                <div class="data-item">
-                    <div class="data-label">Stop Sign</div>
-                    <div id="stop-sign-status" class="data-value">No</div>
-                </div>
-                <div class="data-item">
-                    <div class="data-label">Stop Distance</div>
-                    <div id="stop-sign-distance" class="data-value">0.00 m</div>
-                </div>
-                <div class="data-item">
-                    <div class="data-label">Obstacles</div>
-                    <div id="obstacle-count" class="data-value">0</div>
-                </div>
-                <div class="data-item">
-                    <div class="data-label">Nearest</div>
-                    <div id="nearest-obstacle" class="data-value">0.00 m</div>
-                </div>
-            </div>
+        <div class="image-container">
+          <h3>Lane Mask</h3>
+          <div id="lane-mask-container" class="image-placeholder">No Image Signal</div>
         </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Debug View</div>
+        <div class="image-container">
+          <h3>Processed Image</h3>
+          <div id="debug-image-container" class="image-placeholder">No Image Signal</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Vehicle Data</div>
+        <div class="data-grid">
+          <div class="data-item"><span class="data-label">Vehicle Speed</span><span id="current-speed" class="data-value">0.00 m/s</span></div>
+          <div class="data-item"><span class="data-label">LiDAR Front</span><span id="lidar-front" class="data-value">0.00 m</span></div>
+          <div class="data-item"><span class="data-label">LiDAR Left</span><span id="lidar-left" class="data-value">0.00 m</span></div>
+          <div class="data-item"><span class="data-label">LiDAR Right</span><span id="lidar-right" class="data-value">0.00 m</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Object Detection</div>
+        <div class="data-grid">
+          <div class="data-item"><span class="data-label">Stop Sign</span><span id="stop-sign-status" class="data-value">No</span></div>
+          <div class="data-item"><span class="data-label">Stop Distance</span><span id="stop-sign-distance" class="data-value">0.00 m</span></div>
+          <div class="data-item"><span class="data-label">Obstacles</span><span id="obstacle-count" class="data-value">0</span></div>
+          <div class="data-item"><span class="data-label">Nearest Obstacle</span><span id="nearest-obstacle" class="data-value">0.00 m</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Sensor Status</div>
+        <div id="sensor-status-grid" class="data-grid">
+          <div class="data-item sensor-status-item">
+            <span class="data-label">Main Camera</span>
+            <div class="status-indicator sensor-led" id="sensor-camera-status"></div>
+          </div>
+          <div class="data-item sensor-status-item">
+            <span class="data-label">LiDAR</span>
+            <div class="status-indicator sensor-led" id="sensor-lidar-status"></div>
+          </div>
+          <div class="data-item sensor-status-item">
+            <span class="data-label">Odometry/IMU</span>
+            <div class="status-indicator sensor-led" id="sensor-odom-status"></div>
+          </div>
+          <div class="data-item sensor-status-item">
+            <span class="data-label">Lane Perception</span>
+            <div class="status-indicator sensor-led" id="sensor-lane-perception-status"></div>
+          </div>
+          <div class="data-item sensor-status-item">
+            <span class="data-label">Object Perception</span>
+            <div class="status-indicator sensor-led" id="sensor-object-perception-status"></div>
+          </div>
+          <div class="data-item sensor-status-item">
+            <span class="data-label">State Machine Node</span>
+            <div class="status-indicator sensor-led" id="sensor-state-machine-node-status"></div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script>
-        // WebSocket connection
-        let ws = null;
-        let reconnectInterval = null;
-        let isConnected = false;
-        
-        // Joystick variables
-        let joystickActive = false;
-        let joystickPos = { x: 0, y: 0 };
-        let currentMode = 'MANUAL';
-        let isEmergencyStopped = false;
-        
-        // DOM elements
-        const connectionStatus = document.getElementById('connection-status');
-        const emergencyBanner = document.getElementById('emergency-banner');
-        const resetBtn = document.getElementById('reset-btn');
-        const joystickContainer = document.getElementById('joystick-container');
-        const joystickThumb = document.getElementById('joystick-thumb');
-        
-        // Initialize WebSocket connection
-        function connectWebSocket() {
-            const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-const wsUrl = `${protocol}//${window.location.hostname}:{{ websocket_port }}`;            
-            ws = new WebSocket(wsUrl);
-            
-            ws.onopen = function() {
-                isConnected = true;
-                connectionStatus.textContent = 'Connected';
-                connectionStatus.className = 'connection-status connected';
-                
-                if (reconnectInterval) {
-                    clearInterval(reconnectInterval);
-                    reconnectInterval = null;
-                }
-            };
-            ws.onmessage = function(event) {
-                try {
-                    const message = JSON.parse(event.data);
-                    handleWebSocketMessage(message);
-                } catch (e) {
-                    console.error('Error parsing WebSocket message:', e);
-                }
-            };
-            
-            ws.onclose = function() {
-                isConnected = false;
-                connectionStatus.textContent = 'Disconnected';
-                connectionStatus.className = 'connection-status disconnected';
-                
-                // Attempt to reconnect
-                if (!reconnectInterval) {
-                    reconnectInterval = setInterval(connectWebSocket, 2000);
-                }
-            };
-            
-            ws.onerror = function(error) {
-                console.error('WebSocket error:', error);
-            };
-        }
-        
-        // Handle WebSocket messages
-        function handleWebSocketMessage(message) {
-            switch (message.type) {
-                case 'initial_data':
-                    updateAllData(message.data);
-                    break;
-                case 'state_update':
-                    updateStateData(message.data);
-                    break;
-                case 'lane_update':
-                    updateLaneData(message.data);
-                    break;
-                case 'image_update':
-                    updateImage(message.data);
-                    break;
-                case 'stop_sign_update':
-                    updateStopSignData(message.data);
-                    break;
-                case 'obstacles_update':
-                    updateObstacleData(message.data);
-                    break;
-                case 'odometry_update':
-                    updateOdometryData(message.data);
-                    break;
-                case 'lidar_update':
-                    updateLidarData(message.data);
-                    break;
-                case 'mode_update':
-                    updateModeData(message.data);
-                    break;
-                case 'emergency_update':
-                    updateEmergencyData(message.data);
-                    break;
+      let ws = null,
+        reconnectInterval = null,
+        isConnected = false,
+        joystickActive = false;
+      let joystickPos = { x: 0, y: 0 },
+        currentMode = "MANUAL",
+        isEmergencyStopped = false;
+      const el = (id) => document.getElementById(id);
+      const connectionStatus = el("connection-status"),
+        emergencyBanner = el("emergency-banner"),
+        resetBtn = el("reset-btn");
+      const joystickContainer = el("joystick-container"),
+        joystickThumb = el("joystick-thumb");
+      const manualBtn = el("manual-btn"),
+        autoBtn = el("auto-btn"),
+        modeIndicator = el("mode-indicator");
+      const stateMachineDisplay = el("state-machine-display");
+      const lastMessageTimes = {},
+        PROCESSING_WARN_THRESHOLD_MS = 100;
+
+      const ALL_STATES = [
+        { id: 0, name: "IDLE" },
+        { id: 1, name: "SECTION1 LANE FOLLOWING" },
+        { id: 2, name: "APPROACHING STOP SIGN SECTION1" },
+        { id: 3, name: "STOPPED SECTION1" },
+        { id: 4, name: "SECTION2 OBSTACLE AVOIDANCE" },
+        { id: 5, name: "APPROACHING STOP SIGN SECTION2" },
+        { id: 6, name: "STOPPED SECTION2" },
+        { id: 7, name: "SECTION3 PARKING" },
+        { id: 8, name: "PARKED" },
+        { id: 9, name: "EMERGENCY STOP" },
+      ];
+
+      // Keys should match Python SENSOR_KEY_ constants
+      const SENSOR_HTML_IDS = {
+        camera: "sensor-camera-status",
+        lidar: "sensor-lidar-status",
+        odom: "sensor-odom-status",
+        "lane-perception": "sensor-lane-perception-status",
+        "object-perception": "sensor-object-perception-status",
+        "state-machine-node": "sensor-state-machine-node-status",
+      };
+
+      function connectWebSocket() {
+        console.log("Attempting WebSocket connection...");
+        const protocol = window.location.protocol === "https:" ? "wss:" : "ws:";
+        const wsUrl = `${protocol}//${window.location.hostname}:{{ websocket_port }}`;
+        ws = new WebSocket(wsUrl);
+        ws.onopen = () => {
+          console.log("WebSocket connected to " + wsUrl);
+          isConnected = true;
+          connectionStatus.textContent = "Connected";
+          connectionStatus.className = "connection-status connected";
+          if (reconnectInterval) {
+            clearInterval(reconnectInterval);
+            reconnectInterval = null;
+          }
+        };
+        ws.onmessage = (event) => {
+          const arrivalTime = performance.now();
+          try {
+            const message = JSON.parse(event.data);
+            if (lastMessageTimes[message.type]) {
+              /* console.debug(`Time since last '${message.type}': ${(arrivalTime - lastMessageTimes[message.type]).toFixed(1)}ms`); */
             }
+            lastMessageTimes[message.type] = arrivalTime;
+            handleWebSocketMessage(message);
+            const processingTime = performance.now() - arrivalTime;
+            if (processingTime > PROCESSING_WARN_THRESHOLD_MS) console.warn(`Slow processing for ${message.type}: ${processingTime.toFixed(1)}ms`);
+          } catch (e) {
+            console.error("Error parsing WebSocket message:", e, event.data);
+          }
+        };
+        ws.onclose = (event) => {
+          console.warn(`WebSocket disconnected. Code: ${event.code}, Reason: ${event.reason}`);
+          isConnected = false;
+          connectionStatus.textContent = "Disconnected";
+          connectionStatus.className = "connection-status disconnected";
+          if (!reconnectInterval) reconnectInterval = setInterval(connectWebSocket, 3000);
+        };
+        ws.onerror = (error) => {
+          console.error("WebSocket error:", error);
+        };
+      }
+
+      function handleWebSocketMessage(message) {
+        switch (message.type) {
+          case "initial_data":
+            updateAllData(message.data);
+            break;
+          case "state_update":
+            updateStateData(message.data);
+            break;
+          case "lane_update":
+            updateLaneData(message.data);
+            break;
+          case "image_update":
+            updateImage(message.data);
+            break;
+          case "stop_sign_update":
+            updateStopSignData(message.data);
+            break;
+          case "obstacles_update":
+            updateObstacleData(message.data);
+            break;
+          case "odometry_update":
+            updateOdometryData(message.data);
+            break;
+          case "lidar_update":
+            updateLidarData(message.data);
+            break;
+          case "mode_update":
+            updateModeData(message.data);
+            break;
+          case "emergency_update":
+            updateEmergencyData(message.data);
+            break;
+          case "sensor_health_update":
+            updateSensorStatus(message.data);
+            break; // ADDED
+          default:
+            console.warn("Unknown message type:", message.type);
         }
-        
-        // Update functions
-        function updateAllData(data) {
-            updateStateData(data.state_machine);
-            updateLaneData(data.lane_detection);
-            updateStopSignData(data.stop_sign);
-            updateObstacleData(data.obstacles);
-            updateOdometryData({ odometry: data.odometry, control: data.control });
-            updateLidarData(data.lidar);
-            updateModeData({ mode: data.mode });
-            updateEmergencyData({ emergency_stopped: data.emergency_stopped });
+      }
+
+      function updateAllData(data) {
+        if (!data) {
+          console.error("Initial data is null/undefined");
+          return;
         }
-        
-        function updateStateData(data) {
-            document.getElementById('current-state').textContent = data.state_name;
-            const indicator = document.getElementById('state-indicator');
-            indicator.className = 'status-indicator ' + 
-                (data.current_state === 9 ? 'status-error' : 
-                 data.current_state === 0 ? 'status-warning' : 'status-ok');
+        if (data.state_machine) updateStateData(data.state_machine);
+        if (data.lane_detection) updateLaneData(data.lane_detection);
+        if (data.stop_sign) updateStopSignData(data.stop_sign);
+        if (data.obstacles) updateObstacleData(data.obstacles);
+        if (data.odometry && data.control) updateOdometryData({ odometry: data.odometry, control: data.control });
+        if (data.lidar) updateLidarData(data.lidar);
+        if (data.mode !== undefined) updateModeData({ mode: data.mode });
+        if (data.hasOwnProperty("emergency_stopped")) updateEmergencyData({ emergency_stopped: data.emergency_stopped });
+        if (data.sensor_health) updateSensorStatus(data.sensor_health); // ADDED
+        else updateSensorStatus({}); // Initialize if not present
+      }
+
+      function updateStateData(data) {
+        const overallStateIndicator = el("state-indicator");
+        overallStateIndicator.className = "status-indicator " + (data.current_state === 9 ? "status-error" : data.current_state === 0 ? "status-warning" : "status-ok");
+        const stateItems = stateMachineDisplay.getElementsByTagName("li");
+        for (let i = 0; i < stateItems.length; i++) {
+          stateItems[i].classList.toggle("active-state", parseInt(stateItems[i].dataset.stateId) === data.current_state);
         }
-        
-        function updateLaneData(data) {
-            document.getElementById('lane-offset').textContent = data.center_offset.toFixed(2);
-            document.getElementById('lane-heading').textContent = data.heading_error.toFixed(2);
-            document.getElementById('left-line').textContent = data.left_line_detected ? 'Yes' : 'No';
-            document.getElementById('right-line').textContent = data.right_line_detected ? 'Yes' : 'No';
+      }
+
+      function updateLaneData(data) {
+        el("lane-offset").textContent = data.center_offset?.toFixed(2) ?? "N/A";
+        el("lane-heading").textContent = data.heading_error?.toFixed(2) ?? "N/A";
+        el("left-line").textContent = data.left_line_detected ? "Yes" : "No";
+        el("right-line").textContent = data.right_line_detected ? "Yes" : "No";
+      }
+      function updateImage(data) {
+        const container = el(data.type === "lane_mask" ? "lane-mask-container" : "debug-image-container");
+        container.innerHTML = data.data
+          ? `<img src="data:image/jpeg;base64,${data.data}" alt="${data.type.replace("_", " ")}">`
+          : `<div class="image-placeholder">No ${data.type.replace("_", " ")} signal</div>`;
+      }
+      function updateStopSignData(data) {
+        el("stop-sign-status").textContent = data.detected ? "Yes" : "No";
+        el("stop-sign-distance").textContent = data.distance?.toFixed(2) + " m" ?? "N/A";
+      }
+      function updateObstacleData(data) {
+        el("obstacle-count").textContent = data.count ?? "N/A";
+        el("nearest-obstacle").textContent = data.nearest_distance?.toFixed(2) + " m" ?? "N/A";
+      }
+      function updateOdometryData(data) {
+        if (data.control) el("current-speed").textContent = data.control.linear_speed?.toFixed(2) + " m/s" ?? "N/A";
+      }
+      function updateLidarData(data) {
+        el("lidar-front").textContent = data.front_distance?.toFixed(2) + " m" ?? "N/A";
+        el("lidar-left").textContent = data.left_distance?.toFixed(2) + " m" ?? "N/A";
+        el("lidar-right").textContent = data.right_distance?.toFixed(2) + " m" ?? "N/A";
+      }
+      function updateModeData(data) {
+        currentMode = data.mode;
+        manualBtn.classList.toggle("active", currentMode === "MANUAL");
+        autoBtn.classList.toggle("active", currentMode !== "MANUAL");
+        modeIndicator.className = "status-indicator " + (currentMode === "MANUAL" ? "status-ok" : "status-warning");
+        joystickContainer.style.opacity = currentMode === "MANUAL" && !isEmergencyStopped ? "1" : "0.5";
+      }
+      function updateEmergencyData(data) {
+        isEmergencyStopped = data.emergency_stopped;
+        emergencyBanner.style.display = isEmergencyStopped ? "block" : "none";
+        resetBtn.style.display = isEmergencyStopped ? "block" : "none";
+        el("emergency-btn").disabled = isEmergencyStopped;
+        joystickContainer.style.opacity = currentMode === "MANUAL" && !isEmergencyStopped ? "1" : "0.5";
+        manualBtn.disabled = isEmergencyStopped;
+        autoBtn.disabled = isEmergencyStopped;
+      }
+
+      // ADDED: Function to update sensor statuses from backend data
+      function updateSensorStatus(healthData) {
+        // console.debug("Updating sensor health:", healthData); // DEBUG
+        for (const key in SENSOR_HTML_IDS) {
+          const elementId = SENSOR_HTML_IDS[key];
+          const sensorEl = el(elementId);
+          if (sensorEl) {
+            const status = healthData[key] || "UNKNOWN"; // Default to UNKNOWN if key not in healthData
+            let statusClass = "status-unknown"; // Default for UNKNOWN
+            if (status === "OK") statusClass = "status-ok";
+            else if (status === "TIMEOUT" || status === "ERROR") statusClass = "status-error";
+            // For "WARNING" if you add it later
+            // else if (status === "WARNING") statusClass = 'status-warning';
+            sensorEl.className = `status-indicator sensor-led ${statusClass}`;
+          } else {
+            console.warn(`Sensor element not found for key: ${key}, ID: ${elementId}`);
+          }
         }
-        
-        function updateImage(data) {
-            if (data.type === 'lane_mask') {
-                document.getElementById('lane-mask-container').innerHTML = 
-                    `<img src="data:image/jpeg;base64,${data.data}" alt="Lane Mask">`;
-            } else if (data.type === 'debug_image') {
-                document.getElementById('debug-image-container').innerHTML = 
-                    `<img src="data:image/jpeg;base64,${data.data}" alt="Debug Image">`;
-            }
+      }
+
+      function initializeStateMachineDisplay() {
+        stateMachineDisplay.innerHTML = "";
+        ALL_STATES.forEach((state) => {
+          const li = document.createElement("li");
+          li.textContent = state.name.replace(/_/g, " ");
+          li.dataset.stateId = state.id;
+          stateMachineDisplay.appendChild(li);
+        });
+      }
+
+      function sendWsMessage(type, payload = {}) {
+        if (isConnected && ws?.readyState === WebSocket.OPEN) ws.send(JSON.stringify({ type, ...payload }));
+        else console.warn("WS not connected. Cannot send:", type, payload);
+      }
+      function setMode(mode) {
+        if (!isEmergencyStopped) sendWsMessage("mode", { mode });
+      }
+      function emergencyStop() {
+        sendWsMessage("emergency");
+      }
+      function resetEmergency() {
+        sendWsMessage("reset_emergency");
+      }
+      function sendMovement(linear_x, angular_z) {
+        if (currentMode === "MANUAL" && !isEmergencyStopped) sendWsMessage("move", { linear_x, angular_z });
+      }
+
+      function initJoystick() {
+        const thumbRadius = joystickThumb.offsetWidth / 2,
+          containerRadius = joystickContainer.offsetWidth / 2,
+          maxThumbTravel = containerRadius - thumbRadius;
+        function processJoystickEvent(e) {
+          if (!joystickActive) return;
+          e.preventDefault();
+          const rect = joystickContainer.getBoundingClientRect(),
+            centerX = rect.width / 2,
+            centerY = rect.height / 2;
+          let clientX, clientY;
+          if (e.type.startsWith("touch")) {
+            clientX = e.touches[0].clientX - rect.left;
+            clientY = e.touches[0].clientY - rect.top;
+          } else {
+            clientX = e.clientX - rect.left;
+            clientY = e.clientY - rect.top;
+          }
+          let deltaX = clientX - centerX,
+            deltaY = clientY - centerY;
+          const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+          if (distance > maxThumbTravel) {
+            const angle = Math.atan2(deltaY, deltaX);
+            deltaX = Math.cos(angle) * maxThumbTravel;
+            deltaY = Math.sin(angle) * maxThumbTravel;
+          }
+          joystickThumb.style.transform = `translate(calc(-50% + ${deltaX}px), calc(-50% + ${deltaY}px))`;
+          joystickPos.x = deltaX / maxThumbTravel;
+          joystickPos.y = -deltaY / maxThumbTravel;
+          updateControlDisplay();
+          sendMovement(Math.max(0, joystickPos.y), -joystickPos.x);
         }
-        
-        function updateStopSignData(data) {
-            document.getElementById('stop-sign-status').textContent = data.detected ? 'Yes' : 'No';
-            document.getElementById('stop-sign-distance').textContent = data.distance.toFixed(2) + ' m';
-        }
-        
-        function updateObstacleData(data) {
-            document.getElementById('obstacle-count').textContent = data.count;
-            document.getElementById('nearest-obstacle').textContent = data.nearest_distance.toFixed(2) + ' m';
-        }
-        
-        function updateOdometryData(data) {
-            document.getElementById('current-speed').textContent = data.control.linear_speed.toFixed(2) + ' m/s';
-        }
-        
-        function updateLidarData(data) {
-            document.getElementById('lidar-front').textContent = data.front_distance.toFixed(2) + ' m';
-            document.getElementById('lidar-left').textContent = data.left_distance.toFixed(2) + ' m';
-            document.getElementById('lidar-right').textContent = data.right_distance.toFixed(2) + ' m';
-        }
-        
-        function updateModeData(data) {
-            currentMode = data.mode;
-            const manualBtn = document.getElementById('manual-btn');
-            const autoBtn = document.getElementById('auto-btn');
-            const modeIndicator = document.getElementById('mode-indicator');
-            
-            if (currentMode === 'MANUAL') {
-                manualBtn.classList.add('active');
-                autoBtn.classList.remove('active');
-                modeIndicator.className = 'status-indicator status-ok';
-            } else {
-                manualBtn.classList.remove('active');
-                autoBtn.classList.add('active');
-                modeIndicator.className = 'status-indicator status-warning';
-            }
-        }
-        
-        function updateEmergencyData(data) {
-            isEmergencyStopped = data.emergency_stopped;
-            if (isEmergencyStopped) {
-                emergencyBanner.style.display = 'block';
-                resetBtn.style.display = 'block';
-            } else {
-                emergencyBanner.style.display = 'none';
-                resetBtn.style.display = 'none';
-            }
-        }
-        
-        // Control functions
-        function setMode(mode) {
-            if (isConnected && !isEmergencyStopped) {
-                ws.send(JSON.stringify({ type: 'mode', mode: mode }));
-            }
-        }
-        
-        function emergencyStop() {
-            if (isConnected) {
-                ws.send(JSON.stringify({ type: 'emergency' }));
-            }
-        }
-        
-        function resetEmergency() {
-            if (isConnected) {
-                ws.send(JSON.stringify({ type: 'reset_emergency' }));
-            }
-        }
-        
-        function sendMovement(linear_x, angular_z) {
-            if (isConnected && currentMode === 'MANUAL' && !isEmergencyStopped) {
-                ws.send(JSON.stringify({
-                    type: 'move',
-                    linear_x: linear_x,
-                    angular_z: angular_z
-                }));
-            }
-        }
-        
-        // Joystick handling
-        function initJoystick() {
-            joystickContainer.addEventListener('mousedown', startJoystick);
-            joystickContainer.addEventListener('touchstart', startJoystick, { passive: false });
-            document.addEventListener('mousemove', moveJoystick);
-            document.addEventListener('touchmove', moveJoystick, { passive: false });
-            document.addEventListener('mouseup', endJoystick);
-            document.addEventListener('touchend', endJoystick);
-        }
-        
-        function startJoystick(e) {
-            if (currentMode !== 'MANUAL' || isEmergencyStopped) return;
+        joystickContainer.addEventListener("mousedown", (e) => {
+          if (currentMode !== "MANUAL" || isEmergencyStopped) return;
+          joystickActive = true;
+          joystickThumb.style.transition = "none";
+          processJoystickEvent(e);
+        });
+        joystickContainer.addEventListener(
+          "touchstart",
+          (e) => {
+            if (currentMode !== "MANUAL" || isEmergencyStopped) return;
             joystickActive = true;
-            e.preventDefault();
-            updateJoystickPosition(e);
+            joystickThumb.style.transition = "none";
+            processJoystickEvent(e);
+          },
+          { passive: false }
+        );
+        document.addEventListener("mousemove", processJoystickEvent);
+        document.addEventListener("touchmove", processJoystickEvent, { passive: false });
+        function endJoystickDrag() {
+          if (!joystickActive) return;
+          joystickActive = false;
+          joystickThumb.style.transition = "transform 0.2s ease-out";
+          joystickThumb.style.transform = "translate(-50%, -50%)";
+          joystickPos = { x: 0, y: 0 };
+          updateControlDisplay();
+          sendMovement(0, 0);
         }
-        
-        function moveJoystick(e) {
-            if (!joystickActive) return;
-            e.preventDefault();
-            updateJoystickPosition(e);
-        }
-        
-        function endJoystick() {
-            if (!joystickActive) return;
-            joystickActive = false;
-            
-            // Reset position
-            joystickThumb.style.left = '50%';
-            joystickThumb.style.top = '50%';
-            joystickPos = { x: 0, y: 0 };
-            
-            // Send stop command
-            sendMovement(0, 0);
-            updateControlDisplay();
-        }
-        
-        function updateJoystickPosition(e) {
-            const rect = joystickContainer.getBoundingClientRect();
-            const centerX = rect.left + rect.width / 2;
-            const centerY = rect.top + rect.height / 2;
-            
-            let clientX, clientY;
-            if (e.type.startsWith('touch')) {
-                clientX = e.touches[0].clientX;
-                clientY = e.touches[0].clientY;
-            } else {
-                clientX = e.clientX;
-                clientY = e.clientY;
-            }
-            
-            let deltaX = clientX - centerX;
-            let deltaY = clientY - centerY;
-            const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-            const maxDistance = rect.width / 2 - 30;
-            
-            if (distance > maxDistance) {
-                const angle = Math.atan2(deltaY, deltaX);
-                deltaX = Math.cos(angle) * maxDistance;
-                deltaY = Math.sin(angle) * maxDistance;
-            }
-            
-            joystickThumb.style.left = `calc(50% + ${deltaX}px)`;
-            joystickThumb.style.top = `calc(50% + ${deltaY}px)`;
-            
-            joystickPos.x = deltaX / maxDistance;
-            joystickPos.y = -deltaY / maxDistance;
-            
-            updateControlDisplay();
-            
-            // Send movement command
-            const speed = Math.max(0, joystickPos.y);
-            const steering = -joystickPos.x;
-            sendMovement(speed, steering);
-        }
-        
-        function updateControlDisplay() {
-            const speed = Math.max(0, joystickPos.y);
-            const steering = -joystickPos.x;
-            
-            document.getElementById('speed-value').textContent = speed.toFixed(2);
-            document.getElementById('steering-value').textContent = steering.toFixed(2);
-        }
-        
-        // Initialize everything
+        document.addEventListener("mouseup", endJoystickDrag);
+        document.addEventListener("touchend", endJoystickDrag);
+      }
+      function updateControlDisplay() {
+        const speed = Math.max(0, joystickPos.y),
+          steering = -joystickPos.x;
+        el("speed-value").textContent = speed.toFixed(2);
+        el("steering-value").textContent = steering.toFixed(2);
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        initializeStateMachineDisplay();
         connectWebSocket();
         initJoystick();
+        updateAllData({
+          state_machine: { current_state: 0, state_name: "Initializing..." },
+          lane_detection: {},
+          stop_sign: {},
+          obstacles: {},
+          odometry: {},
+          control: { linear_speed: 0 },
+          lidar: {},
+          mode: "MANUAL",
+          emergency_stopped: false,
+          sensor_health: {},
+        });
+      });
     </script>
-</body>
+  </body>
 </html>

@@ -50,7 +50,7 @@ def generate_launch_description():
             name='stop_sign_detection',
             output='screen',
             parameters=[{
-                'stop_sign_cascade_path': os.path.join(models_dir, 'haarcascade_stop.xml'),
+                'stop_sign_cascade_path': os.path.join(models_dir, 'cascade_stop_sign.xml'),
                 'camera_focal_length': 800.0,  # Focal length in pixels (needs calibration)
                 'stop_sign_real_width': 0.6,  # Actual width of a stop sign in meters (needs verification)
                 'min_detection_width': 30  # Minimum pixel width for a detected stop sign

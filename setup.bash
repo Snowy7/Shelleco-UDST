@@ -72,6 +72,16 @@ cmake .. && make -j$(nproc)
 sudo make install
 sudo ldconfig # Refresh the link library
 
+# Bind the udev rules for Astra camera
+echo "Binding udev rules for Astra camera..."
+cd "$WORKSPACE_ROOT/src/sensors/ros2_astra_camera/astra_camera/scripts" || {
+    echo "Could not find astra_camera/scripts directory!"
+    exit 1
+}
+
+sudo bash install.sh
+sudo udevadm control --reload-rules && sudo udevadm trigger
+
 # Build the workspace
 echo "Building the workspace..."
 cd "$WORKSPACE_ROOT" || exit

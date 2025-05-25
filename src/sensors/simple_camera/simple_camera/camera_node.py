@@ -1,141 +1,119 @@
+#!/usr/bin/env python3
+
+import sys
+import cv2
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Image, CompressedImage
 from cv_bridge import CvBridge
-import cv2
-import numpy as np # For imencode params
+import numpy as np
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
 
-class CameraPublisherNode(Node):
+class CameraPublisher(Node):
     def __init__(self):
         super().__init__('camera_publisher')
-
+        
         # Declare parameters
         self.declare_parameter('camera_index', 0)
-        self.declare_parameter('publish_rate', 30.0)
-        self.declare_parameter('frame_id', 'camera_color_optical_frame')
-        self.declare_parameter('image_topic', '/camera/color/image_raw')
-        self.declare_parameter('compressed_topic', '/camera/color/image_raw/compressed')
-        self.declare_parameter('compression_format', 'jpeg') # 'jpeg' or 'png'
-        self.declare_parameter('jpeg_quality', 90) # 0-100
-        self.declare_parameter('png_compression', 3) # 0-9
-        self.declare_parameter('frame_width', 0) # 0 for auto
-        self.declare_parameter('frame_height', 0) # 0 for auto
-
-        # Get parameters
-        self.camera_index_ = self.get_parameter('camera_index').get_parameter_value().integer_value
-        publish_rate_hz = self.get_parameter('publish_rate').get_parameter_value().double_value
-        self.frame_id_ = self.get_parameter('frame_id').get_parameter_value().string_value
-        image_topic = self.get_parameter('image_topic').get_parameter_value().string_value
-        compressed_topic = self.get_parameter('compressed_topic').get_parameter_value().string_value
-        self.compression_format_ = self.get_parameter('compression_format').get_parameter_value().string_value
-        self.jpeg_quality_ = self.get_parameter('jpeg_quality').get_parameter_value().integer_value
-        self.png_compression_ = self.get_parameter('png_compression').get_parameter_value().integer_value
-        frame_width = self.get_parameter('frame_width').get_parameter_value().integer_value
-        frame_height = self.get_parameter('frame_height').get_parameter_value().integer_value
-
-        self.get_logger().info(f"Opening camera with index: {self.camera_index_}")
-        self.cap_ = cv2.VideoCapture(self.camera_index_)
-
-        if not self.cap_.isOpened():
-            self.get_logger().error(f"Could not open video stream on camera index {self.camera_index_}")
-            rclpy.shutdown()
-            return
-
-        if frame_width > 0 and frame_height > 0:
-            self.cap_.set(cv2.CAP_PROP_FRAME_WIDTH, frame_width)
-            self.cap_.set(cv2.CAP_PROP_FRAME_HEIGHT, frame_height)
-            self.get_logger().info(f"Attempting to set frame size to {frame_width}x{frame_height}")
-
-
-        self.bridge_ = CvBridge()
-
-        self.get_logger().info(f"Publishing raw images to: {image_topic}")
-        self.get_logger().info(f"Publishing compressed images to: {compressed_topic} (format: {self.compression_format_})")
-
-        self.image_publisher_ = self.create_publisher(Image, image_topic, 10)
-        self.compressed_image_publisher_ = self.create_publisher(CompressedImage, compressed_topic, 10)
-
-        timer_period = 1.0 / publish_rate_hz  # seconds
-        self.timer_ = self.create_timer(timer_period, self.timer_callback)
-
-        self.get_logger().info("Python camera publisher node started.")
-
+        self.declare_parameter('backend', 'v4l2')  # Allow specifying backend (v4l2, any)
+        self.camera_index = self.get_parameter('camera_index').get_parameter_value().integer_value
+        self.backend = self.get_parameter('backend').get_parameter_value().string_value
+        
+        # Initialize CvBridge
+        self.bridge = CvBridge()
+        
+        # Set up QoS profile for high-performance publishing
+        qos = QoSProfile(
+            depth=10,
+            reliability=ReliabilityPolicy.BEST_EFFORT,
+            durability=DurabilityPolicy.VOLATILE,
+            history=HistoryPolicy.KEEP_LAST
+        )
+        
+        # Create publishers
+        self.raw_publisher = self.create_publisher(Image, '/camera/color/image_raw', qos)
+        self.compressed_publisher = self.create_publisher(CompressedImage, '/camera/color/image_raw/compressed', qos)
+        
+        # Initialize camera with backend selection
+        self.cap = self.initialize_camera()
+        if self.cap is None:
+            self.get_logger().error("Camera initialization failed. Shutting down.")
+            sys.exit(1)
+            
+        # Optimize camera settings
+        self.cap.set(cv2.CAP_PROP_FPS, 60)
+        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+        self.cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
+        
+        # Create timer for high-frequency publishing (100 Hz)
+        self.timer = self.create_timer(0.01, self.timer_callback)
+        
+        self.get_logger().info(f"Camera publisher started with camera index {self.camera_index}, backend {self.backend}")
+        
+    def initialize_camera(self):
+        # Try specified backend or fallback to others
+        backends = {
+            'v4l2': cv2.CAP_V4L2,
+            'any': cv2.CAP_ANY
+        }
+        
+        backend = backends.get(self.backend, cv2.CAP_ANY)
+        self.get_logger().info(f"Trying backend: {self.backend}")
+        
+        cap = cv2.VideoCapture(self.camera_index, backend)
+        if not cap.isOpened():
+            self.get_logger().warn(f"Failed to open camera with index {self.camera_index} and backend {self.backend}")
+            # Try fallback backend if not already using CAP_ANY
+            if self.backend != 'any':
+                self.get_logger().info("Falling back to CAP_ANY backend")
+                cap = cv2.VideoCapture(self.camera_index, cv2.CAP_ANY)
+            
+            if not cap.isOpened():
+                self.get_logger().error(f"Failed to open camera at index {self.camera_index} with any backend")
+                return None
+                
+        return cap
+        
     def timer_callback(self):
-        ret, frame = self.cap_.read()
+        # Capture frame
+        ret, frame = self.cap.read()
         if not ret:
-            self.get_logger().warn("Could not read frame from camera.")
+            self.get_logger().warn("Failed to capture frame")
             return
-        if frame is None:
-            self.get_logger().warn("Empty frame captured.")
-            return
-
-        now = self.get_clock().now().to_msg()
-
+            
+        # Get timestamp
+        timestamp = self.get_clock().now().to_msg()
+        
         # Publish raw image
-        try:
-            image_msg = self.bridge_.cv2_to_imgmsg(frame, encoding="bgr8")
-            image_msg.header.stamp = now
-            image_msg.header.frame_id = self.frame_id_
-            self.image_publisher_.publish(image_msg)
-        except Exception as e:
-            self.get_logger().error(f"Error converting/publishing raw image: {e}")
-
-
+        raw_msg = self.bridge.cv2_to_imgmsg(frame, encoding="bgr8")
+        raw_msg.header.stamp = timestamp
+        raw_msg.header.frame_id = "camera_frame"
+        self.raw_publisher.publish(raw_msg)
+        
         # Publish compressed image
-        try:
-            compressed_msg = CompressedImage()
-            compressed_msg.header.stamp = now
-            compressed_msg.header.frame_id = self.frame_id_
-
-            params = []
-            if self.compression_format_ == 'jpeg':
-                compressed_msg.format = "jpeg"
-                params = [cv2.IMWRITE_JPEG_QUALITY, self.jpeg_quality_]
-                encode_format = ".jpg"
-            elif self.compression_format_ == 'png':
-                compressed_msg.format = "png"
-                params = [cv2.IMWRITE_PNG_COMPRESSION, self.png_compression_]
-                encode_format = ".png"
-            else:
-                self.get_logger().warn_once(f"Unsupported compression format: {self.compression_format_}. Defaulting to JPEG.")
-                compressed_msg.format = "jpeg"
-                params = [cv2.IMWRITE_JPEG_QUALITY, self.jpeg_quality_]
-                encode_format = ".jpg"
-
-
-            result, buffer = cv2.imencode(encode_format, frame, params)
-            if result:
-                compressed_msg.data = buffer.tobytes() # Use tobytes() for numpy array
-                self.compressed_image_publisher_.publish(compressed_msg)
-            else:
-                self.get_logger().warn(f"cv2.imencode (to {self.compression_format_}) failed!")
-        except Exception as e:
-            self.get_logger().error(f"Error converting/publishing compressed image: {e}")
-
-
+        compressed_msg = CompressedImage()
+        compressed_msg.header = raw_msg.header
+        compressed_msg.format = "jpeg"
+        encode_param = [int(cv2.IMWRITE_JPEG_QUALITY), 90]
+        compressed_msg.data = np.array(cv2.imencode('.jpg', frame, encode_param)[1]).tobytes()
+        self.compressed_publisher.publish(compressed_msg)
+        
     def destroy_node(self):
-        if self.cap_.isOpened():
-            self.cap_.release()
-            self.get_logger().info("Camera released.")
+        # Release camera when node is destroyed
+        if hasattr(self, 'cap') and self.cap is not None:
+            self.cap.release()
         super().destroy_node()
-
 
 def main(args=None):
     rclpy.init(args=args)
-    node = None
+    node = CameraPublisher()
     try:
-        node = CameraPublisherNode()
         rclpy.spin(node)
     except KeyboardInterrupt:
         pass
-    except Exception as e:
-        if node:
-            node.get_logger().error(f"Unhandled exception: {e}")
-        else:
-            print(f"Unhandled exception before node initialization: {e}")
     finally:
-        if node:
-            node.destroy_node()
+        node.destroy_node()
         rclpy.shutdown()
 
 if __name__ == '__main__':

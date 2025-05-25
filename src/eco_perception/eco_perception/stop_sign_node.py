@@ -60,7 +60,7 @@ class StopSignDetectionNode(Node):
     
     def image_callback(self, msg):
         if self.stop_sign_cascade is None:
-            self.get_logger().warn_once("Stop sign cascade classifier not loaded, skipping detection.")
+            self.get_logger().warn("Stop sign cascade classifier not loaded, skipping detection.")
             self.publish_stop_sign(False, 0.0, (0.0, 0.0, 0.0), msg.header)
             # Publish a blank debug image
             self.publish_debug_image(None, msg.header)
