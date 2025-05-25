@@ -25,7 +25,6 @@ class Section1PlannerNode(Node):
         # State variables
         self.current_state = SystemState.IDLE
         self.lane_data = None
-        self.odometry = None
         
         # Publishers
         self.cmd_vel_pub = self.create_publisher(
@@ -44,12 +43,6 @@ class Section1PlannerNode(Node):
             LaneDetection,
             '/perception/lane_detections',
             self.lane_callback,
-            10)
-        
-        self.odom_sub = self.create_subscription(
-            Odometry,
-            '/odometry/filtered',
-            self.odometry_callback,
             10)
         
         # Timer for planning updates
