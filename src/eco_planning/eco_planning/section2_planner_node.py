@@ -13,10 +13,10 @@ class Section2PlannerNode(Node):
         # Parameters
         self.declare_parameter('safety_distance', 2.0)      # Distance to start avoiding
         self.declare_parameter('critical_distance', 0.4)    # Distance for max steering
-        self.declare_parameter('max_steering', 0.6)         # Maximum steering output
+        self.declare_parameter('max_steering', 0.8)         # Maximum steering output
         self.declare_parameter('min_steering', 0.1)         # Minimum steering when avoiding
         self.declare_parameter('steering_smoothness', 0.7)  # Smoothing factor (0-1)
-        self.declare_parameter('max_speed', 0.5)            # m/s
+        self.declare_parameter('max_speed', 0.3)            # m/s
         self.declare_parameter('min_speed', 0.1)            # m/s
         
         self.safety_distance = self.get_parameter('safety_distance').value
